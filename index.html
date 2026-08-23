@@ -18,6 +18,7 @@
       --black: #050505;
       --white: #ffffff;
       --paper: #f5f2ea;
+      --soft-accent: #f2efe8;
       --grey: #737373;
       --border: #dedbd3;
       --gold: #c58b18;
@@ -27,16 +28,8 @@
       --igho-gold: #e5a400;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', Arial, Helvetica, sans-serif;
       background: var(--white);
@@ -44,16 +37,8 @@
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 96px));
-      margin: 0 auto;
-    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 96px)); margin: 0 auto; }
 
     header {
       height: 72px;
@@ -61,14 +46,7 @@
       align-items: center;
       border-bottom: 1px solid rgba(5, 5, 5, 0.06);
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 48px;
-    }
-
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
     .brand {
       display: inline-flex;
       align-items: center;
@@ -77,7 +55,6 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
-
     .brand-mark {
       width: 18px;
       height: 22px;
@@ -86,7 +63,6 @@
       position: relative;
       flex: 0 0 auto;
     }
-
     .brand-mark::after {
       content: "";
       position: absolute;
@@ -97,7 +73,6 @@
       background: var(--white);
       transform: rotate(45deg);
     }
-
     .nav-links {
       display: flex;
       gap: 28px;
@@ -106,42 +81,32 @@
       font-size: 13px;
       font-weight: 600;
     }
+    .nav-links a:hover { color: var(--black); }
 
-    .nav-links a:hover {
-      color: var(--black);
-    }
-
-    .hero {
-      padding: 88px 0 92px;
-    }
-
+    .hero { padding: 88px 0 92px; }
     .hero-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
       gap: 84px;
       align-items: center;
     }
-
-    .hero-copy {
-      max-width: 620px;
-    }
+    .hero-copy { max-width: 620px; }
 
     h1,
     h2,
     h3,
     .statement-title,
-    .principles-title {
+    .principles-title,
+    .visual-title {
       font-family: 'Oswald', Arial, sans-serif;
       font-weight: 600;
     }
-
     h1 {
       font-size: clamp(4.2rem, 7vw, 7.2rem);
       line-height: 0.92;
       letter-spacing: -0.02em;
       margin-bottom: 42px;
     }
-
     .hero-copy p {
       max-width: 530px;
       color: #555;
@@ -149,7 +114,6 @@
       line-height: 1.62;
       margin-bottom: 28px;
     }
-
     .hero-note {
       display: inline-flex;
       align-items: center;
@@ -160,7 +124,6 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
-
     .hero-note::before {
       content: "";
       width: 18px;
@@ -168,124 +131,63 @@
       background: var(--gold);
     }
 
-    .group-map {
+    .visual-card {
       min-height: 420px;
+      border-radius: 14px;
+      background: var(--soft-accent);
       position: relative;
-      display: grid;
-      place-items: center;
+      overflow: hidden;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-
-    .group-map::before {
-      content: "";
-      position: absolute;
-      width: min(360px, 88%);
-      aspect-ratio: 1;
-      border: 1px solid rgba(5, 5, 5, 0.12);
-      border-radius: 50%;
-    }
-
-    .map-axis-x,
-    .map-axis-y {
-      position: absolute;
-      background: rgba(5, 5, 5, 0.12);
-    }
-
-    .map-axis-x {
-      width: min(360px, 88%);
-      height: 1px;
-    }
-
-    .map-axis-y {
-      width: 1px;
-      height: min(360px, 88%);
-    }
-
-    .map-centre {
-      width: 72px;
-      height: 72px;
-      border: 2px solid var(--black);
-      display: grid;
-      place-items: center;
-      font-family: 'Oswald', Arial, sans-serif;
-      font-size: 39px;
-      line-height: 1;
-      background: var(--white);
+    .visual-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #777;
       position: relative;
       z-index: 2;
     }
-
-    .map-label {
+    .visual-title {
+      font-size: clamp(3.4rem, 5.5vw, 5.6rem);
+      line-height: 0.9;
+      letter-spacing: -0.01em;
+      max-width: 420px;
+      position: relative;
+      z-index: 2;
+    }
+    .visual-orbit {
       position: absolute;
-      width: 145px;
-      text-align: center;
-      font-size: 11px;
-      line-height: 1.45;
-      color: #555;
-      z-index: 3;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 999px;
+      right: -60px;
+      bottom: -60px;
     }
-
-    .map-label strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--black);
-    }
-
-    .map-label.culture {
-      top: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .map-label.culture strong {
-      color: var(--gold);
-    }
-
-    .map-label.infrastructure {
-      left: -8px;
-      bottom: 42px;
-    }
-
-    .map-label.infrastructure strong {
-      color: var(--blue);
-    }
-
-    .map-label.operations {
-      right: -8px;
-      bottom: 42px;
-    }
-
-    .map-label.operations strong {
-      color: var(--green);
-    }
-
-    .map-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--gold);
+    .visual-orbit::before,
+    .visual-orbit::after {
+      content: "";
       position: absolute;
-      z-index: 4;
+      border-radius: 999px;
+      background: var(--black);
     }
-
-    .map-dot.top {
-      top: 29px;
-      left: 50%;
-      transform: translateX(-50%);
+    .visual-orbit::before {
+      width: 52px;
+      height: 52px;
+      left: 40px;
+      top: 36px;
     }
-
-    .map-dot.left {
-      left: 35px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .map-dot.right {
-      right: 35px;
-      top: 50%;
-      transform: translateY(-50%);
+    .visual-orbit::after {
+      width: 24px;
+      height: 24px;
+      right: 62px;
+      bottom: 78px;
     }
 
     .statement {
@@ -293,21 +195,18 @@
       color: var(--white);
       padding: 58px 0;
     }
-
     .statement-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
       gap: 88px;
       align-items: center;
     }
-
     .statement-title {
       max-width: 590px;
       font-size: clamp(2.2rem, 4vw, 4.15rem);
       line-height: 1.02;
       letter-spacing: -0.01em;
     }
-
     .statement-copy {
       max-width: 430px;
       border-left: 1px solid rgba(197, 139, 24, 0.75);
@@ -317,10 +216,7 @@
       line-height: 1.7;
     }
 
-    section {
-      padding: 72px 0;
-    }
-
+    section { padding: 72px 0; }
     .section-heading {
       display: flex;
       justify-content: space-between;
@@ -328,7 +224,6 @@
       align-items: end;
       margin-bottom: 38px;
     }
-
     .section-kicker {
       color: var(--gold);
       font-size: 10px;
@@ -337,13 +232,11 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-
     h2 {
       font-size: clamp(2.2rem, 3.8vw, 3.7rem);
       line-height: 1;
       letter-spacing: -0.01em;
     }
-
     .section-heading p {
       max-width: 440px;
       color: var(--grey);
@@ -357,19 +250,14 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-
     .project-card-link,
     .project-card-static {
       display: block;
       min-width: 0;
       border-right: 1px solid var(--border);
     }
-
     .project-card-link:last-child,
-    .project-card-static:last-child {
-      border-right: 0;
-    }
-
+    .project-card-static:last-child { border-right: 0; }
     .project-card {
       min-height: 315px;
       height: 100%;
@@ -379,11 +267,7 @@
       background: var(--white);
       transition: background 0.2s ease;
     }
-
-    .project-card-link:hover .project-card {
-      background: #faf9f6;
-    }
-
+    .project-card-link:hover .project-card { background: #faf9f6; }
     .project-meta {
       display: flex;
       align-items: flex-start;
@@ -391,7 +275,6 @@
       gap: 12px;
       margin-bottom: 28px;
     }
-
     .project-logo {
       width: 112px;
       max-width: 100%;
@@ -403,19 +286,13 @@
       overflow: visible;
       padding: 0;
     }
-
-    .project-logo--icon {
-      width: 56px;
-      height: 56px;
-    }
-
+    .project-logo--icon { width: 56px; height: 56px; }
     .project-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       object-position: left center;
     }
-
     .igho-logo {
       width: 126px;
       height: 56px;
@@ -424,7 +301,6 @@
       gap: 9px;
       color: var(--igho-ink);
     }
-
     .igho-mark {
       width: 39px;
       height: 39px;
@@ -434,25 +310,19 @@
       gap: 4px;
       flex: 0 0 auto;
     }
-
     .igho-mark span {
       width: 100%;
       aspect-ratio: 1;
       border-radius: 50%;
       background: var(--igho-ink);
     }
-
-    .igho-mark span:nth-child(5) {
-      background: var(--igho-gold);
-    }
-
+    .igho-mark span:nth-child(5) { background: var(--igho-gold); }
     .igho-wordmark {
       font-size: 30px;
       line-height: 1;
       font-weight: 600;
       letter-spacing: -0.065em;
     }
-
     .status {
       display: inline-flex;
       align-items: center;
@@ -464,7 +334,6 @@
       text-transform: uppercase;
       white-space: nowrap;
     }
-
     .status::before {
       content: "";
       width: 6px;
@@ -472,19 +341,9 @@
       border-radius: 50%;
       background: currentColor;
     }
-
-    .status.operating {
-      color: var(--blue);
-    }
-
-    .status.building {
-      color: var(--green);
-    }
-
-    .project-body {
-      margin-top: auto;
-    }
-
+    .status.operating { color: var(--blue); }
+    .status.building { color: var(--green); }
+    .project-body { margin-top: auto; }
     .category {
       display: block;
       margin-bottom: 10px;
@@ -494,69 +353,39 @@
       text-transform: uppercase;
       color: #777;
     }
-
-    .category.culture {
-      color: var(--gold);
-    }
-
-    .category.infrastructure {
-      color: var(--blue);
-    }
-
-    .category.operations {
-      color: var(--green);
-    }
-
-    .project-card h3 {
-      font-size: 24px;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .project-card p {
-      color: var(--grey);
-      font-size: 13px;
-      line-height: 1.55;
-    }
+    .category.culture { color: var(--gold); }
+    .category.infrastructure { color: var(--blue); }
+    .category.operations { color: var(--green); }
+    .project-card h3 { font-size: 24px; line-height: 1; margin-bottom: 12px; }
+    .project-card p { color: var(--grey); font-size: 13px; line-height: 1.55; }
 
     .principles {
       background: var(--paper);
       padding: 56px 0 60px;
     }
-
     .principles-title {
       font-size: clamp(1.9rem, 3vw, 2.8rem);
       line-height: 1;
       margin-bottom: 34px;
     }
-
     .principles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid rgba(5, 5, 5, 0.12);
     }
-
     .principle {
       padding: 24px 28px 0 0;
       border-right: 1px solid rgba(5, 5, 5, 0.12);
       min-height: 105px;
     }
-
-    .principle + .principle {
-      padding-left: 28px;
-    }
-
-    .principle:last-child {
-      border-right: 0;
-    }
-
+    .principle + .principle { padding-left: 28px; }
+    .principle:last-child { border-right: 0; }
     .principle strong {
       display: block;
       margin-bottom: 8px;
       font-size: 13px;
       letter-spacing: 0.02em;
     }
-
     .principle p {
       max-width: 260px;
       color: #686868;
@@ -564,19 +393,13 @@
       line-height: 1.55;
     }
 
-    footer {
-      background: var(--black);
-      color: var(--white);
-      padding: 34px 0;
-    }
-
+    footer { background: var(--black); color: var(--white); padding: 34px 0; }
     .footer-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 32px;
     }
-
     .footer-brand {
       display: inline-flex;
       align-items: center;
@@ -584,165 +407,49 @@
       font-size: 13px;
       font-weight: 700;
     }
-
-    .footer-brand .brand-mark {
-      background: var(--white);
-    }
-
-    .footer-brand .brand-mark::after {
-      background: var(--black);
-    }
-
-    .footer-meta {
-      color: #8d8d8d;
-      font-size: 11px;
-      text-align: right;
-    }
+    .footer-brand .brand-mark { background: var(--white); }
+    .footer-brand .brand-mark::after { background: var(--black); }
+    .footer-meta { color: #8d8d8d; font-size: 11px; text-align: right; }
 
     @media (max-width: 1120px) {
-      .projects {
-        grid-template-columns: repeat(2, 1fr);
-        border-bottom: 0;
-      }
-
+      .projects { grid-template-columns: repeat(2, 1fr); border-bottom: 0; }
       .project-card-link,
-      .project-card-static {
-        border-bottom: 1px solid var(--border);
-      }
-
+      .project-card-static { border-bottom: 1px solid var(--border); }
       .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) {
-        border-right: 0;
-      }
-
-      .project-card-static:last-child {
-        border-right: 1px solid var(--border);
-      }
+      .project-card-static:nth-child(2n) { border-right: 0; }
+      .project-card-static:last-child { border-right: 1px solid var(--border); }
     }
 
     @media (max-width: 900px) {
-      .container {
-        width: min(100% - 56px, 1120px);
-      }
-
+      .container { width: min(100% - 56px, 1120px); }
       .hero-grid,
-      .statement-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-grid {
-        gap: 42px;
-      }
-
-      .group-map {
-        min-height: 390px;
-      }
-
-      .statement-grid {
-        gap: 32px;
-      }
-
-      .statement-copy {
-        max-width: 600px;
-      }
-
-      .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+      .statement-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 42px; }
+      .visual-card { min-height: 390px; }
+      .statement-grid { gap: 32px; }
+      .statement-copy { max-width: 600px; }
+      .section-heading { align-items: flex-start; flex-direction: column; }
     }
 
     @media (max-width: 640px) {
-      .container {
-        width: min(100% - 32px, 1120px);
-      }
-
-      header {
-        height: 64px;
-      }
-
-      .nav-links {
-        gap: 18px;
-      }
-
-      .hero {
-        padding: 58px 0 54px;
-      }
-
-      h1 {
-        font-size: 4.15rem;
-        margin-bottom: 30px;
-      }
-
-      .hero-copy p {
-        font-size: 16px;
-      }
-
-      .group-map {
-        min-height: 330px;
-      }
-
-      .group-map::before,
-      .map-axis-x {
-        width: 290px;
-      }
-
-      .map-axis-y {
-        height: 290px;
-      }
-
-      .map-label {
-        width: 115px;
-        font-size: 9px;
-      }
-
-      .map-label.infrastructure {
-        left: 0;
-        bottom: 24px;
-      }
-
-      .map-label.operations {
-        right: 0;
-        bottom: 24px;
-      }
-
-      .map-dot.left {
-        left: 14px;
-      }
-
-      .map-dot.right {
-        right: 14px;
-      }
-
-      .statement {
-        padding: 44px 0;
-      }
-
-      section {
-        padding: 58px 0;
-      }
-
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
+      .container { width: min(100% - 32px, 1120px); }
+      header { height: 64px; }
+      .nav-links { gap: 18px; }
+      .hero { padding: 58px 0 54px; }
+      h1 { font-size: 4.15rem; margin-bottom: 30px; }
+      .hero-copy p { font-size: 16px; }
+      .visual-card { min-height: 330px; padding: 28px; }
+      .visual-title { font-size: 4rem; }
+      .statement { padding: 44px 0; }
+      section { padding: 58px 0; }
+      .projects { grid-template-columns: 1fr; }
       .project-card-link,
       .project-card-static,
       .project-card-static:last-child,
       .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) {
-        border-right: 0;
-      }
-
-      .project-card {
-        min-height: 250px;
-        padding: 22px 4px 24px;
-      }
-
-      .principles-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .project-card-static:nth-child(2n) { border-right: 0; }
+      .project-card { min-height: 250px; padding: 22px 4px 24px; }
+      .principles-grid { grid-template-columns: 1fr; }
       .principle,
       .principle + .principle {
         padding: 20px 0;
@@ -750,19 +457,9 @@
         border-bottom: 1px solid rgba(5, 5, 5, 0.12);
         min-height: 0;
       }
-
-      .principle:last-child {
-        border-bottom: 0;
-      }
-
-      .footer-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .footer-meta {
-        text-align: left;
-      }
+      .principle:last-child { border-bottom: 0; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .footer-meta { text-align: left; }
     }
   </style>
 </head>
@@ -774,7 +471,6 @@
         <span class="brand-mark" aria-hidden="true"></span>
         The 24th Group
       </a>
-
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#work">Work</a>
@@ -794,28 +490,13 @@
           <span class="hero-note">Built for long-term value</span>
         </div>
 
-        <div class="group-map" aria-label="The 24th Group operates across culture, infrastructure and operations">
-          <span class="map-axis-x" aria-hidden="true"></span>
-          <span class="map-axis-y" aria-hidden="true"></span>
-          <span class="map-dot top" aria-hidden="true"></span>
-          <span class="map-dot left" aria-hidden="true"></span>
-          <span class="map-dot right" aria-hidden="true"></span>
-          <div class="map-centre" aria-hidden="true">24</div>
-
-          <div class="map-label culture">
-            <strong>Culture</strong>
-            Stories, communities and platforms that reflect who we are.
+        <div class="visual-card" aria-label="Founder-led venture and operations company, established 2026">
+          <div class="visual-top">
+            <span>Founder-led venture &amp; operations company</span>
+            <span>Est. 2026</span>
           </div>
-
-          <div class="map-label infrastructure">
-            <strong>Infrastructure</strong>
-            Foundational systems that create trust, identity and certainty.
-          </div>
-
-          <div class="map-label operations">
-            <strong>Operations</strong>
-            Tools that support daily work, decisions and delivery.
-          </div>
+          <div class="visual-title">Culture.<br />Systems.<br />Future.</div>
+          <div class="visual-orbit" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -849,9 +530,7 @@
           <a class="project-card-link" href="https://thereplaymag.com?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
             <article class="project-card">
               <div class="project-meta">
-                <div class="project-logo">
-                  <img src="logo/thereplaymag.png" alt="TheReplayMAG" />
-                </div>
+                <div class="project-logo"><img src="logo/thereplaymag.png" alt="TheReplayMAG" /></div>
                 <span class="status operating">Operating</span>
               </div>
               <div class="project-body">
@@ -865,9 +544,7 @@
           <a class="project-card-link" href="https://koroko.development.catalystappsail.com/?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
             <article class="project-card">
               <div class="project-meta">
-                <div class="project-logo project-logo--icon">
-                  <img src="logo/koroko_icon.png" alt="Koroko" />
-                </div>
+                <div class="project-logo project-logo--icon"><img src="logo/koroko_icon.png" alt="Koroko" /></div>
                 <span class="status operating">Operating</span>
               </div>
               <div class="project-body">
@@ -881,9 +558,7 @@
           <a class="project-card-link" href="https://korokoro-758593152.development.catalystserverless.com/app/landing-mockup.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
             <article class="project-card">
               <div class="project-meta">
-                <div class="project-logo project-logo--icon">
-                  <img src="logo/oroko_icon.svg" alt="Oroko" />
-                </div>
+                <div class="project-logo project-logo--icon"><img src="logo/oroko_icon.svg" alt="Oroko" /></div>
                 <span class="status building">Building</span>
               </div>
               <div class="project-body">
@@ -897,9 +572,7 @@
           <a class="project-card-link" href="https://ogoro-758593152.development.catalystserverless.com/app/index.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
             <article class="project-card">
               <div class="project-meta">
-                <div class="project-logo project-logo--icon">
-                  <img src="logo/ogoro_icon.png" alt="Ogoro" />
-                </div>
+                <div class="project-logo project-logo--icon"><img src="logo/ogoro_icon.png" alt="Ogoro" /></div>
                 <span class="status building">Building</span>
               </div>
               <div class="project-body">
@@ -938,7 +611,6 @@
       <div class="container">
         <div class="section-kicker">How we think</div>
         <h2 class="principles-title" id="principles-title">Three principles guide how we build.</h2>
-
         <div class="principles-grid">
           <div class="principle">
             <strong>Clarity</strong>
