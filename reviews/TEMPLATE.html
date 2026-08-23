@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 24th Group — Monthly Review</title>
+  <link rel="icon" type="image/png" href="../brand/assets/mark-only-black.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#050505;
+      --white:#fff;
+      --paper:#f5f2ea;
+      --soft:#f2efe8;
+      --grey:#737373;
+      --border:#dedbd3;
+      --gold:#c58b18;
+      --green:#556f43;
+      --blue:#173653;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased}
+    .page{width:min(1120px,calc(100% - 96px));margin:0 auto}
+    .display,h1,h2,h3{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
+    .topbar{height:72px;border-bottom:1px solid rgba(5,5,5,.08);display:flex;align-items:center}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700}
+    .brand img{width:18px;height:22px;object-fit:contain}
+    .meta{display:flex;gap:28px;color:#666;font-size:12px}
+    .cover{padding:84px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:end}
+    .eyebrow,.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+    .cover h1{font-size:clamp(4.2rem,7vw,7.2rem);line-height:.92;letter-spacing:-.025em;margin:18px 0 30px}
+    .cover p{font-size:18px;line-height:1.65;color:#555;max-width:620px}
+    .cover-card{background:var(--soft);padding:30px;border-radius:14px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+    .cover-card strong{font-size:13px}
+    .cover-card .month{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-size:46px;line-height:1}
+    .cover-card .small{font-size:11px;color:#777;display:grid;gap:8px}
+    .statement{background:var(--black);color:var(--white);padding:52px 0}
+    .statement-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+    .statement h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.02;max-width:650px}
+    .statement p{color:#c9c9c9;border-left:1px solid var(--gold);padding-left:26px;font-size:15px;line-height:1.7}
+    section.content{padding:68px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2rem,3.6vw,3.4rem);line-height:1;margin-top:8px}
+    .section-head p{max-width:440px;color:var(--grey);font-size:14px}
+    .summary-grid{display:grid;grid-template-columns:1.2fr .8fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .summary-block{padding:26px 26px 28px 0}
+    .summary-block + .summary-block{padding-left:26px;border-left:1px solid var(--border)}
+    .summary-block h3{font-size:24px;margin-bottom:16px}
+    .summary-block ul{padding-left:18px;color:#555;display:grid;gap:10px;font-size:14px}
+    .portfolio{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .venture{min-height:205px;padding:22px 18px;border-right:1px solid var(--border)}
+    .venture:last-child{border-right:0}
+    .venture .type{font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:18px}
+    .venture .type.culture{color:var(--gold)}
+    .venture .type.infrastructure{color:var(--blue)}
+    .venture .type.operations{color:var(--green)}
+    .venture h3{font-size:24px;margin-bottom:10px}
+    .health{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-bottom:14px}
+    .venture p{font-size:13px;color:var(--grey);line-height:1.55}
+    .product{padding:44px 0;border-top:1px solid var(--border)}
+    .product-head{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:26px}
+    .product-head h3{font-size:32px}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border)}
+    .product-cell{padding:22px 22px 0 0;min-height:150px}
+    .product-cell + .product-cell{padding-left:22px;border-left:1px solid var(--border)}
+    .product-cell strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;color:#555}
+    .product-cell p,.product-cell ul{font-size:13px;color:var(--grey);line-height:1.6}
+    .product-cell ul{padding-left:16px}
+    .attention{background:var(--paper);padding:58px 0}
+    .attention-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+    .attention h2{font-size:36px;margin:8px 0 18px}
+    .attention table,.decisions table{width:100%;border-collapse:collapse;font-size:13px}
+    th,td{text-align:left;padding:12px 10px;border-top:1px solid rgba(5,5,5,.13);vertical-align:top}
+    th{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#666}
+    .next{padding:68px 0;background:var(--black);color:var(--white)}
+    .next-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+    .next h2{font-size:42px;line-height:1.02}
+    .priorities{counter-reset:item;display:grid;gap:0;border-top:1px solid #333}
+    .priority{display:grid;grid-template-columns:44px 1fr;padding:18px 0;border-bottom:1px solid #333;color:#d2d2d2;font-size:14px}
+    .priority:before{counter-increment:item;content:counter(item,decimal-leading-zero);color:var(--gold);font-size:10px;letter-spacing:.12em;font-weight:700}
+    .evidence{padding:54px 0;color:#777;font-size:12px}
+    .evidence strong{color:var(--black)}
+    footer{border-top:1px solid var(--border);padding:26px 0 38px;color:#888;font-size:11px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){.cover,.statement-grid,.summary-grid,.attention-grid,.next-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.summary-block + .summary-block{border-left:0;border-top:1px solid var(--border);padding-left:0}.page{width:min(100% - 56px,1120px)}}
+    @media(max-width:640px){.page{width:min(100% - 32px,1120px)}.topbar{height:64px}.meta{display:none}.cover{padding:56px 0}.portfolio,.product-grid{grid-template-columns:1fr}.venture{border-right:0;border-bottom:1px solid var(--border)}.product-cell + .product-cell{border-left:0;padding-left:0;border-top:1px solid var(--border)}.section-head{align-items:flex-start;flex-direction:column}}
+    @media print{.page{width:auto;margin:0 18mm}.topbar{border:0}.cover{padding-top:18mm}.statement,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact}.product,.attention,.next{break-inside:avoid}body{font-size:11pt}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="page topbar-inner"><div class="brand"><img src="../brand/assets/mark-only-black.png" alt="" />The 24th Group</div><div class="meta"><span>Monthly Review</span><span>Internal</span></div></div></header>
+
+  <main>
+    <section class="page cover">
+      <div>
+        <div class="eyebrow">Group review</div>
+        <h1>Monthly<br />Review</h1>
+        <p>A concise record of what moved, what we learned, what needs attention and what matters next across the Group.</p>
+      </div>
+      <aside class="cover-card">
+        <div><strong>Review period</strong></div>
+        <div class="month">Month YYYY</div>
+        <div class="small"><span>Prepared: YYYY-MM-DD</span><span>Basis: Asana + GitHub + product status + operating notes</span></div>
+      </aside>
+    </section>
+
+    <section class="statement"><div class="page statement-grid"><h2>[One sentence that best describes the month.]</h2><p>[What changed at Group level, why it matters, and whether priorities shifted.]</p></div></section>
+
+    <section class="page content">
+      <div class="section-head"><div><div class="kicker">01 / Executive summary</div><h2>What mattered this month.</h2></div><p>Keep this section decision-useful. Progress, learning, blockers and material changes only.</p></div>
+      <div class="summary-grid">
+        <div class="summary-block"><h3>Summary</h3><ul><li>[Biggest progress]</li><li>[Biggest learning]</li><li>[Most important blocker]</li><li>[Priority or operating change]</li></ul></div>
+        <div class="summary-block"><h3>Founder attention</h3><ul><li>[Decision or intervention required]</li><li>[External dependency requiring follow-up]</li></ul></div>
+      </div>
+    </section>
+
+    <section class="page content">
+      <div class="section-head"><div><div class="kicker">02 / Portfolio</div><h2>Five businesses. One group.</h2></div><p>Use On track, Watch, Blocked or Paused. Explain anything that is not obvious.</p></div>
+      <div class="portfolio">
+        <article class="venture"><div class="type culture">Culture</div><h3>TheReplayMAG</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
+        <article class="venture"><div class="type infrastructure">Infrastructure</div><h3>Koroko</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
+        <article class="venture"><div class="type operations">Operations</div><h3>Oroko</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
+        <article class="venture"><div class="type operations">Operations</div><h3>Ogoro</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
+        <article class="venture"><div class="type operations">Operations</div><h3>Igho</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
+      </div>
+    </section>
+
+    <section class="page content">
+      <div class="section-head"><div><div class="kicker">03 / Product reviews</div><h2>Evidence, learning and next gates.</h2></div><p>Repeat this block for each venture. Keep task-level detail in Asana, not in the review.</p></div>
+
+      <article class="product"><div class="product-head"><h3>[Product]</h3><div class="health">[Health] · [Current phase]</div></div><div class="product-grid"><div class="product-cell"><strong>Built / completed</strong><p>[Implemented outcomes supported by repository or operational evidence.]</p></div><div class="product-cell"><strong>Learned</strong><p>[Usage, customer, technical or operational learning.]</p></div><div class="product-cell"><strong>Blocked / dependent</strong><p>[Real constraints only.]</p></div><div class="product-cell"><strong>Next</strong><p>[One to three outcome-level priorities.]</p></div></div></article>
+
+      <article class="product"><div class="product-head"><h3>[Product]</h3><div class="health">[Health] · [Current phase]</div></div><div class="product-grid"><div class="product-cell"><strong>Built / completed</strong><p>[...]</p></div><div class="product-cell"><strong>Learned</strong><p>[...]</p></div><div class="product-cell"><strong>Blocked / dependent</strong><p>[...]</p></div><div class="product-cell"><strong>Next</strong><p>[...]</p></div></div></article>
+    </section>
+
+    <section class="attention"><div class="page attention-grid"><div><div class="kicker">04 / Group operations</div><h2>What changed across the Group.</h2><p>[Reporting, finance, Zoho, shared infrastructure, brand, documentation standards, shared marketing or other cross-product operational changes.]</p></div><div><div class="kicker">Founder attention</div><table><thead><tr><th>Dependency</th><th>Product</th><th>Required action</th></tr></thead><tbody><tr><td>[Dependency]</td><td>[Product]</td><td>[Decision / action]</td></tr></tbody></table></div></div></section>
+
+    <section class="page content decisions">
+      <div class="section-head"><div><div class="kicker">05 / Decisions & observations</div><h2>What should remain visible.</h2></div><p>Record material decisions and genuine cross-product patterns. Do not manufacture synergy.</p></div>
+      <table><thead><tr><th>Date</th><th>Decision / observation</th><th>Reason</th><th>Affected</th></tr></thead><tbody><tr><td>[Date]</td><td>[Decision or observation]</td><td>[Why it matters]</td><td>[Products / Group]</td></tr></tbody></table>
+    </section>
+
+    <section class="next"><div class="page next-grid"><div><div class="kicker">06 / Next month</div><h2>Outcomes, not task lists.</h2></div><div class="priorities"><div class="priority">[Priority outcome]</div><div class="priority">[Priority outcome]</div><div class="priority">[Priority outcome]</div><div class="priority">[Priority outcome]</div><div class="priority">[Priority outcome]</div></div></div></section>
+
+    <section class="page evidence"><strong>Evidence rule:</strong> planned means present in roadmap/Asana; implemented means supported by repository or operational evidence; validated means supported by real usage, testing, customer evidence or operational proof. Record source conflicts or missing evidence explicitly.</section>
+  </main>
+
+  <footer><div class="page footer-inner"><span>The 24th Group © 2026</span><span>Internal monthly review template</span></div></footer>
+</body>
+</html>
