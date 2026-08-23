@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>The 24th Group — August 2026 Monthly Review</title>
   <link rel="icon" type="image/png" href="../../../brand/assets/mark-only-black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,13 +12,17 @@
   <style>
     :root{--black:#050505;--white:#fff;--paper:#f5f2ea;--soft:#f2efe8;--grey:#737373;--border:#dedbd3;--gold:#c58b18;--green:#556f43;--blue:#173653;--red:#9a463d}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     .page{width:min(1120px,calc(100% - 96px));margin:0 auto}
     h1,h2,h3,.display{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
-    .topbar{height:72px;border-bottom:1px solid rgba(5,5,5,.08);display:flex;align-items:center}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
-    .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700}.brand img{width:18px;height:22px;object-fit:contain}
-    .meta{display:flex;gap:28px;color:#666;font-size:12px}
+
+    .topbar{height:72px;border-bottom:1px solid rgba(5,5,5,.08);display:flex;align-items:center;background:rgba(255,255,255,.96);position:relative;z-index:20}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;min-width:0;white-space:nowrap}
+    .brand img{width:18px;height:22px;object-fit:contain;flex:0 0 auto}
+    .meta{display:flex;align-items:center;justify-content:flex-end;gap:22px;color:#666;font-size:12px;white-space:nowrap}
+
     .cover{padding:84px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:end}
     .eyebrow,.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
     .cover h1{font-size:clamp(4.2rem,7vw,7.2rem);line-height:.92;letter-spacing:-.025em;margin:18px 0 30px}
@@ -25,24 +30,72 @@
     .cover-card{background:var(--soft);padding:30px;border-radius:14px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
     .cover-card strong{font-size:13px}.cover-card .month{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-size:46px;line-height:1}.small{font-size:11px;color:#777;display:grid;gap:8px}
     .draft{display:inline-flex;width:max-content;padding:5px 8px;border:1px solid #cfb36f;color:#8a6514;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;border-radius:4px}
+
     .statement{background:var(--black);color:var(--white);padding:52px 0}.statement-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
     .statement h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.02;max-width:650px}.statement p{color:#c9c9c9;border-left:1px solid var(--gold);padding-left:26px;font-size:15px;line-height:1.7}
     section.content{padding:68px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,3.6vw,3.4rem);line-height:1;margin-top:8px}.section-head p{max-width:440px;color:var(--grey);font-size:14px}
     .summary-grid{display:grid;grid-template-columns:1.2fr .8fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.summary-block{padding:26px 26px 28px 0}.summary-block + .summary-block{padding-left:26px;border-left:1px solid var(--border)}.summary-block h3{font-size:24px;margin-bottom:16px}.summary-block ul{padding-left:18px;color:#555;display:grid;gap:10px;font-size:14px}
-    .portfolio{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.venture{min-height:235px;padding:22px 18px;border-right:1px solid var(--border)}.venture:last-child{border-right:0}.type{font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:18px}.culture{color:var(--gold)}.infrastructure{color:var(--blue)}.operations{color:var(--green)}.venture h3{font-size:24px;margin-bottom:8px}.health{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-bottom:14px}.health.ontrack{color:var(--blue)}.health.watch{color:#8a6514}.health.blocked{color:var(--red)}.venture p{font-size:13px;color:var(--grey);line-height:1.55}.venture strong{color:#444}
-    .product{padding:44px 0;border-top:1px solid var(--border)}.product-head{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:26px}.product-head h3{font-size:32px}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}.product-cell{padding:22px 22px 0 0;min-height:165px}.product-cell + .product-cell{padding-left:22px;border-left:1px solid var(--border)}.product-cell strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;color:#555}.product-cell p,.product-cell ul{font-size:13px;color:var(--grey);line-height:1.6}.product-cell ul{padding-left:16px;display:grid;gap:7px}
+
+    .portfolio{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .venture{min-height:285px;padding:22px 18px;border-right:1px solid var(--border)}.venture:last-child{border-right:0}
+    .venture-logo{height:52px;display:flex;align-items:center;margin:2px 0 18px}
+    .venture-logo img{display:block;max-width:106px;max-height:46px;object-fit:contain;object-position:left center}
+    .venture-logo.icon img{width:46px;height:46px}
+    .mini-igho{width:40px;height:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+    .mini-igho span{display:block;border-radius:50%;background:#08182b}.mini-igho span:nth-child(5){background:#e5a400}
+    .type{font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:10px}.culture{color:var(--gold)}.infrastructure{color:var(--blue)}.operations{color:var(--green)}
+    .venture h3{font-size:24px;margin-bottom:8px}.health{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#666;margin-bottom:14px}.health.ontrack{color:var(--blue)}.health.watch{color:#8a6514}.health.blocked{color:var(--red)}.venture p{font-size:13px;color:var(--grey);line-height:1.55}.venture strong{color:#444}
+
+    .product{padding:44px 0;border-top:1px solid var(--border)}.product-head{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:26px}.product-title{display:flex;align-items:center;gap:14px;min-width:0}.product-title img{width:38px;height:38px;object-fit:contain;object-position:center}.product-title img.wordmark{width:86px;height:32px;object-position:left center}.product-title .mini-igho{width:34px;height:34px;gap:3px}.product-head h3{font-size:32px}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}.product-cell{padding:22px 22px 0 0;min-height:165px}.product-cell + .product-cell{padding-left:22px;border-left:1px solid var(--border)}.product-cell strong{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;color:#555}.product-cell p,.product-cell ul{font-size:13px;color:var(--grey);line-height:1.6}.product-cell ul{padding-left:16px;display:grid;gap:7px}
+
     .attention{background:var(--paper);padding:58px 0}.attention-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px}.attention h2{font-size:36px;margin:8px 0 18px}.attention p{color:#646464;font-size:14px;line-height:1.7}.attention table,.decisions table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:12px 10px;border-top:1px solid rgba(5,5,5,.13);vertical-align:top}th{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#666}
     .note{margin-top:20px;padding:16px 18px;border-left:2px solid var(--gold);background:#fff;font-size:12px;color:#666;line-height:1.65}
     .next{padding:68px 0;background:var(--black);color:var(--white)}.next-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}.next h2{font-size:42px;line-height:1.02}.priorities{counter-reset:item;border-top:1px solid #333}.priority{display:grid;grid-template-columns:44px 1fr;padding:18px 0;border-bottom:1px solid #333;color:#d2d2d2;font-size:14px}.priority:before{counter-increment:item;content:counter(item,decimal-leading-zero);color:var(--gold);font-size:10px;letter-spacing:.12em;font-weight:700}
     .evidence{padding:54px 0;color:#777;font-size:12px}.evidence h2{font-size:28px;color:var(--black);margin:8px 0 20px}.evidence ul{padding-left:18px;display:grid;gap:8px}.evidence strong{color:var(--black)}
     footer{border-top:1px solid var(--border);padding:26px 0 38px;color:#888;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:900px){.cover,.statement-grid,.summary-grid,.attention-grid,.next-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,1fr)}.summary-block + .summary-block{border-left:0;border-top:1px solid var(--border);padding-left:0}.page{width:min(100% - 56px,1120px)}}
-    @media(max-width:640px){.page{width:min(100% - 32px,1120px)}.topbar{height:64px}.meta{display:none}.cover{padding:56px 0}.portfolio,.product-grid{grid-template-columns:1fr}.venture{border-right:0;border-bottom:1px solid var(--border)}.product-cell + .product-cell{border-left:0;padding-left:0;border-top:1px solid var(--border)}.section-head{align-items:flex-start;flex-direction:column}}
-    @media print{.page{width:auto;margin:0 18mm}.topbar{border:0}.cover{padding-top:18mm}.statement,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact}.product,.attention,.next{break-inside:avoid}}
+
+    .to-top{position:fixed;right:24px;bottom:24px;width:46px;height:46px;border:1px solid rgba(5,5,5,.15);border-radius:50%;background:var(--white);color:var(--black);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 30px rgba(5,5,5,.10);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease;z-index:50}
+    .to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+    .to-top:hover{background:var(--black);color:var(--white)}
+    .to-top svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+    @media(max-width:900px){
+      .page{width:min(100% - 56px,1120px)}
+      .cover,.statement-grid,.summary-grid,.attention-grid,.next-grid{grid-template-columns:1fr}
+      .cover{gap:42px}
+      .portfolio{grid-template-columns:repeat(2,1fr)}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .summary-block + .summary-block{border-left:0;border-top:1px solid var(--border);padding-left:0}
+      .statement h2{font-size:clamp(2.15rem,6vw,3.2rem)}
+    }
+    @media(max-width:640px){
+      .page{width:min(100% - 32px,1120px)}
+      .topbar{height:auto;min-height:64px;padding:13px 0}
+      .topbar-inner{gap:14px}
+      .brand{font-size:14px}.brand img{width:16px;height:20px}
+      .meta{gap:10px;font-size:10px}.meta span:first-child{display:none}
+      .meta span:last-child{padding:5px 7px;border:1px solid var(--border);border-radius:4px;text-transform:uppercase;letter-spacing:.08em;font-size:8px;font-weight:700}
+      .cover{padding:56px 0;gap:32px}.cover h1{font-size:clamp(4rem,20vw,5.2rem)}.cover-card{min-height:210px;padding:24px}.cover-card .month{font-size:40px}
+      .statement{padding:44px 0}.statement-grid{gap:28px}.statement p{padding-left:18px}
+      .portfolio,.product-grid{grid-template-columns:1fr}
+      .venture{border-right:0;border-bottom:1px solid var(--border);min-height:0;padding:24px 4px 28px}
+      .venture-logo{margin-bottom:14px}
+      .product-head{align-items:flex-start;flex-direction:column;gap:10px}
+      .product-cell + .product-cell{border-left:0;padding-left:0;border-top:1px solid var(--border)}
+      .section-head{align-items:flex-start;flex-direction:column}
+      .to-top{right:16px;bottom:16px;width:42px;height:42px}
+    }
+    @media print{.page{width:auto;margin:0 18mm}.topbar{border:0}.cover{padding-top:18mm}.statement,.next{-webkit-print-color-adjust:exact;print-color-adjust:exact}.product,.attention,.next{break-inside:avoid}.to-top{display:none}}
   </style>
 </head>
-<body>
-  <header class="topbar"><div class="page topbar-inner"><div class="brand"><img src="../../../brand/assets/mark-only-black.png" alt="" />The 24th Group</div><div class="meta"><span>Monthly Review</span><span>Internal</span></div></div></header>
+<body id="top">
+  <header class="topbar">
+    <div class="page topbar-inner">
+      <div class="brand"><img src="../../../brand/assets/mark-only-black.png" alt="" />The 24th Group</div>
+      <div class="meta"><span>Monthly Review</span><span>Internal</span></div>
+    </div>
+  </header>
+
   <main>
     <section class="page cover">
       <div><div class="eyebrow">Group review</div><h1>Monthly<br />Review</h1><p>August has been a month of turning the Group into a more deliberate operating system while moving Oroko into real internal testing and giving Ogoro its first concrete product form.</p></div>
@@ -73,46 +126,46 @@
     <section class="page content">
       <div class="section-head"><div><div class="kicker">02 / Portfolio</div><h2>Five businesses. One group.</h2></div><p>Health reflects evidence available in this review, not just product ambition.</p></div>
       <div class="portfolio">
-        <article class="venture"><div class="type culture">Culture</div><h3>TheReplayMAG</h3><div class="health watch">Watch · evidence thin</div><p>The Group site now presents TheReplayMAG as the culture business, but no dedicated August Asana or repository evidence was available in the reviewed sources.<br /><br /><strong>Next gate:</strong> establish a simple status source for monthly reporting.</p></article>
-        <article class="venture"><div class="type infrastructure">Infrastructure</div><h3>Koroko</h3><div class="health watch">Watch · readiness</div><p>Public Slate preview and private AppSail split are recorded, but cutover, live QA, payment, auth and operational evidence remain open.<br /><br /><strong>Next gate:</strong> evidence-based public cutover and beta readiness.</p></article>
-        <article class="venture"><div class="type operations">Operations</div><h3>Oroko</h3><div class="health ontrack">On track · hardening</div><p>Core workflow fixes landed and internal testing is now producing precise defects and productisation requirements.<br /><br /><strong>Next gate:</strong> resolve highest-impact testing findings, then begin structured external testing.</p></article>
-        <article class="venture"><div class="type operations">Operations</div><h3>Ogoro</h3><div class="health watch">Watch · discovery</div><p>Initial platform, whitepaper, process maps and energy intelligence dashboard/report mockups now exist. Asana has no execution tasks yet.<br /><br /><strong>Next gate:</strong> customer discovery that proves what information changes operational decisions.</p></article>
-        <article class="venture"><div class="type operations">Operations</div><h3>Igho</h3><div class="health watch">Watch · pre-build</div><p>Igho was formally added to the Group portfolio and positioned around payroll infrastructure for projects, creative productions and small teams. Structured build evidence is not yet present.<br /><br /><strong>Next gate:</strong> define and prove the smallest internal payroll workflow.</p></article>
+        <article class="venture"><div class="venture-logo"><img src="../../../logo/thereplaymag.png" alt="TheReplayMAG" /></div><div class="type culture">Culture</div><h3>TheReplayMAG</h3><div class="health watch">Watch · evidence thin</div><p>The Group site now presents TheReplayMAG as the culture business, but no dedicated August Asana or repository evidence was available in the reviewed sources.<br /><br /><strong>Next gate:</strong> establish a simple status source for monthly reporting.</p></article>
+        <article class="venture"><div class="venture-logo icon"><img src="../../../logo/koroko_icon.png" alt="Koroko" /></div><div class="type infrastructure">Infrastructure</div><h3>Koroko</h3><div class="health watch">Watch · readiness</div><p>Public Slate preview and private AppSail split are recorded, but cutover, live QA, payment, auth and operational evidence remain open.<br /><br /><strong>Next gate:</strong> evidence-based public cutover and beta readiness.</p></article>
+        <article class="venture"><div class="venture-logo icon"><img src="../../../logo/oroko_icon.svg" alt="Oroko" /></div><div class="type operations">Operations</div><h3>Oroko</h3><div class="health ontrack">On track · hardening</div><p>Core workflow fixes landed and internal testing is now producing precise defects and productisation requirements.<br /><br /><strong>Next gate:</strong> resolve highest-impact testing findings, then begin structured external testing.</p></article>
+        <article class="venture"><div class="venture-logo icon"><img src="../../../logo/ogoro_icon.png" alt="Ogoro" /></div><div class="type operations">Operations</div><h3>Ogoro</h3><div class="health watch">Watch · discovery</div><p>Initial platform, whitepaper, process maps and energy intelligence dashboard/report mockups now exist. Asana has no execution tasks yet.<br /><br /><strong>Next gate:</strong> customer discovery that proves what information changes operational decisions.</p></article>
+        <article class="venture"><div class="venture-logo"><span class="mini-igho" aria-label="Igho"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></div><div class="type operations">Operations</div><h3>Igho</h3><div class="health watch">Watch · pre-build</div><p>Igho was formally added to the Group portfolio and positioned around payroll infrastructure for projects, creative productions and small teams. Structured build evidence is not yet present.<br /><br /><strong>Next gate:</strong> define and prove the smallest internal payroll workflow.</p></article>
       </div>
     </section>
 
     <section class="page content">
       <div class="section-head"><div><div class="kicker">03 / Product reviews</div><h2>Evidence, learning and next gates.</h2></div><p>Task-level detail stays in Asana. This layer records outcomes and what they mean.</p></div>
 
-      <article class="product"><div class="product-head"><h3>Oroko</h3><div class="health ontrack">On track · internal testing / hardening</div></div><div class="product-grid">
+      <article class="product"><div class="product-head"><div class="product-title"><img src="../../../logo/oroko_icon.svg" alt="" /><h3>Oroko</h3></div><div class="health ontrack">On track · internal testing / hardening</div></div><div class="product-grid">
         <div class="product-cell"><strong>Built / completed</strong><ul><li>Initial Oroko build established.</li><li>Canvas fitting, connection deletion and deterministic edges improved.</li><li>App boot and process hydration issues addressed.</li><li>Process library hydration/defaults hardened.</li><li>Start and End nodes made freely movable.</li><li>Tier one and two workflow fixes completed.</li></ul></div>
         <div class="product-cell"><strong>Learned</strong><ul><li>Internal use is now valuable enough to expose product-level inconsistencies rather than just technical bugs.</li><li>Current and Future State must behave as one coherent system, with explicit copy semantics.</li><li>Decision branches need immediate visual feedback on canvas.</li><li>Attachments need guidance, progress and clear success/error states.</li><li>Public sharing needs a read-only canvas option, not only procedure output.</li></ul></div>
         <div class="product-cell"><strong>Blocked / dependent</strong><p>No external blocker is evident. The main constraint is product hardening: internal findings need to be resolved before external testing, pricing and launch-readiness work can be treated as meaningful.</p></div>
         <div class="product-cell"><strong>Next</strong><ul><li>Prioritise the internal-testing defects by impact.</li><li>Bring Future State to parity with Current State.</li><li>Fix branch-label persistence and upload feedback.</li><li>Implement read-only public canvas sharing.</li><li>Move into structured external testing only after the core flow feels coherent.</li></ul></div>
       </div></article>
 
-      <article class="product"><div class="product-head"><h3>Koroko</h3><div class="health watch">Watch · readiness / evidence</div></div><div class="product-grid">
+      <article class="product"><div class="product-head"><div class="product-title"><img src="../../../logo/koroko_icon.png" alt="" /><h3>Koroko</h3></div><div class="health watch">Watch · readiness / evidence</div></div><div class="product-grid">
         <div class="product-cell"><strong>Built / completed</strong><p>Asana records a public Catalyst Slate preview, a continuing AppSail private/workspace runtime, deployed account-control and Checker changes, payment hardening and source/deployment traceability from the prior release cycle.</p></div>
         <div class="product-cell"><strong>Learned</strong><p>The remaining work is less about adding surface area and more about proving runtime behaviour: API contract parity, authentication boundaries, organisation isolation, payment settlement, monitoring and rollback.</p></div>
         <div class="product-cell"><strong>Blocked / dependent</strong><ul><li>Slate Checker/auth routing still needs explicit API Gateway/AppSail handling.</li><li>Desktop/mobile smoke evidence remains open.</li><li>API Gateway tranche parity and cutover remain open.</li><li>Live settlement, invoice, auth and isolation evidence remain open.</li><li>NIPOST API/data request is an external dependency awaiting response.</li></ul></div>
         <div class="product-cell"><strong>Next</strong><ul><li>Close cutover gates before public-domain change.</li><li>Collect live evidence for auth, payments, API and rollback.</li><li>Follow up NIPOST response and assess fields, coverage, reuse rights, coordinates, limits and update frequency when received.</li></ul></div>
       </div></article>
 
-      <article class="product"><div class="product-head"><h3>Ogoro</h3><div class="health watch">Watch · concept validation</div></div><div class="product-grid">
+      <article class="product"><div class="product-head"><div class="product-title"><img src="../../../logo/ogoro_icon.png" alt="" /><h3>Ogoro</h3></div><div class="health watch">Watch · concept validation</div></div><div class="product-grid">
         <div class="product-cell"><strong>Built / completed</strong><ul><li>Initial platform mockup.</li><li>Whitepaper.</li><li>Eight process maps.</li><li>Energy intelligence dashboard and reports mockup.</li></ul></div>
         <div class="product-cell"><strong>Learned</strong><p>The product now has enough shape to test a sharper question: which generator, fuel, maintenance or facility signals actually cause operators to take action or save money?</p></div>
         <div class="product-cell"><strong>Blocked / dependent</strong><p>No structured Asana execution plan or customer-discovery evidence is recorded yet. The risk is building a visually convincing dashboard before proving the decision problem.</p></div>
         <div class="product-cell"><strong>Next</strong><ul><li>Run customer discovery with real facilities/operations users.</li><li>Test the dashboard against real decision moments.</li><li>Define a software-first wedge before considering custom hardware.</li></ul></div>
       </div></article>
 
-      <article class="product"><div class="product-head"><h3>Igho</h3><div class="health watch">Watch · pre-build</div></div><div class="product-grid">
+      <article class="product"><div class="product-head"><div class="product-title"><span class="mini-igho" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><h3>Igho</h3></div><div class="health watch">Watch · pre-build</div></div><div class="product-grid">
         <div class="product-cell"><strong>Built / completed</strong><p>The product was added to the Group portfolio, with a defined visual identity direction and positioning around payroll infrastructure for projects, creative productions and small teams.</p></div>
         <div class="product-cell"><strong>Learned</strong><p>The stronger wedge is not broad HR. The useful starting point is trusted payroll execution: employee setup, payroll preparation, approval, transfers, payslips and records, with project/creative contexts as a differentiator.</p></div>
         <div class="product-cell"><strong>Blocked / dependent</strong><p>No dedicated repository or Asana execution evidence was available in this review. The canonical final logo asset is also still to be exported.</p></div>
         <div class="product-cell"><strong>Next</strong><ul><li>Define the smallest internal payroll proof for The 24th Group.</li><li>Set up the product repository/status source.</li><li>Keep scope firmly away from broad HR-suite expansion.</li></ul></div>
       </div></article>
 
-      <article class="product"><div class="product-head"><h3>TheReplayMAG</h3><div class="health watch">Watch · operating / evidence thin</div></div><div class="product-grid">
+      <article class="product"><div class="product-head"><div class="product-title"><img class="wordmark" src="../../../logo/thereplaymag.png" alt="" /><h3>TheReplayMAG</h3></div><div class="health watch">Watch · operating / evidence thin</div></div><div class="product-grid">
         <div class="product-cell"><strong>Built / completed</strong><p>No August product-level build evidence was available in the Asana/GitHub sources reviewed. The venture remains represented as the Group's culture business on the new portfolio site.</p></div>
         <div class="product-cell"><strong>Learned</strong><p>The reporting process needs a lightweight source of truth for operating businesses too, not only software products.</p></div>
         <div class="product-cell"><strong>Blocked / dependent</strong><p>Monthly evidence is not currently structured enough to assess movement confidently.</p></div>
@@ -157,6 +210,19 @@
       <li><strong>Evidence gap:</strong> no structured August Asana/repository evidence was available for TheReplayMAG or Igho, and Koroko's Asana deployment evidence references work not visible as August commits on the default KorokoAPI branch.</li>
     </ul></section>
   </main>
+
   <footer><div class="page footer-inner"><span>The 24th Group © 2026</span><span>August 2026 · Draft month-to-date review</span></div></footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll to top" title="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6" /></svg>
+  </button>
+
+  <script>
+    const toTop = document.getElementById('toTop');
+    const syncToTop = () => toTop.classList.toggle('visible', window.scrollY > 520);
+    window.addEventListener('scroll', syncToTop, { passive: true });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    syncToTop();
+  </script>
 </body>
 </html>
