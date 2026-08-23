@@ -1,0 +1,62 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Oroko Logo Icon</title>
+  <desc id="desc">Four rounded orange process modules arranged around a clear central space.</desc>
+
+  
+
+  <!-- Top-left module -->
+  <path d="
+    M92 166
+    V124
+    C92 82.026 126.026 48 168 48
+    H224
+    V108
+    H188
+    C165.909 108 148 125.909 148 148
+    V166
+    H92
+    Z"
+    fill="#FF6200"/>
+
+  <!-- Top-right module -->
+  <path d="
+    M240 48
+    H344
+    C385.974 48 420 82.026 420 124
+    V166
+    H364
+    V148
+    C364 125.909 346.091 108 324 108
+    H240
+    V48
+    Z"
+    fill="#FF6200"/>
+
+  <!-- Bottom-left module -->
+  <path d="
+    M92 182
+    H148
+    V220
+    C148 242.091 165.909 260 188 260
+    H224
+    V420
+    H168
+    C126.026 420 92 385.974 92 344
+    V182
+    Z"
+    fill="#FF6200"/>
+
+  <!-- Bottom-right module -->
+  <path d="
+    M240 260
+    H324
+    C346.091 260 364 242.091 364 220
+    V182
+    H420
+    V344
+    C420 385.974 385.974 420 344 420
+    H240
+    V260
+    Z"
+    fill="#FF6200"/>
+</svg>
