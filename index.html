@@ -4,29 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The 24th Group</title>
-  <meta name="description" content="The 24th Group is a founder-led venture and operations company building culture, infrastructure and technology ventures with clarity, discipline and long-term intent." />
+  <meta name="description" content="The 24th Group builds and operates focused ventures across culture, infrastructure and operational technology." />
   <meta property="og:title" content="The 24th Group" />
-  <meta property="og:description" content="Building culture, infrastructure and technology ventures with clarity, discipline and long-term intent." />
+  <meta property="og:description" content="Focused ventures across culture, infrastructure and operational technology." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 22'%3E%3Crect x='0' y='0' width='18' height='22' rx='3' fill='%23050505'/%3E%3Crect x='5' y='13' width='8' height='8' transform='rotate(45 9 17)' fill='%23ffffff'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --black: #050505;
       --white: #ffffff;
-      --grey: #777777;
-      --light-grey: #f4f4f4;
-      --border: #dedede;
-      --soft-accent: #f2efe8;
-      --green: #1a8a4a;
-      --green-soft: #e9f7ee;
-      --green-border: #bfe4cc;
-      --orange: #c2650c;
-      --orange-soft: #fbf0e2;
-      --orange-border: #f0d3a8;
+      --paper: #f5f2ea;
+      --grey: #737373;
+      --border: #dedbd3;
+      --gold: #c58b18;
+      --green: #556f43;
+      --blue: #173653;
       --igho-ink: #08182b;
       --igho-gold: #e5a400;
     }
@@ -42,10 +38,11 @@
     }
 
     body {
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
       background: var(--white);
       color: var(--black);
-      line-height: 1.45;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -54,7 +51,7 @@
     }
 
     .container {
-      width: min(1040px, calc(100% - 96px));
+      width: min(1120px, calc(100% - 96px));
       margin: 0 auto;
     }
 
@@ -62,17 +59,18 @@
       height: 72px;
       display: flex;
       align-items: center;
+      border-bottom: 1px solid rgba(5, 5, 5, 0.06);
     }
 
     .nav {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 56px;
+      justify-content: space-between;
+      gap: 48px;
     }
 
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
       font-size: 15px;
@@ -86,6 +84,7 @@
       background: var(--black);
       border-radius: 3px 3px 1px 1px;
       position: relative;
+      flex: 0 0 auto;
     }
 
     .brand-mark::after {
@@ -101,10 +100,10 @@
 
     .nav-links {
       display: flex;
-      gap: 34px;
+      gap: 28px;
       align-items: center;
-      color: #666666;
-      font-size: 14px;
+      color: #666;
+      font-size: 13px;
       font-weight: 600;
     }
 
@@ -113,236 +112,322 @@
     }
 
     .hero {
-      padding: 70px 0 80px;
+      padding: 88px 0 92px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 0.95fr 0.9fr;
-      gap: 72px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      gap: 84px;
       align-items: center;
     }
 
     .hero-copy {
-      max-width: 560px;
+      max-width: 620px;
+    }
+
+    h1,
+    h2,
+    h3,
+    .statement-title,
+    .principles-title {
+      font-family: 'Oswald', Arial, sans-serif;
+      font-weight: 600;
     }
 
     h1 {
-      font-family: 'Oswald', Inter, Arial, sans-serif;
-      font-size: clamp(3.5rem, 6vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: -0.01em;
-      margin-bottom: 72px;
-      font-weight: 600;
+      font-size: clamp(4.2rem, 7vw, 7.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin-bottom: 42px;
     }
 
     .hero-copy p {
-      max-width: 480px;
-      color: var(--grey);
-      font-size: 17px;
-      line-height: 1.55;
+      max-width: 530px;
+      color: #555;
+      font-size: 18px;
+      line-height: 1.62;
       margin-bottom: 28px;
     }
 
-    .visual-card {
-      min-height: 440px;
-      border-radius: 14px;
-      background: var(--soft-accent);
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #666;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-note::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .group-map {
+      min-height: 420px;
       position: relative;
-      overflow: hidden;
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      display: grid;
+      place-items: center;
     }
 
-    .visual-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      font-size: 12px;
-      color: #777;
-      position: relative;
-      z-index: 2;
-    }
-
-    .visual-title {
-      font-family: 'Oswald', Inter, Arial, sans-serif;
-      font-size: clamp(3.4rem, 5.5vw, 5.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.01em;
-      font-weight: 600;
-      max-width: 420px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .visual-orbit {
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 999px;
-      right: -60px;
-      bottom: -60px;
-    }
-
-    .visual-orbit::before,
-    .visual-orbit::after {
+    .group-map::before {
       content: "";
       position: absolute;
-      border-radius: 999px;
+      width: min(360px, 88%);
+      aspect-ratio: 1;
+      border: 1px solid rgba(5, 5, 5, 0.12);
+      border-radius: 50%;
+    }
+
+    .map-axis-x,
+    .map-axis-y {
+      position: absolute;
+      background: rgba(5, 5, 5, 0.12);
+    }
+
+    .map-axis-x {
+      width: min(360px, 88%);
+      height: 1px;
+    }
+
+    .map-axis-y {
+      width: 1px;
+      height: min(360px, 88%);
+    }
+
+    .map-centre {
+      width: 72px;
+      height: 72px;
+      border: 2px solid var(--black);
+      display: grid;
+      place-items: center;
+      font-family: 'Oswald', Arial, sans-serif;
+      font-size: 39px;
+      line-height: 1;
+      background: var(--white);
+      position: relative;
+      z-index: 2;
+    }
+
+    .map-label {
+      position: absolute;
+      width: 145px;
+      text-align: center;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #555;
+      z-index: 3;
+    }
+
+    .map-label strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .map-label.culture {
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .map-label.culture strong {
+      color: var(--gold);
+    }
+
+    .map-label.infrastructure {
+      left: -8px;
+      bottom: 42px;
+    }
+
+    .map-label.infrastructure strong {
+      color: var(--blue);
+    }
+
+    .map-label.operations {
+      right: -8px;
+      bottom: 42px;
+    }
+
+    .map-label.operations strong {
+      color: var(--green);
+    }
+
+    .map-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      position: absolute;
+      z-index: 4;
+    }
+
+    .map-dot.top {
+      top: 29px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .map-dot.left {
+      left: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .map-dot.right {
+      right: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .statement {
       background: var(--black);
+      color: var(--white);
+      padding: 58px 0;
     }
 
-    .visual-orbit::before {
-      width: 52px;
-      height: 52px;
-      left: 40px;
-      top: 36px;
+    .statement-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 88px;
+      align-items: center;
     }
 
-    .visual-orbit::after {
-      width: 24px;
-      height: 24px;
-      right: 62px;
-      bottom: 78px;
+    .statement-title {
+      max-width: 590px;
+      font-size: clamp(2.2rem, 4vw, 4.15rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+    }
+
+    .statement-copy {
+      max-width: 430px;
+      border-left: 1px solid rgba(197, 139, 24, 0.75);
+      padding-left: 28px;
+      color: #c7c7c7;
+      font-size: 15px;
+      line-height: 1.7;
     }
 
     section {
-      padding: 56px 0;
+      padding: 72px 0;
     }
 
-    .section-intro {
-      max-width: 650px;
-      margin-bottom: 30px;
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 38px;
     }
 
-    .label {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 18px;
+    .section-kicker {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
     h2 {
-      font-family: 'Oswald', Inter, Arial, sans-serif;
-      font-size: clamp(2.1rem, 3.8vw, 3.7rem);
+      font-size: clamp(2.2rem, 3.8vw, 3.7rem);
       line-height: 1;
       letter-spacing: -0.01em;
-      margin-bottom: 18px;
-      font-weight: 600;
     }
 
-    .section-intro p {
+    .section-heading p {
+      max-width: 440px;
       color: var(--grey);
-      font-size: 17px;
-      line-height: 1.55;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .projects {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 14px;
-      align-items: stretch;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-card-link,
+    .project-card-static {
+      display: block;
+      min-width: 0;
+      border-right: 1px solid var(--border);
+    }
+
+    .project-card-link:last-child,
+    .project-card-static:last-child {
+      border-right: 0;
     }
 
     .project-card {
-      min-height: 220px;
+      min-height: 315px;
       height: 100%;
-      width: 100%;
-      border: 1px solid rgba(5, 5, 5, 0.08);
-      border-radius: 12px;
-      padding: 22px;
+      padding: 24px 18px 22px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       background: var(--white);
-      box-shadow: 0 1px 2px rgba(5, 5, 5, 0.03);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .project-card--muted {
-      background: var(--white);
-      border-color: rgba(5, 5, 5, 0.08);
-      box-shadow: none;
-    }
-
-    .project-card--muted .project-logo--wide img {
-      filter: grayscale(20%);
-      opacity: 0.85;
-    }
-
-    .project-card-link {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .project-card-link .project-card {
-      border-color: rgba(5, 5, 5, 0.14);
-      box-shadow: 0 2px 8px rgba(5, 5, 5, 0.05);
+      transition: background 0.2s ease;
     }
 
     .project-card-link:hover .project-card {
-      transform: translateY(-4px);
-      border-color: rgba(5, 5, 5, 0.2);
-      box-shadow: 0 16px 32px rgba(5, 5, 5, 0.1);
+      background: #faf9f6;
     }
 
     .project-meta {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
     }
 
     .project-logo {
-      width: 120px;
+      width: 112px;
       max-width: 100%;
-      height: 56px;
-      min-width: 0;
-      border-radius: 8px;
+      height: 54px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       flex-shrink: 1;
       overflow: visible;
       padding: 0;
     }
 
     .project-logo--icon {
-      width: 60px;
-      height: 60px;
-      padding: 0;
+      width: 56px;
+      height: 56px;
     }
 
     .project-logo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      object-position: center;
+      object-position: left center;
     }
 
     .igho-logo {
-      width: 122px;
+      width: 126px;
       height: 56px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
       color: var(--igho-ink);
     }
 
     .igho-mark {
-      width: 43px;
-      height: 43px;
+      width: 39px;
+      height: 39px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -362,151 +447,321 @@
     }
 
     .igho-wordmark {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 31px;
+      font-size: 30px;
       line-height: 1;
       font-weight: 600;
       letter-spacing: -0.065em;
     }
 
-    .status-tag {
+    .status {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      width: fit-content;
-      flex-shrink: 0;
-      padding: 5px 10px 5px 8px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
       color: #777;
-      background: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
       white-space: nowrap;
     }
 
-    .status-dot {
+    .status::before {
+      content: "";
       width: 6px;
       height: 6px;
-      border-radius: 2px;
+      border-radius: 50%;
       background: currentColor;
-      flex-shrink: 0;
     }
 
-    .status-tag.live {
+    .status.operating {
+      color: var(--blue);
+    }
+
+    .status.building {
       color: var(--green);
-      background: var(--green-soft);
-      border-color: var(--green-border);
     }
 
-    .status-tag.progress {
-      color: var(--orange);
-      background: var(--orange-soft);
-      border-color: var(--orange-border);
+    .project-body {
+      margin-top: auto;
+    }
+
+    .category {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    .category.culture {
+      color: var(--gold);
+    }
+
+    .category.infrastructure {
+      color: var(--blue);
+    }
+
+    .category.operations {
+      color: var(--green);
     }
 
     .project-card h3 {
-      font-family: 'Oswald', Inter, Arial, sans-serif;
-      font-size: 22px;
-      letter-spacing: 0;
-      font-weight: 500;
+      font-size: 24px;
       line-height: 1;
       margin-bottom: 12px;
     }
 
     .project-card p {
-      font-size: 14px;
-      line-height: 1.45;
       color: var(--grey);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .principles {
+      background: var(--paper);
+      padding: 56px 0 60px;
+    }
+
+    .principles-title {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1;
+      margin-bottom: 34px;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(5, 5, 5, 0.12);
+    }
+
+    .principle {
+      padding: 24px 28px 0 0;
+      border-right: 1px solid rgba(5, 5, 5, 0.12);
+      min-height: 105px;
+    }
+
+    .principle + .principle {
+      padding-left: 28px;
+    }
+
+    .principle:last-child {
+      border-right: 0;
+    }
+
+    .principle strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .principle p {
+      max-width: 260px;
+      color: #686868;
+      font-size: 13px;
+      line-height: 1.55;
     }
 
     footer {
-      padding: 26px 0;
-      border-top: 1px solid var(--border);
-      color: #888;
-      font-size: 13px;
+      background: var(--black);
+      color: var(--white);
+      padding: 34px 0;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 32px;
     }
 
-    @media (max-width: 1100px) {
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-brand .brand-mark {
+      background: var(--white);
+    }
+
+    .footer-brand .brand-mark::after {
+      background: var(--black);
+    }
+
+    .footer-meta {
+      color: #8d8d8d;
+      font-size: 11px;
+      text-align: right;
+    }
+
+    @media (max-width: 1120px) {
       .projects {
         grid-template-columns: repeat(2, 1fr);
+        border-bottom: 0;
+      }
+
+      .project-card-link,
+      .project-card-static {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .project-card-link:nth-child(2n),
+      .project-card-static:nth-child(2n) {
+        border-right: 0;
+      }
+
+      .project-card-static:last-child {
+        border-right: 1px solid var(--border);
       }
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 900px) {
       .container {
-        width: min(100% - 64px, 1040px);
+        width: min(100% - 56px, 1120px);
+      }
+
+      .hero-grid,
+      .statement-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 52px;
+        gap: 42px;
       }
 
-      h1 {
-        margin-bottom: 48px;
+      .group-map {
+        min-height: 390px;
+      }
+
+      .statement-grid {
+        gap: 32px;
+      }
+
+      .statement-copy {
+        max-width: 600px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
 
     @media (max-width: 640px) {
       .container {
-        width: min(100% - 32px, 1040px);
+        width: min(100% - 32px, 1120px);
       }
 
       header {
-        height: 66px;
-      }
-
-      .nav {
-        gap: 20px;
+        height: 64px;
       }
 
       .nav-links {
-        gap: 16px;
-        font-size: 13px;
+        gap: 18px;
       }
 
       .hero {
-        padding: 48px 0 58px;
+        padding: 58px 0 54px;
       }
 
       h1 {
-        font-size: 4rem;
-        margin-bottom: 52px;
+        font-size: 4.15rem;
+        margin-bottom: 30px;
       }
 
       .hero-copy p {
         font-size: 16px;
       }
 
-      .visual-card {
-        min-height: 360px;
-        border-radius: 14px;
+      .group-map {
+        min-height: 330px;
       }
 
-      .visual-title {
-        font-size: 4rem;
+      .group-map::before,
+      .map-axis-x {
+        width: 290px;
+      }
+
+      .map-axis-y {
+        height: 290px;
+      }
+
+      .map-label {
+        width: 115px;
+        font-size: 9px;
+      }
+
+      .map-label.infrastructure {
+        left: 0;
+        bottom: 24px;
+      }
+
+      .map-label.operations {
+        right: 0;
+        bottom: 24px;
+      }
+
+      .map-dot.left {
+        left: 14px;
+      }
+
+      .map-dot.right {
+        right: 14px;
+      }
+
+      .statement {
+        padding: 44px 0;
       }
 
       section {
-        padding: 52px 0;
+        padding: 58px 0;
       }
 
       .projects {
         grid-template-columns: 1fr;
       }
 
+      .project-card-link,
+      .project-card-static,
+      .project-card-static:last-child,
+      .project-card-link:nth-child(2n),
+      .project-card-static:nth-child(2n) {
+        border-right: 0;
+      }
+
       .project-card {
-        min-height: 200px;
-        height: auto;
+        min-height: 250px;
+        padding: 22px 4px 24px;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .principle,
+      .principle + .principle {
+        padding: 20px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(5, 5, 5, 0.12);
+        min-height: 0;
+      }
+
+      .principle:last-child {
+        border-bottom: 0;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-meta {
+        text-align: left;
       }
     }
   </style>
@@ -515,14 +770,14 @@
 <body>
   <header>
     <div class="container nav">
-      <a href="#" class="brand">
-        <span class="brand-mark"></span>
+      <a href="#" class="brand" aria-label="The 24th Group home">
+        <span class="brand-mark" aria-hidden="true"></span>
         The 24th Group
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#work">The Work</a>
+        <a href="#work">Work</a>
       </nav>
     </div>
   </header>
@@ -532,57 +787,61 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1>The 24th<br />Group</h1>
-
           <p>
-            Building culture, infrastructure and technology ventures with clarity,
-            discipline and long-term intent.
+            We build and operate focused ventures across culture, infrastructure
+            and operational technology.
           </p>
+          <span class="hero-note">Built for long-term value</span>
         </div>
 
-        <div class="visual-card">
-          <div class="visual-top">
-            <span>Founder-led venture & operations company</span>
-            <span>Est. 2026</span>
+        <div class="group-map" aria-label="The 24th Group operates across culture, infrastructure and operations">
+          <span class="map-axis-x" aria-hidden="true"></span>
+          <span class="map-axis-y" aria-hidden="true"></span>
+          <span class="map-dot top" aria-hidden="true"></span>
+          <span class="map-dot left" aria-hidden="true"></span>
+          <span class="map-dot right" aria-hidden="true"></span>
+          <div class="map-centre" aria-hidden="true">24</div>
+
+          <div class="map-label culture">
+            <strong>Culture</strong>
+            Stories, communities and platforms that reflect who we are.
           </div>
 
-          <div class="visual-title">
-            Culture.<br />
-            Systems.<br />
-            Future.
+          <div class="map-label infrastructure">
+            <strong>Infrastructure</strong>
+            Foundational systems that create trust, identity and certainty.
           </div>
 
-          <div class="visual-orbit"></div>
+          <div class="map-label operations">
+            <strong>Operations</strong>
+            Tools that support daily work, decisions and delivery.
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-intro">
-          <span class="label">01_About</span>
-
-          <h2>Built as the strategic home for long-term work.</h2>
-
-          <p>
-            The 24th Group is the strategic home for a growing ecosystem of projects
-            across media, culture, technology and infrastructure. We build practical
-            systems, creative platforms and operational tools designed to support real
-            communities, businesses and markets.
-          </p>
+    <section class="statement" id="about">
+      <div class="container statement-grid">
+        <div class="statement-title">
+          We build where important work is still fragmented, manual or unreliable.
         </div>
+        <p class="statement-copy">
+          The Group gives focused products a shared operating home while each venture
+          stays close to the real problem it is built to solve.
+        </p>
       </div>
     </section>
 
     <section id="work">
       <div class="container">
-        <div class="section-intro">
-          <span class="label">02_The Work</span>
-
-          <h2>Projects across culture, infrastructure and technology.</h2>
-
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">The work</div>
+            <h2>Five businesses. One group.</h2>
+          </div>
           <p>
-            A focused ecosystem of ventures designed to serve communities, creative
-            markets and practical operational needs.
+            A focused portfolio across culture, location infrastructure, process clarity,
+            energy operations and payroll.
           </p>
         </div>
 
@@ -590,100 +849,109 @@
           <a class="project-card-link" href="https://thereplaymag.com?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
             <article class="project-card">
               <div class="project-meta">
-                <div class="project-logo project-logo--wide">
+                <div class="project-logo">
                   <img src="logo/thereplaymag.png" alt="TheReplayMAG" />
                 </div>
-                <span class="status-tag live"><span class="status-dot"></span>Live</span>
+                <span class="status operating">Operating</span>
               </div>
-
-              <div>
+              <div class="project-body">
+                <span class="category culture">Culture</span>
                 <h3>TheReplayMAG</h3>
-                <p>
-                  An independent culture publication spotlighting emerging creatives,
-                  underground scenes and thoughtful stories.
-                </p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://ogoro-758593152.development.catalystserverless.com/app/index.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card project-card--muted">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon">
-                  <img src="logo/ogoro_icon.png" alt="Ogoro" />
-                </div>
-                <span class="status-tag progress"><span class="status-dot"></span>In progress</span>
-              </div>
-
-              <div>
-                <h3>Ogoro</h3>
-                <p>
-                  An Operations Intelligence Platform helping organisations manage generators,
-                  fuel and maintenance with real-time visibility.
-                </p>
+                <p>An independent culture publication spotlighting emerging creatives and underground scenes.</p>
               </div>
             </article>
           </a>
 
           <a class="project-card-link" href="https://koroko.development.catalystappsail.com/?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card project-card--muted">
+            <article class="project-card">
               <div class="project-meta">
                 <div class="project-logo project-logo--icon">
                   <img src="logo/koroko_icon.png" alt="Koroko" />
                 </div>
-                <span class="status-tag progress"><span class="status-dot"></span>In progress</span>
+                <span class="status operating">Operating</span>
               </div>
-
-              <div>
+              <div class="project-body">
+                <span class="category infrastructure">Infrastructure</span>
                 <h3>Koroko</h3>
-                <p>
-                  A location infrastructure platform building trusted address, direction
-                  and place intelligence for Nigeria.
-                </p>
+                <p>Location infrastructure for trusted address, direction and place intelligence in Nigeria.</p>
               </div>
             </article>
           </a>
 
           <a class="project-card-link" href="https://korokoro-758593152.development.catalystserverless.com/app/landing-mockup.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card project-card--muted">
+            <article class="project-card">
               <div class="project-meta">
                 <div class="project-logo project-logo--icon">
                   <img src="logo/oroko_icon.svg" alt="Oroko" />
                 </div>
-                <span class="status-tag progress"><span class="status-dot"></span>In progress</span>
+                <span class="status building">Building</span>
               </div>
-
-              <div>
+              <div class="project-body">
+                <span class="category operations">Operations</span>
                 <h3>Oroko</h3>
-                <p>
-                  A canvas-first process mapping tool that captures a workflow once and
-                  generates diagrams, procedures and analysis from the same record.
-                </p>
+                <p>Structured process mapping and documentation for teams that need clarity and control.</p>
               </div>
             </article>
           </a>
 
-          <article class="project-card project-card--muted" aria-label="Igho, in progress">
-            <div class="project-meta">
-              <div class="igho-logo" aria-label="Igho">
-                <span class="igho-mark" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                  <span></span><span></span><span></span>
-                  <span></span><span></span><span></span>
-                </span>
-                <span class="igho-wordmark">igho</span>
+          <a class="project-card-link" href="https://ogoro-758593152.development.catalystserverless.com/app/index.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
+            <article class="project-card">
+              <div class="project-meta">
+                <div class="project-logo project-logo--icon">
+                  <img src="logo/ogoro_icon.png" alt="Ogoro" />
+                </div>
+                <span class="status building">Building</span>
               </div>
-              <span class="status-tag progress"><span class="status-dot"></span>In progress</span>
-            </div>
+              <div class="project-body">
+                <span class="category operations">Operations</span>
+                <h3>Ogoro</h3>
+                <p>Operational intelligence for energy systems, facilities and physical assets.</p>
+              </div>
+            </article>
+          </a>
 
-            <div>
-              <h3>Igho</h3>
-              <p>
-                Payroll infrastructure for projects, creative productions and small teams
-                that need people paid clearly, reliably and on time.
-              </p>
-            </div>
-          </article>
+          <div class="project-card-static" aria-label="Igho, building">
+            <article class="project-card">
+              <div class="project-meta">
+                <div class="igho-logo" aria-label="Igho">
+                  <span class="igho-mark" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                  </span>
+                  <span class="igho-wordmark">igho</span>
+                </div>
+                <span class="status building">Building</span>
+              </div>
+              <div class="project-body">
+                <span class="category operations">Operations</span>
+                <h3>Igho</h3>
+                <p>Payroll infrastructure for projects, creative productions and small teams.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-title">
+      <div class="container">
+        <div class="section-kicker">How we think</div>
+        <h2 class="principles-title" id="principles-title">Three principles guide how we build.</h2>
+
+        <div class="principles-grid">
+          <div class="principle">
+            <strong>Clarity</strong>
+            <p>We focus on real problems and make the complex easier to understand.</p>
+          </div>
+          <div class="principle">
+            <strong>Discipline</strong>
+            <p>We build deliberately, stay close to evidence and avoid unnecessary complexity.</p>
+          </div>
+          <div class="principle">
+            <strong>Long-term</strong>
+            <p>We optimise for ownership, durability and useful systems that can compound over time.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -691,8 +959,11 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>The 24th Group © 2026</span>
-      <span>Building with clarity.</span>
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        The 24th Group
+      </div>
+      <div class="footer-meta">© 2026 The 24th Group · Building with clarity.</div>
     </div>
   </footer>
 </body>
