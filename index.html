@@ -3,641 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 24th Group</title>
-  <meta name="description" content="The 24th Group builds and operates focused ventures across culture, infrastructure and operational technology." />
-  <meta property="og:title" content="The 24th Group" />
-  <meta property="og:description" content="Focused ventures across culture, infrastructure and operational technology." />
-  <meta property="og:type" content="website" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>The 24th Group | August 2026 Monthly Review</title>
+  <meta name="description" content="The 24th Group internal monthly operating review for August 2026." />
   <link rel="icon" type="image/png" href="brand/assets/mark-only-black.png" />
-  <link rel="apple-touch-icon" href="brand/assets/mark-only-black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --black: #050505;
-      --white: #ffffff;
-      --paper: #f5f2ea;
-      --soft-accent: #f2efe8;
-      --grey: #737373;
-      --border: #dedbd3;
-      --gold: #c58b18;
-      --green: #556f43;
-      --blue: #173653;
-      --igho-ink: #08182b;
-      --igho-gold: #e5a400;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, calc(100% - 96px)); margin: 0 auto; }
-
-    header {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(5, 5, 5, 0.06);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .brand-mark {
-      width: 18px;
-      height: 22px;
-      background: var(--black);
-      border-radius: 3px 3px 1px 1px;
-      position: relative;
-      flex: 0 0 auto;
-    }
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 5px;
-      width: 8px;
-      height: 8px;
-      background: var(--white);
-      transform: rotate(45deg);
-    }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      color: #666;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .nav-links a:hover { color: var(--black); }
-
-    .hero { padding: 88px 0 92px; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      gap: 84px;
-      align-items: center;
-    }
-    .hero-copy { max-width: 620px; }
-
-    h1,
-    h2,
-    h3,
-    .statement-title,
-    .principles-title,
-    .visual-title {
-      font-family: 'IBM Plex Sans Condensed', Arial, sans-serif;
-      font-weight: 600;
-    }
-    h1 {
-      font-size: clamp(4.2rem, 7vw, 7.2rem);
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      margin-bottom: 42px;
-    }
-    .hero-copy p {
-      max-width: 530px;
-      color: #555;
-      font-size: 18px;
-      line-height: 1.62;
-      margin-bottom: 28px;
-    }
-    .hero-note {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #666;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-    .hero-note::before {
-      content: "";
-      width: 18px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    .visual-card {
-      min-height: 420px;
-      border-radius: 14px;
-      background: var(--soft-accent);
-      position: relative;
-      overflow: hidden;
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .visual-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 24px;
-      font-size: 11px;
-      line-height: 1.4;
-      color: #777;
-      position: relative;
-      z-index: 2;
-    }
-    .visual-title {
-      font-size: clamp(3.4rem, 5.5vw, 5.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.01em;
-      max-width: 420px;
-      position: relative;
-      z-index: 2;
-    }
-    .visual-orbit {
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 999px;
-      right: -60px;
-      bottom: -60px;
-    }
-    .visual-orbit::before,
-    .visual-orbit::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      background: var(--black);
-    }
-    .visual-orbit::before {
-      width: 52px;
-      height: 52px;
-      left: 40px;
-      top: 36px;
-    }
-    .visual-orbit::after {
-      width: 24px;
-      height: 24px;
-      right: 62px;
-      bottom: 78px;
-    }
-
-    .statement {
-      background: var(--black);
-      color: var(--white);
-      padding: 58px 0;
-    }
-    .statement-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 88px;
-      align-items: center;
-    }
-    .statement-title {
-      max-width: 590px;
-      font-size: clamp(2.2rem, 4vw, 4.15rem);
-      line-height: 1.02;
-      letter-spacing: -0.01em;
-    }
-    .statement-copy {
-      max-width: 430px;
-      border-left: 1px solid rgba(197, 139, 24, 0.75);
-      padding-left: 28px;
-      color: #c7c7c7;
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    section { padding: 72px 0; }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      gap: 32px;
-      align-items: end;
-      margin-bottom: 38px;
-    }
-    .section-kicker {
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: clamp(2.2rem, 3.8vw, 3.7rem);
-      line-height: 1;
-      letter-spacing: -0.01em;
-    }
-    .section-heading p {
-      max-width: 440px;
-      color: var(--grey);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .project-card-link,
-    .project-card-static {
-      display: block;
-      min-width: 0;
-      border-right: 1px solid var(--border);
-    }
-    .project-card-link:last-child,
-    .project-card-static:last-child { border-right: 0; }
-    .project-card {
-      min-height: 275px;
-      height: 100%;
-      padding: 24px 18px 22px;
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      transition: background 0.2s ease;
-    }
-    .project-card-link:hover .project-card { background: #faf9f6; }
-    .project-meta {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .project-logo {
-      width: 112px;
-      max-width: 100%;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-shrink: 1;
-      overflow: visible;
-      padding: 0;
-    }
-    .project-logo--icon { width: 56px; height: 56px; }
-    .project-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: left center;
-    }
-    .igho-logo {
-      width: 126px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--igho-ink);
-    }
-    .igho-mark {
-      width: 39px;
-      height: 39px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 4px;
-      flex: 0 0 auto;
-    }
-    .igho-mark span {
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: var(--igho-ink);
-    }
-    .igho-mark span:nth-child(5) { background: var(--igho-gold); }
-    .igho-wordmark {
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.065em;
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #777;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .status::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-    .status.operating { color: var(--blue); }
-    .status.building { color: var(--green); }
-    .project-body { margin-top: 10px; }
-    .category {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: #777;
-    }
-    .category.culture { color: var(--gold); }
-    .category.infrastructure { color: var(--blue); }
-    .category.operations { color: var(--green); }
-    .project-card h3 { font-size: 24px; line-height: 1; margin-bottom: 12px; }
-    .project-card p { color: var(--grey); font-size: 13px; line-height: 1.55; }
-
-    .principles {
-      background: var(--paper);
-      padding: 56px 0 60px;
-    }
-    .principles-title {
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-      line-height: 1;
-      margin-bottom: 34px;
-    }
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid rgba(5, 5, 5, 0.12);
-    }
-    .principle {
-      padding: 24px 28px 0 0;
-      border-right: 1px solid rgba(5, 5, 5, 0.12);
-      min-height: 105px;
-    }
-    .principle + .principle { padding-left: 28px; }
-    .principle:last-child { border-right: 0; }
-    .principle strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-    }
-    .principle p {
-      max-width: 260px;
-      color: #686868;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-
-    footer { background: var(--black); color: var(--white); padding: 34px 0; }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 32px;
-    }
-    .footer-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .footer-brand .brand-mark { background: var(--white); }
-    .footer-brand .brand-mark::after { background: var(--black); }
-    .footer-meta { color: #8d8d8d; font-size: 11px; text-align: right; }
-
-    @media (max-width: 1120px) {
-      .projects { grid-template-columns: repeat(2, 1fr); border-bottom: 0; }
-      .project-card-link,
-      .project-card-static { border-bottom: 1px solid var(--border); }
-      .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) { border-right: 0; }
-      .project-card-static:last-child { border-right: 1px solid var(--border); }
-    }
-
-    @media (max-width: 900px) {
-      .container { width: min(100% - 56px, 1120px); }
-      .hero-grid,
-      .statement-grid { grid-template-columns: 1fr; }
-      .hero-grid { gap: 42px; }
-      .visual-card { min-height: 390px; }
-      .statement-grid { gap: 32px; }
-      .statement-copy { max-width: 600px; }
-      .section-heading { align-items: flex-start; flex-direction: column; }
-    }
-
-    @media (max-width: 640px) {
-      .container { width: min(100% - 32px, 1120px); }
-      header { height: 64px; }
-      .nav-links { gap: 18px; }
-      .hero { padding: 58px 0 54px; }
-      h1 { font-size: 4.15rem; margin-bottom: 30px; }
-      .hero-copy p { font-size: 16px; }
-      .visual-card { min-height: 330px; padding: 28px; }
-      .visual-title { font-size: 4rem; }
-      .statement { padding: 44px 0; }
-      section { padding: 58px 0; }
-      .projects { grid-template-columns: 1fr; }
-      .project-card-link,
-      .project-card-static,
-      .project-card-static:last-child,
-      .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) { border-right: 0; }
-      .project-card { min-height: 235px; padding: 22px 4px 24px; }
-      .principles-grid { grid-template-columns: 1fr; }
-      .principle,
-      .principle + .principle {
-        padding: 20px 0;
-        border-right: 0;
-        border-bottom: 1px solid rgba(5, 5, 5, 0.12);
-        min-height: 0;
-      }
-      .principle:last-child { border-bottom: 0; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-      .footer-meta { text-align: left; }
-    }
+    :root{--black:#050505;--white:#fff;--paper:#f5f2ea;--soft:#f2efe8;--grey:#737373;--muted:#9a9a9a;--border:#dedbd3;--gold:#c58b18;--green:#556f43;--blue:#173653;--red:#9a463d;--igho:#08182b;--igho-gold:#e5a400}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    button{font:inherit}.shell{width:min(1180px,calc(100% - 64px));margin:0 auto}
+    h1,h2,h3,.display{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(5,5,5,.08)}
+    .topbar-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;white-space:nowrap}.brand img{width:18px;height:22px;object-fit:contain}
+    .topmeta{display:flex;align-items:center;gap:14px;color:#777;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.pill{border:1px solid var(--border);padding:6px 8px;border-radius:4px;color:#555}
+    .tabs-wrap{border-bottom:1px solid var(--border);background:var(--white);overflow:auto;scrollbar-width:none}.tabs-wrap::-webkit-scrollbar{display:none}
+    .tabs{display:flex;align-items:center;gap:0;min-width:max-content}.tab{appearance:none;border:0;border-right:1px solid var(--border);background:transparent;padding:14px 18px 13px;color:#777;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:.02em}.tab:first-child{border-left:1px solid var(--border)}.tab:hover{color:var(--black);background:#faf9f6}.tab.active{color:var(--black);box-shadow:inset 0 -2px 0 var(--gold);background:#faf9f6}
+    .panel{display:none;min-height:calc(100vh - 118px)}.panel.active{display:block}
+    .slide{padding:70px 0 78px}.eyebrow,.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:end;min-height:calc(100vh - 188px)}
+    .hero h1{font-size:clamp(4.5rem,8vw,8.3rem);line-height:.88;letter-spacing:-.025em;margin:18px 0 30px}.hero p{font-size:18px;line-height:1.65;color:#555;max-width:650px}
+    .hero-card{background:var(--soft);border-radius:14px;min-height:310px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.hero-card .month{font-family:'IBM Plex Sans Condensed';font-size:50px;line-height:.95}.hero-card .meta{display:grid;gap:8px;color:#777;font-size:11px}.hero-card:after{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(0,0,0,.12);border-radius:50%;right:-70px;bottom:-80px}
+    .statement{background:var(--black);color:var(--white);padding:58px 0}.statement-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}.statement h2{font-size:clamp(2.4rem,4.5vw,4.7rem);line-height:.98;letter-spacing:-.015em}.statement p{border-left:1px solid var(--gold);padding-left:26px;color:#c7c7c7;font-size:15px;line-height:1.75}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:34px}.section-head h2{font-size:clamp(2.4rem,4vw,4rem);line-height:.98;margin-top:8px}.section-head p{max-width:480px;color:#777;font-size:14px;line-height:1.65}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.grid-2>div{padding:28px 30px 30px 0}.grid-2>div+div{padding-left:30px;border-left:1px solid var(--border)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.grid-3>div{padding:25px 25px 28px 0}.grid-3>div+div{padding-left:25px;border-left:1px solid var(--border)}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}.grid-4>div{padding:24px 22px 24px 0}.grid-4>div+div{padding-left:22px;border-left:1px solid var(--border)}
+    .cell-title{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#666;font-weight:700;margin-bottom:12px}.grid-2 h3,.grid-3 h3{font-size:27px;margin-bottom:12px}.grid-2 p,.grid-3 p,.grid-4 p,.grid-2 li,.grid-3 li,.grid-4 li{font-size:13px;color:#666;line-height:1.65}.grid-2 ul,.grid-3 ul,.grid-4 ul{padding-left:18px;display:grid;gap:8px}
+    .portfolio{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.venture{padding:22px 18px 26px;border-right:1px solid var(--border);min-height:270px}.venture:last-child{border-right:0}.vlogo{height:48px;display:flex;align-items:center;margin-bottom:18px}.vlogo img{max-width:104px;max-height:44px;object-fit:contain;object-position:left center}.vlogo.icon img{width:44px;height:44px}.venture h3{font-size:24px;margin-bottom:8px}.venture p{font-size:12px;color:#777;line-height:1.6}.status{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:14px}.ontrack{color:var(--blue)}.watch{color:#8a6514}.building{color:var(--green)}
+    .igho-mark{width:40px;height:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.igho-mark span{border-radius:50%;background:var(--igho)}.igho-mark span:nth-child(5){background:var(--igho-gold)}
+    .product-head{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:28px}.product-lockup{display:flex;align-items:center;gap:16px}.product-lockup img{width:48px;height:48px;object-fit:contain}.product-lockup img.wordmark{width:116px;height:48px;object-position:left center}.product-lockup h1{font-size:clamp(3.5rem,7vw,6.8rem);line-height:.92}.product-head .aside{max-width:340px;color:#777;font-size:13px;line-height:1.65;padding-top:12px}
+    .health-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--black);color:var(--white);margin:8px 0 44px}.metric{padding:18px 20px;border-right:1px solid #2b2b2b}.metric:last-child{border-right:0}.metric span{display:block;color:#999;font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:7px}.metric strong{font-family:'IBM Plex Sans Condensed';font-size:25px;font-weight:600}.metric strong.gold{color:#dfae43}
+    .timeline{border-top:1px solid var(--border)}.event{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border)}.event .date{font-size:10px;color:#777;text-transform:uppercase;letter-spacing:.11em;font-weight:700}.event h3{font-size:22px;margin-bottom:5px}.event p{font-size:13px;color:#707070;line-height:1.6}
+    .paper{background:var(--paper)}.dark{background:var(--black);color:var(--white)}.dark .section-head p,.dark p,.dark li{color:#bbb}.dark .grid-2,.dark .grid-3,.dark .grid-4,.dark .event{border-color:#303030}.dark .grid-2>div+div,.dark .grid-3>div+div,.dark .grid-4>div+div{border-color:#303030}.dark .cell-title{color:#999}
+    .priorities{counter-reset:item;border-top:1px solid #333}.priority{counter-increment:item;display:grid;grid-template-columns:50px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid #333;color:#d0d0d0;font-size:14px}.priority:before{content:counter(item,decimal-leading-zero);color:var(--gold);font-size:10px;letter-spacing:.12em;font-weight:700;padding-top:2px}
+    .source-note{margin-top:30px;border-left:2px solid var(--gold);padding:15px 18px;background:#faf9f6;color:#777;font-size:11px;line-height:1.65}.dark .source-note{background:#111;color:#aaa}
+    .nav-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding:18px 0 28px}.nav-button{appearance:none;border:0;background:none;color:#666;font-size:11px;font-weight:700;cursor:pointer;padding:8px 0}.nav-button:hover{color:var(--black)}.slide-count{font-size:10px;color:#999;letter-spacing:.1em;text-transform:uppercase}
+    footer{border-top:1px solid var(--border);padding:24px 0 34px;color:#888;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:980px){.shell{width:min(100% - 48px,1180px)}.hero,.statement-grid{grid-template-columns:1fr}.hero{min-height:auto;gap:42px}.portfolio{grid-template-columns:repeat(2,1fr)}.venture:nth-child(2n){border-right:0}.venture{border-bottom:1px solid var(--border)}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-4>div:nth-child(3){border-left:0}.health-strip{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid #2b2b2b}}
+    @media(max-width:680px){.shell{width:min(100% - 30px,1180px)}.topmeta span:first-child{display:none}.slide{padding:48px 0 56px}.hero h1{font-size:clamp(4rem,20vw,6rem)}.hero-card{min-height:240px;padding:24px}.statement{padding:46px 0}.section-head{align-items:flex-start;flex-direction:column}.grid-2,.grid-3,.grid-4,.portfolio{grid-template-columns:1fr}.grid-2>div+div,.grid-3>div+div,.grid-4>div+div{border-left:0;border-top:1px solid var(--border);padding-left:0}.grid-2>div,.grid-3>div,.grid-4>div{padding-right:0}.venture{border-right:0;min-height:0}.health-strip{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid #2b2b2b}.product-head{flex-direction:column}.event{grid-template-columns:1fr;gap:7px}.tabs .tab{padding-left:14px;padding-right:14px}.topbar-inner{min-height:62px}.product-lockup h1{font-size:4.2rem}}
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a href="#" class="brand" aria-label="The 24th Group home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        The 24th Group
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-      </nav>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><img src="brand/assets/mark-only-black.png" alt="" />The 24th Group</div>
+      <div class="topmeta"><span>Monthly operating review</span><span class="pill">Internal · August 2026</span></div>
     </div>
+    <div class="tabs-wrap"><nav class="shell tabs" aria-label="Presentation sections">
+      <button class="tab active" data-panel="overview">Overview</button><button class="tab" data-panel="replay">TheReplayMAG</button><button class="tab" data-panel="koroko">Koroko</button><button class="tab" data-panel="oroko">Oroko</button><button class="tab" data-panel="ogoro">Ogoro</button><button class="tab" data-panel="igho">Igho</button><button class="tab" data-panel="group">Group</button><button class="tab" data-panel="september">September</button>
+    </nav></div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>The 24th<br />Group</h1>
-          <p>
-            We build and operate focused ventures across culture, infrastructure
-            and operational technology.
-          </p>
-          <span class="hero-note">Built for long-term value</span>
-        </div>
-
-        <div class="visual-card" aria-label="Founder-led venture and operations company, established 2026">
-          <div class="visual-top">
-            <span>Founder-led venture &amp; operations company</span>
-            <span>Est. 2026</span>
-          </div>
-          <div class="visual-title">Culture.<br />Systems.<br />Future.</div>
-          <div class="visual-orbit" aria-hidden="true"></div>
+    <section class="panel active" id="overview">
+      <div class="shell slide hero">
+        <div><div class="eyebrow">Group review · 01</div><h1>Monthly<br>Review.</h1><p>August was the month the portfolio became more operational. The Group established a clearer management layer, TheReplayMAG prepared a coordinated September restart, Oroko moved deeper into real internal use, Ogoro became tangible, and Koroko remained focused on readiness and external data dependencies.</p></div>
+        <aside class="hero-card"><span class="pill" style="width:max-content">Final monthly view</span><div class="month">August<br>2026</div><div class="meta"><span>Period: 1–31 August 2026</span><span>Evidence: Asana + GitHub + Group operating record</span><span>Prepared: 2 September 2026</span></div></aside>
+      </div>
+      <div class="statement"><div class="shell statement-grid"><h2>The portfolio is becoming easier to operate because each venture is clearer about what must happen next.</h2><p>The strongest movement this month was not one isolated launch. It was the creation of a more coherent operating rhythm across the Group, with more explicit product states, evidence, dependencies and next actions.</p></div></div>
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Portfolio health</div><h2>Five businesses. Different stages.</h2></div><p>Health reflects the evidence available at month end, not ambition. “On track” means the next operating gate is understood and supported by recent work.</p></div>
+        <div class="portfolio">
+          <div class="venture"><div class="vlogo"><img src="logo/thereplaymag.png" alt="TheReplayMAG"></div><div class="status ontrack">On track</div><h3>TheReplayMAG</h3><p>September operating restart prepared around Studio, Editorial, Replay Go, Frontline and distribution.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="logo/koroko_icon.png" alt="Koroko"></div><div class="status watch">Watch</div><h3>Koroko</h3><p>Strategically important, but readiness evidence and NIPOST/data dependencies remain the key constraint.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="logo/oroko_icon.svg" alt="Oroko"></div><div class="status ontrack">On track</div><h3>Oroko</h3><p>Internal use continues to expose real product gaps, giving the strongest near-term validation loop.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="logo/ogoro_icon.png" alt="Ogoro"></div><div class="status building">Building</div><h3>Ogoro</h3><p>Moved from concept into platform, process and energy-intelligence mockups, with discovery still the core next step.</p></div>
+          <div class="venture"><div class="vlogo"><div class="igho-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="status building">Pre-build</div><h3>Igho</h3><p>Scope remains deliberately narrow: payroll infrastructure for projects, productions and small teams.</p></div>
         </div>
       </div>
+      <div class="shell nav-bottom"><button class="nav-button" disabled>← Previous</button><span class="slide-count">1 / 8</span><button class="nav-button" data-next="replay">TheReplayMAG →</button></div>
     </section>
 
-    <section class="statement" id="about">
-      <div class="container statement-grid">
-        <div class="statement-title">
-          We build where important work is still fragmented, manual or unreliable.
+    <section class="panel" id="replay">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img class="wordmark" src="logo/thereplaymag.png" alt="TheReplayMAG"><div><div class="eyebrow">Venture review · 02</div><h1>TheReplayMAG</h1></div></div><p class="aside">August prepared a coordinated September operating restart, with Studio and Replay Go as the immediate launch surfaces and Frontline maturing into a real fulfilment and publishing system.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">On track</strong></div><div class="metric"><span>Operating phase</span><strong>Restart + build-out</strong></div><div class="metric"><span>Editorial target</span><strong>5+ articles / month</strong></div><div class="metric"><span>Immediate gate</span><strong>Internal adoption</strong></div></div>
+        <div class="section-head"><div><div class="kicker">What changed</div><h2>Replay’s operating stack matured materially.</h2></div><p>Asana now provides the management structure, while GitHub provides strong implementation evidence for Studio Editorial and Replay Go.</p></div>
+        <div class="grid-3">
+          <div><span class="cell-title">Studio + Editorial</span><h3>Launch-ready direction</h3><p>By 28 August, Editorial structural redesign and pitch commissioning were merged, client bundle sync was merged, automated smoke/regression/build/bundle/CI were green, and launch-polish QA was the remaining gate ahead of 1 September internal use.</p></div>
+          <div><span class="cell-title">Replay Go</span><h3>Built as a distribution layer</h3><p>August commits created the Catalyst project, Creator-backed API, public Slate interface, live API connection, responsive styling, newsletter flow, analytics/source attribution and a 48-hour Creator cache with manual refresh.</p></div>
+          <div><span class="cell-title">Frontline</span><h3>From submissions to fulfilment</h3><p>The current operating definition now spans Desk handoff, WorkDrive source handling, extraction/OCR, AI-assisted editorial production, human review, WordPress publishing, duplicate protection and downstream Replay Go integration.</p></div>
         </div>
-        <p class="statement-copy">
-          The Group gives focused products a shared operating home while each venture
-          stays close to the real problem it is built to solve.
-        </p>
       </div>
+      <div class="paper"><div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Operating structure</div><h2>The September system is explicit.</h2></div><p>The 24th Group Asana project now carries the active Replay management record rather than relying on older standalone projects.</p></div>
+        <div class="grid-4">
+          <div><span class="cell-title">Editorial</span><p>Restart around reliable cadence first, using engaged writers and Studio. Use the writer questionnaire to understand pitch versus assignment preference. Mini-mag follows once cadence works.</p></div>
+          <div><span class="cell-title">Marketing</span><p>Social is now inside Marketing. Focus is volunteer confirmation, contact-base clean-up, simple email campaigns and distribution of Editorial output.</p></div>
+          <div><span class="cell-title">Collab</span><p>Formalise relationship building around collab@thereplaymag.com, CRM as relationship memory and Studio Collab as the management layer. Warm relationships first.</p></div>
+          <div><span class="cell-title">Operations + Work</span><p>Operations coordinates the restart and monthly rhythm. Work is the recruitment surface, but hiring remains demand-led after Editorial cadence is tested.</p></div>
+        </div>
+        <div class="source-note"><strong>Evidence note:</strong> The old Frontline portal repository has no August 2026 commit evidence. August Frontline progress is therefore represented through the current 24th Group Asana implementation structure and the newer operating work, not retroactively attributed to that old repo.</div>
+      </div></div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="overview">← Overview</button><span class="slide-count">2 / 8</span><button class="nav-button" data-next="koroko">Koroko →</button></div>
     </section>
 
-    <section id="work">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">The work</div>
-            <h2>Five businesses. One group.</h2>
-          </div>
-          <p>
-            A focused portfolio across culture, location infrastructure, process clarity,
-            energy operations and payroll.
-          </p>
-        </div>
-
-        <div class="projects">
-          <a class="project-card-link" href="https://thereplaymag.com?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo"><img src="logo/thereplaymag.png" alt="TheReplayMAG" /></div>
-                <span class="status operating">Operating</span>
-              </div>
-              <div class="project-body">
-                <span class="category culture">Culture</span>
-                <h3>TheReplayMAG</h3>
-                <p>An independent culture publication spotlighting emerging creatives and underground scenes.</p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://koroko.development.catalystappsail.com/?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/koroko_icon.png" alt="Koroko" /></div>
-                <span class="status operating">Operating</span>
-              </div>
-              <div class="project-body">
-                <span class="category infrastructure">Infrastructure</span>
-                <h3>Koroko</h3>
-                <p>Location infrastructure for trusted address, direction and place intelligence in Nigeria.</p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://korokoro-758593152.development.catalystserverless.com/app/landing-mockup.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/oroko_icon.svg" alt="Oroko" /></div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Oroko</h3>
-                <p>Structured process mapping and documentation for teams that need clarity and control.</p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://ogoro-758593152.development.catalystserverless.com/app/index.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/ogoro_icon.png" alt="Ogoro" /></div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Ogoro</h3>
-                <p>Operational intelligence for energy systems, facilities and physical assets.</p>
-              </div>
-            </article>
-          </a>
-
-          <div class="project-card-static" aria-label="Igho, building">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="igho-logo" aria-label="Igho">
-                  <span class="igho-mark" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                  </span>
-                  <span class="igho-wordmark">igho</span>
-                </div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Igho</h3>
-                <p>Payroll infrastructure for projects, creative productions and small teams.</p>
-              </div>
-            </article>
-          </div>
-        </div>
+    <section class="panel" id="koroko">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="logo/koroko_icon.png" alt="Koroko"><div><div class="eyebrow">Venture review · 03</div><h1>Koroko</h1></div></div><p class="aside">Koroko remains the Group’s largest strategic infrastructure opportunity, but August was still primarily a readiness and dependency month rather than a validation month.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Watch</strong></div><div class="metric"><span>Phase</span><strong>Readiness</strong></div><div class="metric"><span>Core dependency</span><strong>NIPOST / data</strong></div><div class="metric"><span>Primary risk</span><strong>Data quality</strong></div></div>
+        <div class="grid-4"><div><span class="cell-title">Built / operating</span><p>Public Slate preview and AppSail/private workspace architecture remain the established direction, with API, auth, billing and checker infrastructure already in place from earlier work.</p></div><div><span class="cell-title">August learning</span><p>The moat remains less about software construction and more about coverage, accuracy, licensing, update frequency and the right national address-data relationship.</p></div><div><span class="cell-title">Blocked / dependent</span><p>NIPOST access, postcode/address data terms, commercial rights and redistribution constraints remain external dependencies that can materially change the product.</p></div><div><span class="cell-title">Next</span><p>Keep hardening public/API readiness while treating NIPOST and data-quality work as first-class product work rather than an integration afterthought.</p></div></div>
+        <div class="source-note">The Group Asana project also records August compliance/data-licensing research output for Koroko, reinforcing that operational data readiness is now being treated alongside the technical build.</div>
       </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="replay">← TheReplayMAG</button><span class="slide-count">3 / 8</span><button class="nav-button" data-next="oroko">Oroko →</button></div>
     </section>
 
-    <section class="principles" aria-labelledby="principles-title">
-      <div class="container">
-        <div class="section-kicker">How we think</div>
-        <h2 class="principles-title" id="principles-title">Three principles guide how we build.</h2>
-        <div class="principles-grid">
-          <div class="principle">
-            <strong>Clarity</strong>
-            <p>We focus on real problems and make the complex easier to understand.</p>
-          </div>
-          <div class="principle">
-            <strong>Discipline</strong>
-            <p>We build deliberately, stay close to evidence and avoid unnecessary complexity.</p>
-          </div>
-          <div class="principle">
-            <strong>Long-term</strong>
-            <p>We optimise for ownership, durability and useful systems that can compound over time.</p>
-          </div>
-        </div>
+    <section class="panel" id="oroko">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="logo/oroko_icon.svg" alt="Oroko"><div><div class="eyebrow">Venture review · 04</div><h1>Oroko</h1></div></div><p class="aside">Oroko continues to have the strongest near-term validation loop because it is being used against real process-mapping needs rather than tested only as a concept.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">On track</strong></div><div class="metric"><span>Phase</span><strong>Product hardening</strong></div><div class="metric"><span>Validation</span><strong>Internal use</strong></div><div class="metric"><span>2026 focus</span><strong>Primary</strong></div></div>
+        <div class="grid-4"><div><span class="cell-title">Built</span><p>August work continued around process-library and canvas behaviour, with the product already far enough along to support real process visualisation and structured documentation.</p></div><div><span class="cell-title">Learned</span><p>Internal use surfaced concrete usability gaps rather than abstract feature requests, including future-state parity, current/future copying, branch representation and attachment guidance.</p></div><div><span class="cell-title">Product direction</span><p>The value remains clarity and structured process documentation, not automation. Keeping Oroko narrow protects it from becoming a generic whiteboard or workflow builder.</p></div><div><span class="cell-title">Next</span><p>Continue using Oroko for Group and day-job processes, resolve high-friction internal testing gaps and turn repeated real-world usage into the productisation backlog.</p></div></div>
       </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="koroko">← Koroko</button><span class="slide-count">4 / 8</span><button class="nav-button" data-next="ogoro">Ogoro →</button></div>
+    </section>
+
+    <section class="panel" id="ogoro">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="logo/ogoro_icon.png" alt="Ogoro"><div><div class="eyebrow">Venture review · 05</div><h1>Ogoro</h1></div></div><p class="aside">August was the month Ogoro became tangible enough to discuss with potential users. The next risk is building too much before customer discovery proves which operational decisions matter.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Building</strong></div><div class="metric"><span>Phase</span><strong>Discovery</strong></div><div class="metric"><span>First module</span><strong>Energy</strong></div><div class="metric"><span>Strategy</span><strong>Software first</strong></div></div>
+        <div class="timeline"><div class="event"><div class="date">19 August</div><div><h3>Product foundation created</h3><p>The repository was established with a platform mockup, whitepaper and eight process maps, moving Ogoro from narrative into something reviewable.</p></div></div><div class="event"><div class="date">20 August</div><div><h3>Energy intelligence became visible</h3><p>An energy intelligence dashboard and reports mockup made the first module easier to test against real schools, hotels, hospitals, offices and other operating environments.</p></div></div><div class="event"><div class="date">Next</div><div><h3>Discovery before custom hardware</h3><p>Prove that the software causes action, savings or operational control before expanding into custom IoT or broad Ogoro One modules.</p></div></div></div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="oroko">← Oroko</button><span class="slide-count">5 / 8</span><button class="nav-button" data-next="igho">Igho →</button></div>
+    </section>
+
+    <section class="panel" id="igho">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><div class="igho-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div><div class="eyebrow">Venture review · 06</div><h1>Igho</h1></div></div><p class="aside">Igho was brought into the formal Group portfolio in August. It remains intentionally pre-build while the payroll lifecycle and internal first-use case are kept narrow.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Pre-build</strong></div><div class="metric"><span>First user</span><strong>The 24th Group</strong></div><div class="metric"><span>Initial scale</span><strong>2 employees</strong></div><div class="metric"><span>Boundary</span><strong>Payroll, not HR</strong></div></div>
+        <div class="grid-3"><div><span class="cell-title">Core job</span><h3>Pay people reliably</h3><p>Employee setup, bank details, payroll run preparation, funding, approval, transfers, transfer outcomes, payslips and records are the core product.</p></div><div><span class="cell-title">Trust surface</span><h3>Simple proof</h3><p>Payslips and employment records should be simple enough to understand but credible enough to use as proof of employment or income when needed.</p></div><div><span class="cell-title">Next</span><h3>Validate the lifecycle</h3><p>Create a dedicated repo/Asana implementation record when build resumes, then prove the smallest complete payroll run before expanding features.</p></div></div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="ogoro">← Ogoro</button><span class="slide-count">6 / 8</span><button class="nav-button" data-next="group">Group →</button></div>
+    </section>
+
+    <section class="panel" id="group">
+      <div class="paper"><div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Group review · 07</div><h2>The management layer now exists.</h2></div><p>August established the Group repo as the strategic and operating archive, while Asana remains the execution record and GitHub remains the implementation record.</p></div>
+        <div class="grid-3"><div><span class="cell-title">Strategic record</span><h3>Group repo</h3><p>Group thesis, product register, roadmap, operating rhythm, repo standard and monthly review template were added, alongside the refined public portfolio site.</p></div><div><span class="cell-title">Execution record</span><h3>Asana</h3><p>The 24th Group project was refreshed to make Replay’s September operating structure explicit, while product projects continue to carry detailed work and blockers.</p></div><div><span class="cell-title">Technical record</span><h3>GitHub</h3><p>Implementation evidence is becoming strong enough to distinguish what was planned, implemented, deployed and genuinely validated rather than treating them as the same thing.</p></div></div>
+        <div class="source-note">Operating rule: Asana answers what is being done and who owns it. GitHub answers what actually changed. The Group repo answers why it matters and how the portfolio fits together.</div>
+      </div></div>
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Founder attention</div><h2>Where judgement is still required.</h2></div><p>The aim of the operating system is not to remove founder decisions. It is to make the decisions that genuinely need founder judgement easier to see.</p></div>
+        <div class="grid-2"><div><h3>Near-term</h3><ul><li>Keep Oroko as the primary product focus through the end of 2026 while using real internal work as validation.</li><li>Decide Koroko data strategy as NIPOST information becomes available, particularly commercial and redistribution rights.</li><li>Protect Ogoro from premature scope expansion until customer discovery proves the Energy module’s action value.</li></ul></div><div><h3>Operating discipline</h3><ul><li>Move Replay into an actual publishing cadence rather than another build cycle.</li><li>Keep Igho narrow enough to prove payroll trust before adding HR-adjacent features.</li><li>Use monthly reviews to surface source conflicts and evidence gaps, not simply produce status prose.</li></ul></div></div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="igho">← Igho</button><span class="slide-count">7 / 8</span><button class="nav-button" data-next="september">September →</button></div>
+    </section>
+
+    <section class="panel dark" id="september">
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Next month · 08</div><h2>September priorities.</h2></div><p>September should convert August’s build and planning activity into evidence of use, cadence and operating reliability.</p></div>
+        <div class="priorities"><div class="priority"><strong>TheReplayMAG:</strong>&nbsp; move Studio and Replay Go into normal internal use, establish the Editorial publishing cadence and fix blockers quickly.</div><div class="priority"><strong>Frontline:</strong>&nbsp; continue the V1 fulfilment/publishing pipeline, proving Desk handoff, source handling, extraction, editorial review and publish outcomes.</div><div class="priority"><strong>Oroko:</strong>&nbsp; keep using it against real process work, close the highest-friction product gaps and turn repeated usage into productisation evidence.</div><div class="priority"><strong>Koroko:</strong>&nbsp; continue readiness hardening while treating NIPOST/data access, licensing and quality as the dominant product dependency.</div><div class="priority"><strong>Ogoro:</strong>&nbsp; use the tangible Energy mockups to drive customer discovery and identify which insights actually change operational behaviour.</div><div class="priority"><strong>Igho:</strong>&nbsp; hold scope, document the minimum payroll lifecycle and only restart implementation when the internal test path is clear.</div><div class="priority"><strong>Group:</strong>&nbsp; maintain Asana hygiene, source-system discipline and the monthly evidence-based review cadence.</div></div>
+        <div class="source-note"><strong>Monthly review principle:</strong> next month’s report should be able to distinguish planned, implemented, deployed, used and validated for every material claim.</div>
+      </div>
+      <div class="shell nav-bottom" style="border-color:#333"><button class="nav-button" style="color:#aaa" data-prev="group">← Group</button><span class="slide-count">8 / 8</span><button class="nav-button" style="color:#aaa" data-next="overview">Back to start ↑</button></div>
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        The 24th Group
-      </div>
-      <div class="footer-meta">© 2026 The 24th Group · Building with clarity.</div>
-    </div>
-  </footer>
+  <footer><div class="shell footer-inner"><span>© 2026 The 24th Group · Internal operating review</span><span>Sources: Asana · GitHub · Group operating record</span></div></footer>
+
+  <script>
+    const tabs=[...document.querySelectorAll('.tab')];
+    const panels=[...document.querySelectorAll('.panel')];
+    function show(id){
+      panels.forEach(p=>p.classList.toggle('active',p.id===id));
+      tabs.forEach(t=>t.classList.toggle('active',t.dataset.panel===id));
+      const active=tabs.find(t=>t.dataset.panel===id); if(active) active.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+      history.replaceState(null,'','#'+id); window.scrollTo({top:0,behavior:'smooth'});
+    }
+    tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.panel)));
+    document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.next)));
+    document.querySelectorAll('[data-prev]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.prev)));
+    document.addEventListener('keydown',e=>{const order=tabs.map(t=>t.dataset.panel);const current=document.querySelector('.panel.active')?.id;const i=order.indexOf(current);if(e.key==='ArrowRight')show(order[(i+1)%order.length]);if(e.key==='ArrowLeft')show(order[(i-1+order.length)%order.length]);});
+    const initial=location.hash.slice(1); if(initial&&document.getElementById(initial)) show(initial);
+  </script>
 </body>
 </html>
