@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>The 24th Group — Brand Guide</title>
+  <link rel="icon" type="image/png" href="assets/mark-only-black.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:#050505;
+      --white:#ffffff;
+      --paper:#f5f2ea;
+      --soft:#f2efe8;
+      --grey:#737373;
+      --mid:#555555;
+      --border:#dedbd3;
+      --gold:#c58b18;
+      --green:#556f43;
+      --blue:#173653;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.55;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .shell{width:min(var(--max),calc(100% - 72px));margin:0 auto}
+    .display,h1,h2,h3{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
+
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(5,5,5,.08)}
+    .nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+    .nav-logo{width:178px}
+    .nav-meta{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--grey);font-weight:700}
+
+    .hero{padding:110px 0 96px;border-bottom:1px solid var(--border)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:78px;align-items:end}
+    .eyebrow{font-size:11px;line-height:1;text-transform:uppercase;letter-spacing:.17em;font-weight:700;color:var(--gold);margin-bottom:22px}
+    h1{font-size:clamp(4.8rem,9vw,8.8rem);line-height:.84;letter-spacing:-.025em;max-width:760px}
+    .hero-copy{max-width:520px;color:var(--mid);font-size:18px;line-height:1.7}
+    .hero-copy strong{color:var(--black)}
+    .hero-meta{display:flex;gap:34px;margin-top:34px;padding-top:20px;border-top:1px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--grey);font-weight:700}
+
+    .intro{background:var(--black);color:var(--white);padding:72px 0}
+    .intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:84px;align-items:start}
+    .intro h2{font-size:clamp(2.8rem,5vw,5rem);line-height:.98;letter-spacing:-.01em;max-width:690px}
+    .intro p{color:#c8c8c8;max-width:440px;border-left:1px solid rgba(197,139,24,.8);padding-left:26px}
+
+    .section{padding:92px 0;border-bottom:1px solid var(--border)}
+    .section-head{display:grid;grid-template-columns:220px 1fr;gap:54px;margin-bottom:54px}
+    .section-num{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);font-weight:700;padding-top:8px}
+    .section-title h2{font-size:clamp(2.7rem,5vw,4.8rem);line-height:.95;letter-spacing:-.015em;margin-bottom:16px}
+    .section-title p{max-width:680px;color:var(--mid);font-size:16px}
+
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .card{border:1px solid var(--border);padding:28px;background:var(--white);min-height:190px}
+    .card.paper{background:var(--paper)}
+    .card.dark{background:var(--black);color:var(--white);border-color:var(--black)}
+    .card h3{font-size:27px;line-height:1.04;margin-bottom:12px}
+    .card p{font-size:14px;color:var(--mid);max-width:480px}
+    .card.dark p{color:#bebebe}
+    .label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:var(--grey);margin-bottom:20px}
+    .dark .label{color:#949494}
+
+    .logo-stage{min-height:300px;display:flex;align-items:center;justify-content:center;padding:50px;background:var(--paper);border:1px solid var(--border)}
+    .logo-stage img{width:min(520px,80%)}
+    .logo-stage.dark{background:var(--black);border-color:var(--black)}
+    .logo-stage.mark img{width:62px}
+    .rule-box{margin-top:24px;border-left:2px solid var(--gold);padding-left:18px;font-size:14px;color:var(--mid)}
+
+    .colour-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--border)}
+    .swatch{min-height:220px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(5,5,5,.08)}
+    .swatch:last-child{border-right:none}
+    .swatch strong{font-size:14px}
+    .swatch span{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .black{background:#050505;color:#fff}.white{background:#fff}.paper-bg{background:#f5f2ea}.gold{background:#c58b18;color:#fff}
+    .supporting{margin-top:18px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .support{height:96px;padding:14px;display:flex;align-items:flex-end;font-size:11px;font-weight:700}
+
+    .type-sample{border-top:1px solid var(--border);padding:28px 0;display:grid;grid-template-columns:220px 1fr;gap:54px;align-items:start}
+    .type-sample:last-child{border-bottom:1px solid var(--border)}
+    .type-meta{font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+    .type-display{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600;font-size:64px;line-height:.93;letter-spacing:-.02em}
+    .type-body{font-size:18px;line-height:1.7;max-width:690px}
+    .type-micro{font-size:11px;line-height:1.5;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+
+    .principle{padding:28px 0;border-top:1px solid var(--border);display:grid;grid-template-columns:100px 250px 1fr;gap:34px;align-items:start}
+    .principle:last-child{border-bottom:1px solid var(--border)}
+    .principle .n{font-family:'IBM Plex Sans Condensed';font-size:30px;color:var(--gold)}
+    .principle h3{font-size:30px}
+    .principle p{color:var(--mid);max-width:610px}
+
+    .voice-example{padding:26px;border:1px solid var(--border)}
+    .voice-example.good{border-top:3px solid var(--green)}
+    .voice-example.bad{border-top:3px solid #9b4b41}
+    .voice-example p{font-size:17px;line-height:1.6}
+
+    .ownership{background:var(--paper);padding:34px;border:1px solid var(--border)}
+    .powered{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#727b87;margin-top:28px}
+    .powered-mark{width:14px;height:17px;background:#111;border-radius:2.5px 2.5px 1px 1px;position:relative;display:inline-block}
+    .powered-mark:after{content:"";position:absolute;bottom:-1px;left:4px;width:6px;height:6px;background:var(--paper);transform:rotate(45deg)}
+    .powered strong{color:#111;font-weight:600}
+
+    .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .do,.dont{padding:26px;border:1px solid var(--border);min-height:250px}
+    .do{border-top:3px solid var(--green)}.dont{border-top:3px solid #9b4b41}
+    .do h3,.dont h3{font-size:28px;margin-bottom:16px}
+    .do ul,.dont ul{padding-left:18px;color:var(--mid);font-size:14px;line-height:1.8}
+
+    footer{padding:42px 0 54px;background:var(--black);color:var(--white)}
+    .footer-grid{display:flex;justify-content:space-between;gap:40px;align-items:end}
+    .footer-logo{width:190px;filter:invert(1)}
+    .footer-meta{text-align:right;color:#8e8e8e;font-size:11px;line-height:1.7;text-transform:uppercase;letter-spacing:.11em}
+
+    @media(max-width:840px){
+      .shell{width:min(100% - 36px,var(--max))}.hero{padding:74px 0 64px}.hero-grid,.intro-grid,.section-head{grid-template-columns:1fr;gap:34px}.section{padding:64px 0}.grid-2,.grid-3,.colour-grid,.supporting,.do-dont{grid-template-columns:1fr}.colour-grid{border:none;gap:10px}.swatch{border:1px solid var(--border)}.type-sample{grid-template-columns:1fr;gap:14px}.type-display{font-size:48px}.principle{grid-template-columns:55px 1fr}.principle p{grid-column:2}.nav-meta{display:none}.nav-logo{width:154px}.hero-meta{flex-wrap:wrap}.footer-grid{align-items:start;flex-direction:column}.footer-meta{text-align:left}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="shell nav">
+    <a href="#top"><img class="nav-logo" src="assets/logo-lockup-black.png" alt="The 24th Group" /></a>
+    <div class="nav-meta">Brand system · v1.0 · 2026</div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <div class="eyebrow">The 24th Group · Brand Guide</div>
+        <h1>Culture.<br>Systems.<br>Future.</h1>
+      </div>
+      <div>
+        <p class="hero-copy"><strong>This guide defines the parent brand system for The 24th Group.</strong> It establishes the visual and verbal rules that hold the portfolio together while leaving each venture enough room to remain distinctive.</p>
+        <div class="hero-meta"><span>Master brand</span><span>Digital-first</span><span>Living system</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="shell intro-grid">
+      <h2>One operating home. Distinct ventures. A shared standard of clarity.</h2>
+      <p>The Group should feel disciplined, editorial and quietly confident. It is not a conventional corporate brand and it should not look like a generic holding company, consultancy or venture fund.</p>
+    </div>
+  </section>
+
+  <section class="section" id="idea">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">01 · Brand idea</div><div class="section-title"><h2>What the Group stands for</h2><p>The visual system begins with the same strategic pattern behind the portfolio: important work that is fragmented, manual or unreliable can be made clearer, more structured and more dependable.</p></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="label">Principle 01</span><h3>Clarity</h3><p>Make the important thing easy to see. Reduce noise. Use plain language, strong hierarchy and deliberate spacing.</p></div>
+        <div class="card"><span class="label">Principle 02</span><h3>Discipline</h3><p>Systems should feel intentional and maintained. Consistency matters more than decorative novelty.</p></div>
+        <div class="card"><span class="label">Principle 03</span><h3>Long-term</h3><p>Build identities and systems that can mature. Avoid visual decisions that depend on trends or launch hype.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="logo">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">02 · Logo system</div><div class="section-title"><h2>The Group mark and lockup</h2><p>The full lockup is the primary signature. The standalone mark is reserved for compact digital spaces, favicons, app icons and quiet ownership marks.</p></div></div>
+      <div class="grid-2">
+        <div><div class="logo-stage"><img src="assets/logo-lockup-black.png" alt="The 24th Group black logo lockup" /></div><div class="rule-box">Primary use on white, paper and other light surfaces.</div></div>
+        <div><div class="logo-stage dark"><img src="assets/logo-lockup-white.png" alt="The 24th Group white logo lockup" /></div><div class="rule-box">Use the supplied white lockup on dark surfaces. Do not manually recolour the black asset.</div></div>
+      </div>
+      <div class="grid-2" style="margin-top:24px">
+        <div class="card paper"><span class="label">Standalone mark</span><div class="logo-stage mark" style="min-height:150px;border:0;background:transparent"><img src="assets/mark-only-black.png" alt="The 24th Group mark" /></div><p>Use where the full name is already clear or where space is genuinely constrained.</p></div>
+        <div class="card"><span class="label">Clearspace rule</span><h3>Give it room.</h3><p>Keep surrounding type and graphic elements comfortably separated from the lockup. As a working rule, preserve clearspace at least equal to the visual height of the Group mark.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="colour">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">03 · Colour</div><div class="section-title"><h2>Neutral first. Gold with purpose.</h2><p>The Group palette is deliberately restrained. Black, white and warm paper do most of the work. Gold is a signal, not a background habit.</p></div></div>
+      <div class="colour-grid">
+        <div class="swatch black"><strong>Near Black</strong><span>#050505</span></div>
+        <div class="swatch white"><strong>White</strong><span>#FFFFFF</span></div>
+        <div class="swatch paper-bg"><strong>Warm Paper</strong><span>#F5F2EA</span></div>
+        <div class="swatch gold"><strong>Group Gold</strong><span>#C58B18</span></div>
+      </div>
+      <div class="supporting">
+        <div class="support" style="background:#f2efe8">Soft accent · #F2EFE8</div>
+        <div class="support" style="background:#dedbd3">Border · #DEDBD3</div>
+        <div class="support" style="background:#556f43;color:white">Support green · #556F43</div>
+        <div class="support" style="background:#173653;color:white">Support blue · #173653</div>
+      </div>
+      <div class="rule-box">Green and blue are supporting system colours. They can help with status, categorisation and portfolio communication, but they should never compete with the core black, white, paper and gold identity.</div>
+    </div>
+  </section>
+
+  <section class="section" id="type">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">04 · Typography</div><div class="section-title"><h2>Editorial scale. Operational clarity.</h2><p>The typography system combines condensed display type with a neutral, highly readable body face.</p></div></div>
+      <div class="type-sample"><div class="type-meta">Display<br>IBM Plex Sans Condensed<br>600</div><div class="type-display">Build with clarity.</div></div>
+      <div class="type-sample"><div class="type-meta">Body<br>Inter<br>400–600</div><div class="type-body">The 24th Group builds and operates focused ventures across culture, infrastructure and operational technology. Body copy should stay calm, readable and direct.</div></div>
+      <div class="type-sample"><div class="type-meta">Metadata<br>Inter<br>700</div><div class="type-micro">Monthly review · Operating system · Portfolio health · September 2026</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="layout">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">05 · Layout & composition</div><div class="section-title"><h2>Strong alignment. Generous space.</h2><p>The Group should feel designed through proportion and hierarchy rather than decoration. Pages should have a clear reading order and enough breathing room for information to feel deliberate.</p></div></div>
+      <div class="principle"><div class="n">01</div><h3>Use a visible grid</h3><p>Align headings, labels, body text and media to shared columns. Avoid floating elements that feel placed by eye without a system.</p></div>
+      <div class="principle"><div class="n">02</div><h3>Let whitespace carry hierarchy</h3><p>Separate sections with space before introducing boxes. Cards should be used when they clarify grouping, not as the default container for every piece of content.</p></div>
+      <div class="principle"><div class="n">03</div><h3>Keep surfaces restrained</h3><p>Prefer white, warm paper, thin rules and occasional black fields. Avoid gradients, glassmorphism, heavy shadows and over-rounded UI.</p></div>
+      <div class="principle"><div class="n">04</div><h3>Make data feel editorial</h3><p>Numbers, status and evidence should be easy to scan without turning Group communication into a dashboard aesthetic.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="imagery">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">06 · Imagery & graphics</div><div class="section-title"><h2>Meaning before decoration.</h2><p>The Group itself does not need a fixed photography style as expressive as its ventures. Visual material should explain work, people, systems or context rather than fill space.</p></div></div>
+      <div class="grid-3">
+        <div class="card paper"><span class="label">Photography</span><h3>Documentary over stock</h3><p>Prefer real environments, real work and real people. Avoid generic corporate teamwork imagery and obvious stock metaphors.</p></div>
+        <div class="card"><span class="label">Graphic language</span><h3>Simple geometry</h3><p>Thin circles, lines, dots, grids and technical annotations can support composition. Use them sparsely and structurally.</p></div>
+        <div class="card dark"><span class="label">Product visuals</span><h3>Show the system</h3><p>When a venture is the subject, use its own product and brand language. The Group should frame the work rather than visually overwrite it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="voice">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">07 · Voice</div><div class="section-title"><h2>Direct, precise and calm.</h2><p>The Group voice should sound like an operator who understands the work. It should be ambitious without hype, technical without jargon for its own sake, and confident without grandstanding.</p></div></div>
+      <div class="grid-2">
+        <div class="voice-example good"><span class="label">Prefer</span><p>“We build where important work is still fragmented, manual or unreliable.”</p></div>
+        <div class="voice-example bad"><span class="label">Avoid</span><p>“We are revolutionising industries through world-class innovation and disruptive next-generation solutions.”</p></div>
+      </div>
+      <div class="grid-3" style="margin-top:20px">
+        <div class="card"><h3>Plain</h3><p>Say what the thing is, what changed and why it matters.</p></div>
+        <div class="card"><h3>Grounded</h3><p>Separate what is planned, implemented and validated.</p></div>
+        <div class="card"><h3>Useful</h3><p>Prefer concrete information over ceremonial corporate language.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="digital">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">08 · Digital & UI</div><div class="section-title"><h2>The Group frames. Products express.</h2><p>Group-level digital surfaces should remain editorial and minimal. Product applications may have stronger functional systems, but should inherit the Group's commitment to clarity, hierarchy and restraint.</p></div></div>
+      <div class="grid-2">
+        <div class="card"><span class="label">Group surfaces</span><h3>Editorial navigation</h3><p>Use strong headings, clear sections, light interaction and responsive layouts. The Group website and reports are references for this direction.</p></div>
+        <div class="card paper"><span class="label">Product surfaces</span><h3>Function first</h3><p>Each venture owns its UI language. Group consistency should appear in the quality of structure, not by forcing every product into the same colours or component library.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="documents">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">09 · Documents & presentations</div><div class="section-title"><h2>One information design language.</h2><p>Reports, presentations, proposals, one-pagers and internal documents should feel like the same organisation produced them, even when their formats differ.</p></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="label">Headlines</span><h3>Condensed and decisive</h3><p>Use IBM Plex Sans Condensed for major titles and section statements.</p></div>
+        <div class="card paper"><span class="label">Structure</span><h3>Evidence-led</h3><p>Use clear metadata, thin rules, short summaries and visible distinction between status, evidence and commentary.</p></div>
+        <div class="card"><span class="label">Colour</span><h3>Signal sparingly</h3><p>Gold can mark key messages, dates or structural accents. Do not turn every heading or table into a gold treatment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ownership">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">10 · Portfolio ownership</div><div class="section-title"><h2>“Powered by The 24th Group”</h2><p>This line belongs on venture-level surfaces where Group ownership should be visible without making the parent brand the primary identity.</p></div></div>
+      <div class="ownership">
+        <span class="label">Reference treatment</span>
+        <h3 style="font-size:34px">Product first. Group second.</h3>
+        <p style="max-width:650px;color:var(--mid);margin-top:10px">The venture logo remains the dominant signature. The ownership line should be small, quiet and consistently spaced. It is not used on Group-owned documents or Group-only surfaces.</p>
+        <div class="powered"><span>Powered by</span><span class="powered-mark"></span><strong>The 24th Group</strong></div>
+      </div>
+      <div class="grid-2" style="margin-top:20px">
+        <div class="card"><h3>Use it</h3><p>On product websites, product documents, selected product footers, launch material and places where ownership context is useful.</p></div>
+        <div class="card"><h3>Do not use it</h3><p>On The 24th Group website, Group reports, Group presentations or anywhere the Group is already the primary brand.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cobrand">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">11 · Co-branding</div><div class="section-title"><h2>Keep the hierarchy obvious.</h2><p>When multiple ventures or external partners appear together, avoid merging identities into a single invented lockup. Keep signatures separate and let layout establish the relationship.</p></div></div>
+      <div class="do-dont">
+        <div class="do"><h3>Do</h3><ul><li>Keep each logo at a visually balanced size.</li><li>Use spacing or rules to show separation.</li><li>Lead with the brand responsible for the communication.</li><li>Use the Group ownership line quietly when appropriate.</li></ul></div>
+        <div class="dont"><h3>Don't</h3><ul><li>Create hybrid marks.</li><li>Force venture logos into Group gold.</li><li>Place logos too close together.</li><li>Use the Group as a decorative sponsor badge on its own products.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rules">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">12 · Guardrails</div><div class="section-title"><h2>What it should never become</h2><p>These guardrails protect the Group from drifting into generic corporate or startup visual language.</p></div></div>
+      <div class="do-dont">
+        <div class="do"><h3>Keep</h3><ul><li>Minimal editorial layouts.</li><li>Strong black-and-white contrast.</li><li>Warm paper as a secondary surface.</li><li>Gold as a restrained signal.</li><li>Real evidence, real products and real operating context.</li><li>Clear typography and deliberate spacing.</li></ul></div>
+        <div class="dont"><h3>Avoid</h3><ul><li>Gradients and glossy startup styling.</li><li>Generic venture-capital visual tropes.</li><li>Excessive rounded cards and shadows.</li><li>Stock corporate photography.</li><li>Hype-heavy language.</li><li>Making every venture visually identical to the Group.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="assets">
+    <div class="shell">
+      <div class="section-head"><div class="section-num">13 · Asset reference</div><div class="section-title"><h2>Canonical Group assets</h2><p>Use repository assets as the source of truth. Do not redraw or approximate the Group mark when an approved asset is available.</p></div></div>
+      <div class="grid-3">
+        <div class="card"><span class="label">Primary</span><h3>logo-lockup-black.png</h3><p>Full black Group lockup for light surfaces.</p></div>
+        <div class="card dark"><span class="label">Reverse</span><h3>logo-lockup-white.png</h3><p>Full white Group lockup for dark surfaces.</p></div>
+        <div class="card paper"><span class="label">Compact</span><h3>mark-only-black.png</h3><p>Standalone Group mark for favicons and constrained placements.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-grid">
+    <img class="footer-logo" src="assets/logo-lockup-white.png" alt="The 24th Group" />
+    <div class="footer-meta">The 24th Group · Brand system v1.0<br>Building with clarity · 2026</div>
+  </div>
+</footer>
+</body>
+</html>
