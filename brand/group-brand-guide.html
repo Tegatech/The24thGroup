@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>The 24th Group — Brand Guide</title>
+  <link rel="icon" type="image/png" href="assets/mark-only-black.png" />
+  <link rel="apple-touch-icon" href="assets/mark-only-black.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--black:#050505;--white:#fff;--paper:#f5f2ea;--soft:#f2efe8;--grey:#737373;--border:#dedbd3;--gold:#c58b18;--green:#556f43;--blue:#173653;--max:1120px}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+    body{font-family:'Inter',Arial,Helvetica,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{width:min(var(--max),calc(100% - 96px));margin:0 auto}
+    h1,h2,h3,.display{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
+
+    header{height:72px;display:flex;align-items:center;border-bottom:1px solid rgba(5,5,5,.06);background:#fff}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:48px}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:-.02em}
+    .brand-mark{width:18px;height:22px;background:var(--black);border-radius:3px 3px 1px 1px;position:relative;flex:0 0 auto}
+    .brand-mark::after{content:"";position:absolute;bottom:-1px;left:5px;width:8px;height:8px;background:var(--white);transform:rotate(45deg)}
+    .nav-meta{color:#666;font-size:12px;font-weight:600}
+
+    .hero{padding:88px 0 92px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:84px;align-items:center}
+    .kicker{color:var(--gold);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+    h1{font-size:clamp(4.2rem,7vw,7.2rem);line-height:.92;letter-spacing:-.02em;margin-bottom:34px}
+    .hero-copy{max-width:540px;color:#555;font-size:18px;line-height:1.62}
+    .hero-card{min-height:420px;border-radius:14px;background:var(--soft);padding:36px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .hero-card-top{display:flex;justify-content:space-between;gap:24px;color:#777;font-size:11px;line-height:1.4}
+    .hero-card-title{font-family:'IBM Plex Sans Condensed';font-weight:600;font-size:clamp(3.4rem,5.5vw,5.6rem);line-height:.9;letter-spacing:-.01em;position:relative;z-index:2}
+    .orbit{position:absolute;width:260px;height:260px;border:1px solid rgba(0,0,0,.12);border-radius:999px;right:-60px;bottom:-60px}.orbit:before,.orbit:after{content:"";position:absolute;border-radius:999px;background:var(--black)}.orbit:before{width:52px;height:52px;left:40px;top:36px}.orbit:after{width:24px;height:24px;right:62px;bottom:78px}
+
+    .statement{background:var(--black);color:var(--white);padding:58px 0}.statement-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:88px;align-items:center}.statement h2{font-size:clamp(2.2rem,4vw,4.15rem);line-height:1.02;letter-spacing:-.01em}.statement p{max-width:430px;border-left:1px solid rgba(197,139,24,.75);padding-left:28px;color:#c7c7c7;font-size:15px;line-height:1.7}
+
+    section.guide{padding:72px 0;border-bottom:1px solid var(--border)}
+    .section-heading{display:flex;justify-content:space-between;gap:32px;align-items:end;margin-bottom:38px}.section-heading h2{font-size:clamp(2.2rem,3.8vw,3.7rem);line-height:1;letter-spacing:-.01em}.section-heading p{max-width:460px;color:var(--grey);font-size:14px;line-height:1.6}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .card{border:1px solid var(--border);padding:28px;background:#fff;min-height:190px}.card.paper{background:var(--paper)}.card.dark{background:var(--black);color:#fff;border-color:var(--black)}.card h3{font-size:27px;line-height:1.04;margin-bottom:12px}.card p{font-size:14px;color:#555;line-height:1.65}.card.dark p{color:#bebebe}.label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:var(--grey);margin-bottom:20px}
+
+    .logo-stage{min-height:300px;display:flex;align-items:center;justify-content:center;padding:50px;background:var(--paper);border:1px solid var(--border)}.logo-stage img{width:min(520px,80%)}.logo-stage.dark{background:var(--black);border-color:var(--black)}.logo-stage.mark img{width:62px}
+    .rule{margin-top:18px;border-left:2px solid var(--gold);padding-left:16px;color:#555;font-size:13px;line-height:1.6}
+
+    .colours{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border)}.swatch{min-height:210px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(5,5,5,.08)}.swatch:last-child{border-right:0}.swatch strong{font-size:14px}.swatch span{font-size:11px;text-transform:uppercase;letter-spacing:.08em}.black{background:#050505;color:#fff}.white{background:#fff}.paper-bg{background:#f5f2ea}.gold{background:#c58b18;color:#fff}
+    .supporting{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.support{height:92px;padding:14px;display:flex;align-items:flex-end;font-size:11px;font-weight:700}
+
+    .type-row{display:grid;grid-template-columns:220px 1fr;gap:54px;padding:28px 0;border-top:1px solid var(--border)}.type-row:last-child{border-bottom:1px solid var(--border)}.type-meta{font-size:11px;color:var(--grey);text-transform:uppercase;letter-spacing:.12em;font-weight:700}.type-display{font-family:'IBM Plex Sans Condensed';font-weight:600;font-size:64px;line-height:.93;letter-spacing:-.02em}.type-body{font-size:18px;line-height:1.7;max-width:700px}.type-micro{font-size:11px;line-height:1.5;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
+
+    .principle{display:grid;grid-template-columns:100px 240px 1fr;gap:34px;padding:27px 0;border-top:1px solid var(--border)}.principle:last-child{border-bottom:1px solid var(--border)}.principle .n{font-family:'IBM Plex Sans Condensed';font-size:30px;color:var(--gold)}.principle h3{font-size:29px}.principle p{color:#555;max-width:610px}
+    .powered{background:var(--paper);border:1px solid var(--border);padding:34px}.powered-line{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#727b87;margin-top:24px}.powered-line .mini-mark{width:14px;height:17px;background:#111;border-radius:2.5px 2.5px 1px 1px;position:relative}.powered-line .mini-mark:after{content:"";position:absolute;bottom:-1px;left:4px;width:6px;height:6px;background:var(--paper);transform:rotate(45deg)}.powered-line strong{color:#111;font-weight:600}
+
+    .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:20px}.do,.dont{padding:26px;border:1px solid var(--border);min-height:230px}.do{border-top:3px solid var(--green)}.dont{border-top:3px solid #9b4b41}.do h3,.dont h3{font-size:28px;margin-bottom:16px}.do ul,.dont ul{padding-left:18px;color:#555;font-size:14px;line-height:1.8}
+
+    footer{background:var(--black);color:var(--white);padding:34px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:32px}.footer-brand{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700}.footer-brand .brand-mark{background:var(--white)}.footer-brand .brand-mark::after{background:var(--black)}.footer-meta{color:#8d8d8d;font-size:11px;text-align:right}
+
+    @media(max-width:900px){.container{width:min(100% - 56px,var(--max))}.hero-grid,.statement-grid{grid-template-columns:1fr}.hero-grid{gap:42px}.section-heading{align-items:flex-start;flex-direction:column}.grid-3{grid-template-columns:1fr}.principle{grid-template-columns:70px 1fr}.principle p{grid-column:2}}
+    @media(max-width:640px){.container{width:min(100% - 32px,var(--max))}header{height:64px}.nav-meta{display:none}.hero{padding:58px 0 54px}h1{font-size:4.15rem}.hero-card{min-height:330px;padding:28px}.hero-card-title{font-size:4rem}section.guide{padding:58px 0}.grid-2,.colours,.supporting,.do-dont{grid-template-columns:1fr}.colours{border:0;gap:10px}.swatch{border:1px solid var(--border)}.type-row{grid-template-columns:1fr;gap:14px}.type-display{font-size:48px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-meta{text-align:left}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="The 24th Group brand guide home"><span class="brand-mark" aria-hidden="true"></span>The 24th Group</a>
+    <div class="nav-meta">Brand Guide · v1.0 · 2026</div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div><div class="kicker">The 24th Group · Brand Guide</div><h1>The 24th<br/>Group</h1><p class="hero-copy">The master brand system for a focused portfolio across culture, infrastructure and operational technology.</p></div>
+      <div class="hero-card"><div class="hero-card-top"><span>Founder-led venture &amp; operations company</span><span>Est. 2026</span></div><div class="hero-card-title">Culture.<br/>Systems.<br/>Future.</div><div class="orbit" aria-hidden="true"></div></div>
+    </div>
+  </section>
+
+  <section class="statement"><div class="container statement-grid"><h2>One operating home. Distinct ventures. A shared standard of clarity.</h2><p>The Group should feel disciplined, editorial and quietly confident. It should not look like a generic holding company, consultancy or venture fund.</p></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">01 · Brand idea</div><h2>What the Group stands for</h2></div><p>The brand follows the operating thesis: make fragmented, manual or unreliable work clearer, more structured and more dependable.</p></div><div class="grid-3"><div class="card"><span class="label">Principle 01</span><h3>Clarity</h3><p>Strong hierarchy, direct language and deliberate spacing. Make the important thing easy to see.</p></div><div class="card"><span class="label">Principle 02</span><h3>Discipline</h3><p>Consistency matters more than decorative novelty. Systems should feel intentional and maintained.</p></div><div class="card"><span class="label">Principle 03</span><h3>Long-term</h3><p>Build identities that can mature. Avoid visual decisions dependent on short-lived trends.</p></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">02 · Logo system</div><h2>The Group mark and lockup</h2></div><p>The landing-page header treatment is the standard for digital Group identity. Supplied lockups remain the primary artwork for documents, covers and static brand applications.</p></div><div class="grid-2"><div><div class="logo-stage"><img src="assets/logo-lockup-black.png" alt="The 24th Group black lockup"/></div><div class="rule">Use on light surfaces. Preserve the supplied proportions.</div></div><div><div class="logo-stage dark"><img src="assets/logo-lockup-white.png" alt="The 24th Group white lockup"/></div><div class="rule">Use the supplied white artwork on dark surfaces. Do not recolour the black file manually.</div></div></div><div class="grid-2" style="margin-top:24px"><div class="card paper"><span class="label">Digital header standard</span><div class="brand" style="margin-top:44px"><span class="brand-mark"></span>The 24th Group</div><p style="margin-top:28px">This CSS mark + Inter wordmark treatment matches the Group landing page and should be used for site-level headers and compact digital navigation.</p></div><div class="card"><span class="label">Standalone mark</span><div class="logo-stage mark" style="min-height:130px;border:0;background:transparent"><img src="assets/mark-only-black.png" alt="The 24th Group mark"/></div><p>Use for favicons, app icons and constrained ownership marks where the Group name is already clear.</p></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">03 · Colour</div><h2>Neutral first. Gold with purpose.</h2></div><p>Black, white and warm paper do most of the work. Gold is a signal, not a default surface.</p></div><div class="colours"><div class="swatch black"><strong>Near Black</strong><span>#050505</span></div><div class="swatch white"><strong>White</strong><span>#FFFFFF</span></div><div class="swatch paper-bg"><strong>Warm Paper</strong><span>#F5F2EA</span></div><div class="swatch gold"><strong>Group Gold</strong><span>#C58B18</span></div></div><div class="supporting"><div class="support" style="background:#f2efe8">Soft Accent · #F2EFE8</div><div class="support" style="background:#dedbd3">Border · #DEDBD3</div><div class="support" style="background:#556f43;color:white">Green · #556F43</div><div class="support" style="background:#173653;color:white">Blue · #173653</div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">04 · Typography</div><h2>Condensed display. Neutral body.</h2></div><p>The typography system is inherited directly from the landing page.</p></div><div class="type-row"><div class="type-meta">Display<br/>IBM Plex Sans Condensed 600</div><div class="type-display">Culture. Systems. Future.</div></div><div class="type-row"><div class="type-meta">Body<br/>Inter 400–600</div><div class="type-body">Use Inter for paragraphs, navigation, labels, metadata and interface copy. Keep body text calm, compact and highly readable.</div></div><div class="type-row"><div class="type-meta">Micro<br/>Inter 700</div><div class="type-micro">Section kicker · status · dates · metadata · category labels</div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">05 · Layout</div><h2>Structured, editorial, spacious.</h2></div><p>The Group is not a card-heavy SaaS brand. Prefer strong grids, open space, fine rules and restrained surfaces.</p></div><div class="principle"><div class="n">01</div><h3>Alignment first</h3><p>Build pages around a consistent content width and clear vertical rhythm. Elements should feel placed, not floated.</p></div><div class="principle"><div class="n">02</div><h3>Use fewer containers</h3><p>Cards are functional tools, not decoration. Prefer sections, rules and hierarchy when a container adds no meaning.</p></div><div class="principle"><div class="n">03</div><h3>Warm surfaces sparingly</h3><p>Paper and soft accent surfaces are for contrast and emphasis, not blanket backgrounds.</p></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">06 · Graphic language</div><h2>Quiet geometry, not decoration.</h2></div><p>Use simple circles, fine rules, dots and technical/editorial structures only when they support hierarchy or meaning.</p></div><div class="grid-3"><div class="card paper"><span class="label">Orbit</span><h3>Circles and nodes</h3><p>The landing-page orbit is a useful reference for restrained geometric expression. Keep it sparse and secondary.</p></div><div class="card"><span class="label">Rules</span><h3>Thin separators</h3><p>Use subtle grey rules to create rhythm and structure instead of heavy boxes.</p></div><div class="card dark"><span class="label">Contrast</span><h3>Black statements</h3><p>Dark sections are reserved for major statements, emphasis and strong transitions.</p></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">07 · Voice</div><h2>Clear, measured, confident.</h2></div><p>The Group speaks like an operator. Avoid inflated startup language, generic consulting phrases and investor-first positioning.</p></div><div class="grid-2"><div class="card"><span class="label">Preferred</span><h3>Plain and specific</h3><p>“We build where important work is still fragmented, manual or unreliable.”</p></div><div class="card paper"><span class="label">Avoid</span><h3>Hype and abstraction</h3><p>Avoid phrases such as “revolutionising industries”, “disrupting ecosystems” or claims that are not grounded in real work.</p></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">08 · Digital & documents</div><h2>One visual discipline across formats.</h2></div><p>Web, Slate reports, documents and presentations should feel related even when their layouts differ.</p></div><div class="grid-3"><div class="card"><span class="label">Web</span><h3>Landing-page standard</h3><p>Inter navigation, CSS Group mark, IBM Plex Sans Condensed headlines, white/paper/black composition and restrained gold signals.</p></div><div class="card"><span class="label">Reports</span><h3>Editorial intelligence</h3><p>Use strong titles, metadata, evidence, concise status language, thin rules and clean tables.</p></div><div class="card"><span class="label">Presentations</span><h3>Large ideas, low noise</h3><p>One idea per screen where possible. Avoid dense consultancy-deck formatting and decorative charts.</p></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">09 · Portfolio ownership</div><h2>Powered by The 24th Group</h2></div><p>Product identities remain primary. The ownership line connects them to the Group without making every product visually identical.</p></div><div class="powered"><h3 style="font-size:30px">Product brand first. Group ownership second.</h3><p style="margin-top:10px;color:#555;max-width:700px">Use the ownership line on venture websites, product documentation and selected public surfaces where Group provenance matters. Do not use it as the Group’s own tagline.</p><div class="powered-line"><span>Powered by</span><span class="mini-mark" aria-hidden="true"></span><strong>The 24th Group</strong></div></div></div></section>
+
+  <section class="guide"><div class="container"><div class="section-heading"><div><div class="kicker">10 · Guardrails</div><h2>Keep the system recognisable.</h2></div><p>Consistency should come from discipline, not from forcing every venture into the same visual personality.</p></div><div class="do-dont"><div class="do"><h3>Do</h3><ul><li>Use the landing-page identity as the Group digital standard.</li><li>Preserve actual logo assets and proportions.</li><li>Use IBM Plex Sans Condensed for display and Inter for body/UI.</li><li>Keep gold restrained.</li><li>Let each venture retain its own character.</li></ul></div><div class="dont"><h3>Don’t</h3><ul><li>Substitute a different font for the Group wordmark treatment.</li><li>Invent alternative Group marks or lockups.</li><li>Overuse cards, gradients or generic startup visuals.</li><li>Make product brands look like reskins of the Group site.</li><li>Use “Powered by The 24th Group” on Group-owned documents as a tagline.</li></ul></div></div></div></section>
+</main>
+
+<footer><div class="container footer-inner"><div class="footer-brand"><span class="brand-mark" aria-hidden="true"></span>The 24th Group</div><div class="footer-meta">© 2026 The 24th Group · Building with clarity.</div></div></footer>
+</body>
+</html>
