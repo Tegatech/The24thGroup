@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>The 24th Group | September 2026 Monthly Review</title>
+  <meta name="description" content="The 24th Group internal month-to-date operating review for September 2026." />
+  <link rel="icon" type="image/png" href="brand/assets/mark-only-black.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--black:#050505;--white:#fff;--paper:#f5f2ea;--soft:#f2efe8;--grey:#737373;--muted:#9a9a9a;--border:#dedbd3;--gold:#c58b18;--green:#556f43;--blue:#173653;--red:#9a463d;--igho:#08182b;--igho-gold:#e5a400}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:var(--white);color:var(--black);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    button{font:inherit}.shell{width:min(1180px,calc(100% - 64px));margin:0 auto}
+    h1,h2,h3,.display{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-weight:600}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(5,5,5,.08)}
+    .topbar-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;white-space:nowrap}.brand img{width:18px;height:22px;object-fit:contain}
+    .topmeta{display:flex;align-items:center;gap:14px;color:#777;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.pill{border:1px solid var(--border);padding:6px 8px;border-radius:4px;color:#555}
+    .tabs-wrap{border-bottom:1px solid var(--border);background:var(--white);overflow:auto;scrollbar-width:none}.tabs-wrap::-webkit-scrollbar{display:none}
+    .tabs{display:flex;align-items:center;gap:0;min-width:max-content}.tab{appearance:none;border:0;border-right:1px solid var(--border);background:transparent;padding:14px 18px 13px;color:#777;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:.02em}.tab:first-child{border-left:1px solid var(--border)}.tab:hover{color:var(--black);background:#faf9f6}.tab.active{color:var(--black);box-shadow:inset 0 -2px 0 var(--gold);background:#faf9f6}
+    .panel{display:none;min-height:calc(100vh - 118px)}.panel.active{display:block}
+    .slide{padding:70px 0 78px}.eyebrow,.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:end;min-height:calc(100vh - 188px)}
+    .hero h1{font-size:clamp(4.5rem,8vw,8.3rem);line-height:.88;letter-spacing:-.025em;margin:18px 0 30px}.hero p{font-size:18px;line-height:1.65;color:#555;max-width:650px}
+    .hero-card{background:var(--soft);border-radius:14px;min-height:310px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.hero-card .month{font-family:'IBM Plex Sans Condensed';font-size:50px;line-height:.95}.hero-card .meta{display:grid;gap:8px;color:#777;font-size:11px}.hero-card:after{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(0,0,0,.12);border-radius:50%;right:-70px;bottom:-80px}
+    .statement{background:var(--black);color:var(--white);padding:58px 0}.statement-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}.statement h2{font-size:clamp(2.4rem,4.5vw,4.7rem);line-height:.98;letter-spacing:-.015em}.statement p{border-left:1px solid var(--gold);padding-left:26px;color:#c7c7c7;font-size:15px;line-height:1.75}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:34px}.section-head h2{font-size:clamp(2.4rem,4vw,4rem);line-height:.98;margin-top:8px}.section-head p{max-width:480px;color:#777;font-size:14px;line-height:1.65}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.grid-2>div{padding:28px 30px 30px 0}.grid-2>div+div{padding-left:30px;border-left:1px solid var(--border)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.grid-3>div{padding:25px 25px 28px 0}.grid-3>div+div{padding-left:25px;border-left:1px solid var(--border)}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border)}.grid-4>div{padding:24px 22px 24px 0}.grid-4>div+div{padding-left:22px;border-left:1px solid var(--border)}
+    .cell-title{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#666;font-weight:700;margin-bottom:12px}.grid-2 h3,.grid-3 h3{font-size:27px;margin-bottom:12px}.grid-2 p,.grid-3 p,.grid-4 p,.grid-2 li,.grid-3 li,.grid-4 li{font-size:13px;color:#666;line-height:1.65}.grid-2 ul,.grid-3 ul,.grid-4 ul{padding-left:18px;display:grid;gap:8px}
+    .portfolio{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.venture{padding:22px 18px 26px;border-right:1px solid var(--border);min-height:270px}.venture:last-child{border-right:0}.vlogo{height:48px;display:flex;align-items:center;margin-bottom:18px}.vlogo img{max-width:104px;max-height:44px;object-fit:contain;object-position:left center}.vlogo.icon img{width:44px;height:44px}.venture h3{font-size:24px;margin-bottom:8px}.venture p{font-size:12px;color:#777;line-height:1.6}.status{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:14px}.ontrack{color:var(--blue)}.watch{color:#8a6514}.building{color:var(--green)}
+    .igho-mark{width:40px;height:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.igho-mark span{border-radius:50%;background:var(--igho)}.igho-mark span:nth-child(5){background:var(--igho-gold)}
+    .product-head{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:28px}.product-lockup{display:flex;align-items:center;gap:16px;min-width:0;max-width:100%}.product-lockup>div{min-width:0}.product-lockup img{width:48px;height:48px;object-fit:contain;flex:0 0 auto}.product-lockup img.wordmark{width:116px;height:48px;object-position:left center}.product-lockup h1{font-size:clamp(3.5rem,7vw,6.8rem);line-height:.92;max-width:100%}.product-head .aside{max-width:340px;color:#777;font-size:13px;line-height:1.65;padding-top:12px}
+    .health-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--black);color:var(--white);margin:8px 0 44px}.metric{padding:18px 20px;border-right:1px solid #2b2b2b}.metric:last-child{border-right:0}.metric span{display:block;color:#999;font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:7px}.metric strong{font-family:'IBM Plex Sans Condensed';font-size:25px;font-weight:600}.metric strong.gold{color:#dfae43}
+    .timeline{border-top:1px solid var(--border)}.event{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border)}.event .date{font-size:10px;color:#777;text-transform:uppercase;letter-spacing:.11em;font-weight:700}.event h3{font-size:22px;margin-bottom:5px}.event p{font-size:13px;color:#707070;line-height:1.6}
+    .paper{background:var(--paper)}.dark{background:var(--black);color:var(--white)}.dark .section-head p,.dark p,.dark li{color:#bbb}.dark .grid-2,.dark .grid-3,.dark .grid-4,.dark .event{border-color:#303030}.dark .grid-2>div+div,.dark .grid-3>div+div,.dark .grid-4>div+div{border-color:#303030}.dark .cell-title{color:#999}
+    .priorities{counter-reset:item;border-top:1px solid #333}.priority{counter-increment:item;display:block;position:relative;padding:18px 0 18px 60px;border-bottom:1px solid #333;color:#d0d0d0;font-size:14px;line-height:1.65;min-width:0}.priority:before{content:counter(item,decimal-leading-zero);position:absolute;left:0;top:20px;color:var(--gold);font-size:10px;letter-spacing:.12em;font-weight:700}.priority strong{display:inline;color:#e5e5e5}
+    .source-note{margin-top:30px;border-left:2px solid var(--gold);padding:15px 18px;background:#faf9f6;color:#777;font-size:11px;line-height:1.65}.dark .source-note{background:#111;color:#aaa}
+    .nav-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding:18px 0 28px;gap:16px}.nav-button{appearance:none;border:0;background:none;color:#666;font-size:11px;font-weight:700;cursor:pointer;padding:8px 0;min-width:0}.nav-button:hover{color:var(--black)}.slide-count{font-size:10px;color:#999;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+    footer{border-top:1px solid var(--border);padding:24px 0 34px;color:#888;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:980px){.shell{width:min(100% - 48px,1180px)}.hero,.statement-grid{grid-template-columns:1fr}.hero{min-height:auto;gap:42px}.portfolio{grid-template-columns:repeat(2,1fr)}.venture:nth-child(2n){border-right:0}.venture{border-bottom:1px solid var(--border)}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-4>div:nth-child(3){border-left:0}.health-strip{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid #2b2b2b}}
+    @media(max-width:680px){.shell{width:min(100% - 30px,1180px)}.topmeta span:first-child{display:none}.slide{padding:48px 0 56px}.hero h1{font-size:clamp(4rem,20vw,6rem)}.hero-card{min-height:240px;padding:24px}.statement{padding:46px 0}.section-head{align-items:flex-start;flex-direction:column}.grid-2,.grid-3,.grid-4,.portfolio{grid-template-columns:1fr}.grid-2>div+div,.grid-3>div+div,.grid-4>div+div{border-left:0;border-top:1px solid var(--border);padding-left:0}.grid-2>div,.grid-3>div,.grid-4>div{padding-right:0}.venture{border-right:0;min-height:0}.health-strip{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid #2b2b2b}.product-head{flex-direction:column}.event{grid-template-columns:1fr;gap:7px}.tabs .tab{padding-left:14px;padding-right:14px}.topbar-inner{min-height:62px}.product-lockup h1{font-size:clamp(3rem,16vw,4.2rem)}#replay .product-lockup{flex-direction:column;align-items:flex-start;gap:10px}#replay .product-lockup img.wordmark{width:104px;height:40px}#replay .product-lockup h1{font-size:clamp(2.75rem,14vw,3.7rem);line-height:.95;overflow-wrap:normal;word-break:normal}.priority{padding:17px 0 17px 40px;font-size:13px}.priority:before{left:0;top:19px}.nav-button{max-width:42%;white-space:normal}.footer-inner{flex-direction:column;gap:8px}}
+    @media(max-width:390px){.shell{width:min(100% - 24px,1180px)}#replay .product-lockup h1{font-size:2.55rem}.topmeta .pill{font-size:8px;padding:5px 6px}.priority{padding-left:34px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand"><img src="../../../brand/assets/mark-only-black.png" alt="" />The 24th Group</div>
+      <div class="topmeta"><span>Monthly operating review</span><span class="pill">Internal · September 2026 MTD</span></div>
+    </div>
+    <div class="tabs-wrap"><nav class="shell tabs" aria-label="Presentation sections">
+      <button class="tab active" data-panel="overview">Overview</button><button class="tab" data-panel="replay">TheReplayMAG</button><button class="tab" data-panel="koroko">Koroko</button><button class="tab" data-panel="oroko">Oroko</button><button class="tab" data-panel="ogoro">Ogoro</button><button class="tab" data-panel="igho">Igho</button><button class="tab" data-panel="group">Group</button><button class="tab" data-panel="next">Next</button>
+    </nav></div>
+  </header>
+
+  <main>
+    <section class="panel active" id="overview">
+      <div class="shell slide hero">
+        <div><div class="eyebrow">Group review · 01</div><h1>Monthly<br>Review.</h1><p>September has been a month of conversion from concept and build work into testable operating systems. Oroko is now in whole-product testing, Koroko is adapting its architecture and terminology around NIPOST, Igho has moved into real engineering foundations, and Replay has continued shipping the publishing and operations stack.</p></div>
+        <aside class="hero-card"><span class="pill" style="width:max-content">Month-to-date view</span><div class="month">September<br>2026</div><div class="meta"><span>Period: 1–20 September 2026</span><span>Evidence: Asana + GitHub + Group operating record</span><span>Prepared: 20 September 2026</span></div></aside>
+      </div>
+      <div class="statement"><div class="shell statement-grid"><h2>The portfolio is moving from “can we build it?” to “does it work reliably enough to use?”</h2><p>The strongest evidence this month is concentrated in product hardening, admin/support tooling, API/MCP readiness and real deployment architecture. The next operating challenge is disciplined acceptance testing and actual adoption, not adding more surface area.</p></div></div>
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Portfolio health</div><h2>Five businesses. Clearer next gates.</h2></div><p>Health reflects September evidence to date. Implemented means supported by repository evidence; validated still requires browser testing, real usage or operational proof.</p></div>
+        <div class="portfolio">
+          <div class="venture"><div class="vlogo"><img src="../../../logo/thereplaymag.png" alt="TheReplayMAG"></div><div class="status watch">Watch</div><h3>TheReplayMAG</h3><p>Build output is strong across Frontline, Studio and Go, but the management record and adoption evidence have not kept pace.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="../../../logo/koroko_icon.png" alt="Koroko"></div><div class="status watch">Watch</div><h3>Koroko</h3><p>Slate/backend migration work and NIPOST-aligned terminology are moving, but production data and cutover validation remain material dependencies.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="../../../logo/oroko_icon.svg" alt="Oroko"></div><div class="status ontrack">On track</div><h3>Oroko</h3><p>Whole-product testing is active, with major hardening merged and MCP/API surfaces becoming materially more complete.</p></div>
+          <div class="venture"><div class="vlogo icon"><img src="../../../logo/ogoro_icon.png" alt="Ogoro"></div><div class="status building">Discovery</div><h3>Ogoro</h3><p>No September implementation movement. The right next step remains customer discovery rather than more build.</p></div>
+          <div class="venture"><div class="vlogo"><div class="igho-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div><div class="status building">Building</div><h3>Igho</h3><p>Moved from demo/mockup into a governed implementation programme, with M0 complete and M1 underway.</p></div>
+        </div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" disabled>← Previous</button><span class="slide-count">1 / 8</span><button class="nav-button" data-next="replay">TheReplayMAG →</button></div>
+    </section>
+
+    <section class="panel" id="replay">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img class="wordmark" src="../../../logo/thereplaymag.png" alt="TheReplayMAG"><div><div class="eyebrow">Venture review · 02</div><h1>TheReplayMAG</h1></div></div><p class="aside">Replay’s engineering and publishing stack continued to move in September, but Asana is still largely carrying the August restart plan rather than a live September operating record.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Watch</strong></div><div class="metric"><span>Build evidence</span><strong>Strong</strong></div><div class="metric"><span>Adoption evidence</span><strong>Incomplete</strong></div><div class="metric"><span>Next gate</span><strong>Use the stack</strong></div></div>
+        <div class="grid-4">
+          <div><span class="cell-title">Frontline</span><p>September merged Replay rewrite, WordPress publishing and the Creator operations widget. Paid-tier payments were deliberately paused in favour of a free-mode path, and Desk email templates were brought under source control.</p></div>
+          <div><span class="cell-title">Studio</span><p>Editorial auto-cover shipped, CRM-to-Studio onboarding and role mapping were hardened, Zoho Desk-backed Help was added, and production magic-link onboarding issues were fixed.</p></div>
+          <div><span class="cell-title">Replay Go</span><p>The Creator content-manager widget, WordPress image upload function and mobile footer/list refinements landed on 4 September, strengthening Go as the distribution and content-management layer.</p></div>
+          <div><span class="cell-title">Operating gap</span><p>The 24th Group Asana project still reflects the August 23 restart structure. There is not yet enough current management evidence to claim the September editorial cadence, volunteer adoption or distribution rhythm is validated.</p></div>
+        </div>
+        <div class="source-note"><strong>September evidence:</strong> Studio PRs 109–120, Submissions PRs 4–12, and Replay Go commits on 4 September. The operational record should now be refreshed to match what the software stack has actually become.</div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="overview">← Overview</button><span class="slide-count">2 / 8</span><button class="nav-button" data-next="koroko">Koroko →</button></div>
+    </section>
+
+    <section class="panel" id="koroko">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="../../../logo/koroko_icon.png" alt="Koroko"><div><div class="eyebrow">Venture review · 03</div><h1>Koroko</h1></div></div><p class="aside">September changed both the deployment architecture and the postal-data model. The product is moving, but external data truth and acceptance remain the gating risk.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Watch</strong></div><div class="metric"><span>Current build</span><strong>Slate migration</strong></div><div class="metric"><span>Data model</span><strong>NIPOST aligned</strong></div><div class="metric"><span>Next gate</span><strong>Validate</strong></div></div>
+        <div class="grid-4">
+          <div><span class="cell-title">Architecture</span><p>The backend branch now proxies Slate UI traffic to the existing AppSail backend and loads customer/admin data through established APIs, preserving backend responsibility while moving the gated UI toward Slate.</p></div>
+          <div><span class="cell-title">Postal model</span><p>PR #2 is implementing the terminology shift from 6-digit postcode to <strong>area code</strong> and introducing nullable <strong>digital postcode</strong> for the 11-character building-level code.</p></div>
+          <div><span class="cell-title">Boundary</span><p>The live Supabase schema has not yet been changed for PR #2. The migration, API contract, Checker, verification flows, seed/QA scripts and copy are implemented in the branch but still require review and controlled application.</p></div>
+          <div><span class="cell-title">Next</span><p>Finish temporary Slate validation, test auth/workspace/admin flows, review PR #2, apply the schema deliberately, then run the next API/Checker test tranche before any domain cutover.</p></div>
+        </div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="replay">← TheReplayMAG</button><span class="slide-count">3 / 8</span><button class="nav-button" data-next="oroko">Oroko →</button></div>
+    </section>
+
+    <section class="panel" id="oroko">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="../../../logo/oroko_icon.svg" alt="Oroko"><div><div class="eyebrow">Venture review · 04</div><h1>Oroko</h1></div></div><p class="aside">Oroko has the strongest September delivery evidence in the portfolio. The product is now in whole-product testing, with the canvas first and API/MCP following.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">On track</strong></div><div class="metric"><span>Phase</span><strong>Testing</strong></div><div class="metric"><span>V1 launch</span><strong>Jan 2027</strong></div><div class="metric"><span>Next gate</span><strong>Acceptance</strong></div></div>
+        <div class="grid-4">
+          <div><span class="cell-title">Hardening merged</span><p>Developer API/MCP docs, Future State parity + state copy, attachment UX, public read-only canvas sharing, process/navigation cleanup and CRM admin foundations all merged through the month.</p></div>
+          <div><span class="cell-title">MCP + developer</span><p>Oroko now exposes process skills through the public MCP, includes canonical subprocess examples, points users to help.oroko.space and developer.oroko.space, and has OAuth support in active PR #111.</p></div>
+          <div><span class="cell-title">Admin/support</span><p>The internal CRM/admin API is built for users, organisations, workspaces, processes, keys, invitations and audit. The frontend was moved away from Slate toward same-origin Catalyst Web Client hosting after cross-origin auth friction.</p></div>
+          <div><span class="cell-title">Next</span><p>Stop expanding breadth. Complete canvas acceptance, CRM operational validation, API/MCP testing and Product Finalisation items. Turn every failed test into a specific reproducible task.</p></div>
+        </div>
+        <div class="source-note"><strong>Evidence:</strong> PR55, PR57, PR58, PR59, PR100, PR103–110 merged; PR111 open as of 20 September. Asana now explicitly records whole-product testing and Product Finalisation.</div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="koroko">← Koroko</button><span class="slide-count">4 / 8</span><button class="nav-button" data-next="ogoro">Ogoro →</button></div>
+    </section>
+
+    <section class="panel" id="ogoro">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><img src="../../../logo/ogoro_icon.png" alt="Ogoro"><div><div class="eyebrow">Venture review · 05</div><h1>Ogoro</h1></div></div><p class="aside">There is no September repository or Asana implementation movement to report. That is acceptable if the product remains intentionally in discovery.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Discovery</strong></div><div class="metric"><span>Last repo movement</span><strong>20 Aug</strong></div><div class="metric"><span>First module</span><strong>Energy</strong></div><div class="metric"><span>Next gate</span><strong>Interviews</strong></div></div>
+        <div class="grid-3">
+          <div><span class="cell-title">What exists</span><h3>Enough to test the idea</h3><p>The platform mockup, whitepaper, process maps and Energy intelligence dashboard already provide enough material for structured customer conversations.</p></div>
+          <div><span class="cell-title">September learning</span><h3>No new evidence</h3><p>No current customer-discovery notes, implementation commits or Asana progress were found for September. Do not convert silence into assumed validation.</p></div>
+          <div><span class="cell-title">Next</span><h3>Discovery, not more surface area</h3><p>Use the existing mockups with schools, hotels, hospitals, offices or similar operators and capture what decisions, alerts and savings would actually make the Energy module useful.</p></div>
+        </div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="oroko">← Oroko</button><span class="slide-count">5 / 8</span><button class="nav-button" data-next="igho">Igho →</button></div>
+    </section>
+
+    <section class="panel" id="igho">
+      <div class="shell slide">
+        <div class="product-head"><div class="product-lockup"><div class="igho-mark"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div><div class="eyebrow">Venture review · 06</div><h1>Igho</h1></div></div><p class="aside">Igho made the clearest stage change of the month: from an internal payroll concept and interactive demo into an implementation programme governed by Group engineering standards.</p></div>
+        <div class="health-strip"><div class="metric"><span>Health</span><strong class="gold">Building</strong></div><div class="metric"><span>M0</span><strong>Complete</strong></div><div class="metric"><span>M1</span><strong>In progress</strong></div><div class="metric"><span>V1 gate</span><strong>Internal payroll</strong></div></div>
+        <div class="grid-4">
+          <div><span class="cell-title">Foundation</span><p>M0 established the production scaffold, repo structure, standards alignment and quality gates. Asana marks this milestone complete.</p></div>
+          <div><span class="cell-title">Access model</span><p>M1 implemented auth, workspace and access foundations, then refactored the implementation toward Catalyst serverless architecture. CI dependency handling was stabilised on 18 September.</p></div>
+          <div><span class="cell-title">Scope discipline</span><p>The roadmap stays narrow: people/bank readiness, payroll engine, funding, approval/payouts, payslips, notifications, reconciliation, employee portal and release hardening.</p></div>
+          <div><span class="cell-title">Next</span><p>Finish and test M1 before opening M2. The internal acceptance target remains a real payroll path from employees through funding, approval, transfers and payslips.</p></div>
+        </div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="ogoro">← Ogoro</button><span class="slide-count">6 / 8</span><button class="nav-button" data-next="group">Group →</button></div>
+    </section>
+
+    <section class="panel" id="group">
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Group operations · 07</div><h2>The operating layer is improving, but the records are uneven.</h2></div><p>September strengthened brand governance and product-level execution. The weakest shared layer is still consistent management hygiene across all ventures.</p></div>
+        <div class="grid-3">
+          <div><span class="cell-title">Brand system</span><h3>Portfolio identity formalised</h3><p>The Group and five venture brand guides were created and standardised in early September, with each venture retaining its own visual language and a quiet Powered by The 24th Group relationship.</p></div>
+          <div><span class="cell-title">Management record</span><h3>Asana quality is uneven</h3><p>Oroko and Igho now have materially current project records. Replay’s Group-level tasks are stale, Ogoro has almost no active management record, and the overall 24th Group project status has not been refreshed since August.</p></div>
+          <div><span class="cell-title">Operating principle</span><h3>Acceptance before expansion</h3><p>The common pattern across Oroko, Koroko and Igho is now testing, architecture and operational correctness. October planning should be driven by acceptance evidence rather than feature volume.</p></div>
+        </div>
+        <div class="source-note"><strong>Record conflict:</strong> repository evidence for several products is significantly fresher than the central Group Asana project. This review therefore treats GitHub as implementation evidence and flags Asana staleness rather than silently assuming task status.</div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="igho">← Igho</button><span class="slide-count">7 / 8</span><button class="nav-button" data-next="next">Next →</button></div>
+    </section>
+
+    <section class="panel" id="next">
+      <div class="dark"><div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Remainder of September · 08</div><h2>Finish the month with evidence.</h2></div><p>These are outcome gates, not a feature backlog.</p></div>
+        <div class="priorities">
+          <div class="priority"><strong>Oroko:</strong> complete the current canvas/whole-product acceptance pass and make CRM admin access operational on the same-origin Catalyst hosting model.</div>
+          <div class="priority"><strong>Koroko:</strong> review and safely apply the area-code/digital-postcode change, then validate temporary Slate workspace and admin flows before cutover.</div>
+          <div class="priority"><strong>TheReplayMAG:</strong> reconcile Asana with September reality and prove normal use of Studio, Frontline and Go through publishing/distribution activity.</div>
+          <div class="priority"><strong>Igho:</strong> close M1 acceptance before moving into People & bank readiness.</div>
+          <div class="priority"><strong>Ogoro:</strong> capture real customer-discovery evidence or explicitly keep the product paused rather than generating more speculative build work.</div>
+        </div>
+      </div></div>
+      <div class="shell slide">
+        <div class="section-head"><div><div class="kicker">Founder attention</div><h2>Where decisions still matter.</h2></div><p>Keep intervention concentrated on the few dependencies that genuinely change product direction.</p></div>
+        <div class="grid-2">
+          <div><span class="cell-title">Immediate</span><ul><li>Oroko acceptance sequence and January 2027 finalisation scope.</li><li>Koroko NIPOST/data terminology and production schema timing.</li><li>Replay operating adoption, not additional tooling.</li></ul></div>
+          <div><span class="cell-title">Keep controlled</span><ul><li>Igho must remain internal-first until the payroll path is proven.</li><li>Ogoro should not outrun customer discovery.</li><li>Group-level reporting should reconcile Asana and GitHub monthly so “planned”, “implemented” and “validated” remain distinct.</li></ul></div>
+        </div>
+        <div class="source-note"><strong>Evidence rule:</strong> planned means present in Asana/roadmap; implemented means supported by repository or operational evidence; validated means supported by browser testing, real usage, customer evidence or operational proof. This review is month-to-date and should be closed with a final September pass after 30 September.</div>
+      </div>
+      <div class="shell nav-bottom"><button class="nav-button" data-prev="group">← Group</button><span class="slide-count">8 / 8</span><button class="nav-button" disabled>Next →</button></div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-inner"><span>The 24th Group © 2026</span><span>Internal · September 2026 month-to-date review</span></div></footer>
+<script>
+    const tabs=[...document.querySelectorAll('.tab')];
+    const panels=[...document.querySelectorAll('.panel')];
+    function show(id){
+      panels.forEach(p=>p.classList.toggle('active',p.id===id));
+      tabs.forEach(t=>t.classList.toggle('active',t.dataset.panel===id));
+      const active=tabs.find(t=>t.dataset.panel===id); if(active) active.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+      history.replaceState(null,'','#'+id); window.scrollTo({top:0,behavior:'smooth'});
+    }
+    tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.panel)));
+    document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.next)));
+    document.querySelectorAll('[data-prev]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.prev)));
+    document.addEventListener('keydown',e=>{const order=tabs.map(t=>t.dataset.panel);const current=document.querySelector('.panel.active')?.id;const i=order.indexOf(current);if(e.key==='ArrowRight')show(order[(i+1)%order.length]);if(e.key==='ArrowLeft')show(order[(i-1+order.length)%order.length]);});
+    const initial=location.hash.slice(1); if(initial&&document.getElementById(initial)) show(initial);
+  </script>
+</body>
+</html>
