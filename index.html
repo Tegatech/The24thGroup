@@ -1,643 +1,903 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The 24th Group</title>
-  <meta name="description" content="The 24th Group builds and operates focused ventures across culture, infrastructure and operational technology." />
-  <meta property="og:title" content="The 24th Group" />
-  <meta property="og:description" content="Focused ventures across culture, infrastructure and operational technology." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="brand/assets/mark-only-black.png" />
-  <link rel="apple-touch-icon" href="brand/assets/mark-only-black.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>BSP Costing Application - Delivery Proposal</title>
+<style>
+:root {
+  --bg: #f5f4ef;
+  --surface: #ffffff;
+  --ink: #151515;
+  --muted: #696960;
+  --line: #d8d6ce;
+  --accent: #185d4d;
+  --accent-soft: #dce8e3;
+  --warning: #8a4f11;
+  --warning-soft: #f4e6d6;
+  --max: 1220px;
+}
 
-  <style>
-    :root {
-      --black: #050505;
-      --white: #ffffff;
-      --paper: #f5f2ea;
-      --soft-accent: #f2efe8;
-      --grey: #737373;
-      --border: #dedbd3;
-      --gold: #c58b18;
-      --green: #556f43;
-      --blue: #173653;
-      --igho-ink: #08182b;
-      --igho-gold: #e5a400;
-    }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+a { color: inherit; text-decoration: none; }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', Arial, Helvetica, sans-serif;
-      background: var(--white);
-      color: var(--black);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, calc(100% - 96px)); margin: 0 auto; }
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
 
-    header {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgba(5, 5, 5, 0.06);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .brand-mark {
-      width: 18px;
-      height: 22px;
-      background: var(--black);
-      border-radius: 3px 3px 1px 1px;
-      position: relative;
-      flex: 0 0 auto;
-    }
-    .brand-mark::after {
-      content: "";
-      position: absolute;
-      bottom: -1px;
-      left: 5px;
-      width: 8px;
-      height: 8px;
-      background: var(--white);
-      transform: rotate(45deg);
-    }
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      color: #666;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .nav-links a:hover { color: var(--black); }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+}
+.topbar-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.brand strong { font-size: 15px; letter-spacing: .02em; }
+.brand span { color: var(--muted); font-size: 13px; }
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { color: var(--muted); font-size: 13px; }
+nav a:hover { color: var(--ink); }
 
-    .hero { padding: 88px 0 92px; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-      gap: 84px;
-      align-items: center;
-    }
-    .hero-copy { max-width: 620px; }
+.hero {
+  padding: 88px 0 64px;
+  display: grid;
+  grid-template-columns: 1.45fr .8fr;
+  gap: 48px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+}
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(48px, 7.6vw, 108px);
+  line-height: .92;
+  letter-spacing: -.055em;
+  max-width: 900px;
+}
+.hero-copy {
+  margin-top: 28px;
+  font-size: 18px;
+  max-width: 760px;
+  color: #383833;
+}
+.hero-aside {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+.hero-aside p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+.hero-aside strong { display:block; color:var(--ink); font-size:16px; margin-bottom:4px; }
 
-    h1,
-    h2,
-    h3,
-    .statement-title,
-    .principles-title,
-    .visual-title {
-      font-family: 'IBM Plex Sans Condensed', Arial, sans-serif;
-      font-weight: 600;
-    }
-    h1 {
-      font-size: clamp(4.2rem, 7vw, 7.2rem);
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      margin-bottom: 42px;
-    }
-    .hero-copy p {
-      max-width: 530px;
-      color: #555;
-      font-size: 18px;
-      line-height: 1.62;
-      margin-bottom: 28px;
-    }
-    .hero-note {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #666;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-    .hero-note::before {
-      content: "";
-      width: 18px;
-      height: 1px;
-      background: var(--gold);
-    }
+.section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--line);
+}
+.section-head {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 28px;
+  margin-bottom: 38px;
+}
+.section-index {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--accent);
+  font-weight: 700;
+}
+.section h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 58px);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.section-intro {
+  margin: 14px 0 0;
+  color: var(--muted);
+  max-width: 820px;
+  font-size: 17px;
+}
 
-    .visual-card {
-      min-height: 420px;
-      border-radius: 14px;
-      background: var(--soft-accent);
-      position: relative;
-      overflow: hidden;
-      padding: 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .visual-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 24px;
-      font-size: 11px;
-      line-height: 1.4;
-      color: #777;
-      position: relative;
-      z-index: 2;
-    }
-    .visual-title {
-      font-size: clamp(3.4rem, 5.5vw, 5.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.01em;
-      max-width: 420px;
-      position: relative;
-      z-index: 2;
-    }
-    .visual-orbit {
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 999px;
-      right: -60px;
-      bottom: -60px;
-    }
-    .visual-orbit::before,
-    .visual-orbit::after {
-      content: "";
-      position: absolute;
-      border-radius: 999px;
-      background: var(--black);
-    }
-    .visual-orbit::before {
-      width: 52px;
-      height: 52px;
-      left: 40px;
-      top: 36px;
-    }
-    .visual-orbit::after {
-      width: 24px;
-      height: 24px;
-      right: 62px;
-      bottom: 78px;
-    }
+.grid-2, .grid-3, .grid-4 {
+  display: grid;
+  gap: 18px;
+}
+.grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
 
-    .statement {
-      background: var(--black);
-      color: var(--white);
-      padding: 58px 0;
-    }
-    .statement-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 88px;
-      align-items: center;
-    }
-    .statement-title {
-      max-width: 590px;
-      font-size: clamp(2.2rem, 4vw, 4.15rem);
-      line-height: 1.02;
-      letter-spacing: -0.01em;
-    }
-    .statement-copy {
-      max-width: 430px;
-      border-left: 1px solid rgba(197, 139, 24, 0.75);
-      padding-left: 28px;
-      color: #c7c7c7;
-      font-size: 15px;
-      line-height: 1.7;
-    }
+.panel {
+  background: var(--surface);
+  border-top: 3px solid var(--ink);
+  padding: 22px;
+  min-height: 100%;
+}
+.panel.accent { border-top-color: var(--accent); }
+.panel.warning { border-top-color: var(--warning); background: #fffdf9; }
+.panel h3 { margin: 0 0 10px; font-size: 18px; letter-spacing: -.02em; }
+.panel p { margin: 0; color: var(--muted); }
+.panel ul { margin: 14px 0 0 18px; padding: 0; }
+.panel li { margin: 6px 0; }
 
-    section { padding: 72px 0; }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      gap: 32px;
-      align-items: end;
-      margin-bottom: 38px;
-    }
-    .section-kicker {
-      color: var(--gold);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: clamp(2.2rem, 3.8vw, 3.7rem);
-      line-height: 1;
-      letter-spacing: -0.01em;
-    }
-    .section-heading p {
-      max-width: 440px;
-      color: var(--grey);
-      font-size: 14px;
-      line-height: 1.6;
-    }
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.compare > div { background: var(--surface); padding: 26px; }
+.compare h3 { margin: 0 0 12px; font-size: 20px; }
+.compare ul { margin: 0; padding-left: 18px; }
+.compare .good h3 { color: var(--accent); }
+.compare .todo h3 { color: var(--warning); }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .project-card-link,
-    .project-card-static {
-      display: block;
-      min-width: 0;
-      border-right: 1px solid var(--border);
-    }
-    .project-card-link:last-child,
-    .project-card-static:last-child { border-right: 0; }
-    .project-card {
-      min-height: 275px;
-      height: 100%;
-      padding: 24px 18px 22px;
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      transition: background 0.2s ease;
-    }
-    .project-card-link:hover .project-card { background: #faf9f6; }
-    .project-meta {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-    .project-logo {
-      width: 112px;
-      max-width: 100%;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-shrink: 1;
-      overflow: visible;
-      padding: 0;
-    }
-    .project-logo--icon { width: 56px; height: 56px; }
-    .project-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: left center;
-    }
-    .igho-logo {
-      width: 126px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--igho-ink);
-    }
-    .igho-mark {
-      width: 39px;
-      height: 39px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 4px;
-      flex: 0 0 auto;
-    }
-    .igho-mark span {
-      width: 100%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: var(--igho-ink);
-    }
-    .igho-mark span:nth-child(5) { background: var(--igho-gold); }
-    .igho-wordmark {
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 600;
-      letter-spacing: -0.065em;
-    }
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #777;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .status::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-    .status.operating { color: var(--blue); }
-    .status.building { color: var(--green); }
-    .project-body { margin-top: 10px; }
-    .category {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      color: #777;
-    }
-    .category.culture { color: var(--gold); }
-    .category.infrastructure { color: var(--blue); }
-    .category.operations { color: var(--green); }
-    .project-card h3 { font-size: 24px; line-height: 1; margin-bottom: 12px; }
-    .project-card p { color: var(--grey); font-size: 13px; line-height: 1.55; }
+.flow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+.flow .step {
+  background: var(--surface);
+  border-top: 2px solid var(--line);
+  padding: 18px 14px;
+  position: relative;
+  min-height: 110px;
+}
+.flow .step::after {
+  content: "→";
+  position: absolute;
+  right: -10px;
+  top: 39px;
+  color: var(--muted);
+  font-size: 18px;
+}
+.flow .step:last-child::after { display: none; }
+.flow .step span { display:block; color:var(--muted); font-size:12px; margin-bottom:8px; }
+.flow .step strong { font-size: 15px; }
 
-    .principles {
-      background: var(--paper);
-      padding: 56px 0 60px;
-    }
-    .principles-title {
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-      line-height: 1;
-      margin-bottom: 34px;
-    }
-    .principles-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid rgba(5, 5, 5, 0.12);
-    }
-    .principle {
-      padding: 24px 28px 0 0;
-      border-right: 1px solid rgba(5, 5, 5, 0.12);
-      min-height: 105px;
-    }
-    .principle + .principle { padding-left: 28px; }
-    .principle:last-child { border-right: 0; }
-    .principle strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-    }
-    .principle p {
-      max-width: 260px;
-      color: #686868;
-      font-size: 13px;
-      line-height: 1.55;
-    }
+.roadmap {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.phase { display: contents; }
+.phase-num, .phase-body { border-bottom: 1px solid var(--line); }
+.phase-num {
+  padding: 24px 16px 24px 0;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.phase-body { padding: 24px 0; }
+.phase-body h3 { margin: 0 0 8px; font-size: 22px; }
+.phase-body p { margin: 0 0 10px; color: var(--muted); max-width: 900px; }
+.phase-meta { font-size: 13px; color: var(--ink); }
 
-    footer { background: var(--black); color: var(--white); padding: 34px 0; }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 32px;
-    }
-    .footer-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .footer-brand .brand-mark { background: var(--white); }
-    .footer-brand .brand-mark::after { background: var(--black); }
-    .footer-meta { color: #8d8d8d; font-size: 11px; text-align: right; }
+.tag {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 5px 8px;
+  margin: 3px 4px 3px 0;
+  font-size: 12px;
+  background: #faf9f5;
+}
+.tag.accent { border-color: var(--accent); color: var(--accent); }
+.tag.warn { border-color: var(--warning); color: var(--warning); }
 
-    @media (max-width: 1120px) {
-      .projects { grid-template-columns: repeat(2, 1fr); border-bottom: 0; }
-      .project-card-link,
-      .project-card-static { border-bottom: 1px solid var(--border); }
-      .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) { border-right: 0; }
-      .project-card-static:last-child { border-right: 1px solid var(--border); }
-    }
+.matrix { width:100%; border-collapse:collapse; background:var(--surface); }
+.matrix th, .matrix td { text-align:left; vertical-align:top; padding:14px 12px; border-bottom:1px solid var(--line); }
+.matrix th { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+.matrix td:first-child { font-weight:700; width:18%; }
 
-    @media (max-width: 900px) {
-      .container { width: min(100% - 56px, 1120px); }
-      .hero-grid,
-      .statement-grid { grid-template-columns: 1fr; }
-      .hero-grid { gap: 42px; }
-      .visual-card { min-height: 390px; }
-      .statement-grid { gap: 32px; }
-      .statement-copy { max-width: 600px; }
-      .section-heading { align-items: flex-start; flex-direction: column; }
-    }
+.money {
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 24px;
+  align-items:start;
+}
+.money-hero {
+  background: var(--ink);
+  color: #fff;
+  padding: 30px;
+}
+.money-hero .amount { font-size: clamp(56px, 8vw, 96px); line-height:.9; letter-spacing:-.05em; }
+.money-hero p { color:#c9c9c4; margin:20px 0 0; max-width: 420px; }
+.money-notes { display:grid; gap:14px; }
+.money-notes .note { padding:18px 0; border-bottom:1px solid var(--line); }
+.money-notes .note strong { display:block; margin-bottom:4px; }
+.money-notes .note span { color:var(--muted); }
 
-    @media (max-width: 640px) {
-      .container { width: min(100% - 32px, 1120px); }
-      header { height: 64px; }
-      .nav-links { gap: 18px; }
-      .hero { padding: 58px 0 54px; }
-      h1 { font-size: 4.15rem; margin-bottom: 30px; }
-      .hero-copy p { font-size: 16px; }
-      .visual-card { min-height: 330px; padding: 28px; }
-      .visual-title { font-size: 4rem; }
-      .statement { padding: 44px 0; }
-      section { padding: 58px 0; }
-      .projects { grid-template-columns: 1fr; }
-      .project-card-link,
-      .project-card-static,
-      .project-card-static:last-child,
-      .project-card-link:nth-child(2n),
-      .project-card-static:nth-child(2n) { border-right: 0; }
-      .project-card { min-height: 235px; padding: 22px 4px 24px; }
-      .principles-grid { grid-template-columns: 1fr; }
-      .principle,
-      .principle + .principle {
-        padding: 20px 0;
-        border-right: 0;
-        border-bottom: 1px solid rgba(5, 5, 5, 0.12);
-        min-height: 0;
-      }
-      .principle:last-child { border-bottom: 0; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-      .footer-meta { text-align: left; }
-    }
-  </style>
+.callout {
+  background: var(--accent-soft);
+  padding: 24px;
+  border-left: 4px solid var(--accent);
+  margin-top: 24px;
+}
+.callout strong { display:block; margin-bottom:6px; }
+.callout p { margin:0; }
+
+.open-decisions details {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+.open-decisions summary { cursor:pointer; font-weight:700; }
+.open-decisions p { color:var(--muted); max-width:900px; }
+
+.footer {
+  padding: 34px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 30px; }
+  .hero-aside { border-left:0; border-top:1px solid var(--line); padding-left:0; padding-top:20px; }
+  .section-head { grid-template-columns: 1fr; gap: 10px; }
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+  .flow { grid-template-columns: 1fr 1fr 1fr; }
+  .flow .step::after { display:none; }
+  .money { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .page, .topbar-inner { padding-left: 18px; padding-right: 18px; }
+  .topbar-inner { align-items:flex-start; flex-direction:column; }
+  nav { gap: 12px; }
+  .hero { padding-top: 56px; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .compare { grid-template-columns:1fr; }
+  .flow { grid-template-columns:1fr; }
+  .roadmap { grid-template-columns: 84px 1fr; }
+  .matrix { font-size:13px; }
+  .matrix th:nth-child(3), .matrix td:nth-child(3) { display:none; }
+}
+
+@media print {
+  .topbar { display:none; }
+  body { background:#fff; }
+  .page { max-width:none; padding:0; }
+  .section { break-inside: avoid; }
+}
+
+
+
+/* Blueprint v2 additions */
+.principle-band { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 26px; display:grid; grid-template-columns:.75fr 1.75fr; gap:28px; }
+.principle-band > div:first-child strong { display:block; margin-top:8px; font-size:26px; line-height:1.1; letter-spacing:-.03em; }
+.eyebrow { font-size:11px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); }
+.principle-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.principle-grid p { margin:0; color:var(--muted); font-size:14px; padding-top:12px; border-top:2px solid var(--ink); }
+.principle-grid b { color:var(--ink); }
+.repo-layout { display:grid; grid-template-columns:1.2fr .8fr; gap:34px; align-items:start; }
+.repo-tree { margin:0; background:#111512; color:#e9eee9; padding:28px; overflow:auto; font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; border-radius:0; }
+.repo-notes { border-top:1px solid var(--line); }
+.repo-rule { display:grid; grid-template-columns:42px 1fr; gap:10px; padding:18px 0; border-bottom:1px solid var(--line); }
+.repo-rule > span { color:var(--accent); font-size:12px; font-weight:800; letter-spacing:.08em; }
+.repo-rule strong { display:block; margin-bottom:3px; }
+.repo-rule p { margin:0; color:var(--muted); font-size:14px; }
+.repo-rule code { font-size:12px; }
+.app-concept-wrap { margin-top:34px; padding-top:30px; border-top:1px solid var(--line); }
+.app-concept-head { display:grid; grid-template-columns:1fr .85fr; gap:30px; align-items:end; margin-bottom:22px; }
+.app-concept-head h3 { font-size:30px; letter-spacing:-.035em; line-height:1.05; margin:8px 0 0; }
+.app-concept-head p { margin:0; color:var(--muted); }
+.app-window { border:1px solid #bfc2bc; background:#f8f9f7; box-shadow:0 24px 60px rgba(0,0,0,.08); min-height:660px; overflow:hidden; }
+.app-titlebar { height:54px; display:grid; grid-template-columns:170px 1fr auto; align-items:center; border-bottom:1px solid #d9dcd6; background:#fff; }
+.app-brandmark { height:54px; display:flex; align-items:center; padding:0 22px; font-weight:900; letter-spacing:-.03em; border-right:1px solid #e0e2dd; }
+.app-crumb { padding:0 20px; font-size:13px; color:#4f554f; }
+.app-crumb span { color:#a6aaa5; padding:0 6px; }
+.app-status { margin-right:18px; font-size:12px; color:#4f554f; display:flex; align-items:center; gap:8px; }
+.app-status i { width:7px; height:7px; border-radius:50%; background:#b78a36; display:block; }
+.app-body { display:grid; grid-template-columns:170px 1fr; min-height:606px; }
+.app-sidebar { background:#171b18; color:#f3f5f1; display:flex; flex-direction:column; padding:20px 13px 16px; }
+.side-context { padding:3px 9px 20px; border-bottom:1px solid rgba(255,255,255,.12); }
+.side-context small,.side-foot small { display:block; font-size:9px; letter-spacing:.13em; color:#939c95; margin-bottom:5px; }
+.side-context strong,.side-foot strong { display:block; font-size:14px; }
+.side-context span,.side-foot span { display:block; color:#9da49e; font-size:11px; margin-top:2px; }
+.side-nav { display:flex; flex-direction:column; gap:3px; padding:16px 0; flex:1; }
+.side-nav a { display:flex; justify-content:space-between; gap:8px; padding:9px; color:#aeb5af; font-size:12px; border-left:2px solid transparent; }
+.side-nav a b { font-size:10px; font-weight:600; color:#788078; }
+.side-nav a.on { color:#fff; background:#252b27; border-left-color:#8bc2ad; }
+.side-nav a.on b { color:#9fd1bd; }
+.side-foot { padding:16px 9px 0; border-top:1px solid rgba(255,255,255,.12); }
+.app-main { min-width:0; padding:28px 30px 34px; background:#f4f5f2; }
+.screen-heading { display:flex; justify-content:space-between; gap:20px; align-items:start; padding-bottom:20px; border-bottom:1px solid #d8dbd5; }
+.screen-kicker { font-size:9px; letter-spacing:.13em; color:#687169; font-weight:800; }
+.screen-heading h4 { font-size:27px; letter-spacing:-.035em; margin:4px 0 3px; }
+.screen-heading p { margin:0; color:#687169; font-size:12px; }
+.quiet-btn,.text-btn { border:1px solid #c8ccc6; background:transparent; padding:8px 11px; font:inherit; font-size:11px; }
+.text-btn { border:0; padding:0; color:#416b5c; }
+.workspace-grid { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:22px; padding-top:22px; }
+.work-area { min-width:0; }
+.work-group { background:#fff; border:1px solid #dfe1dc; padding:19px; margin-bottom:14px; }
+.work-group-head { display:flex; justify-content:space-between; gap:12px; margin-bottom:16px; }
+.work-group-head strong { font-size:13px; }
+.work-group-head span { font-size:10px; color:#7a817b; }
+.field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px 18px; }
+.field-grid label > span { display:block; font-size:10px; color:#555d56; margin-bottom:6px; }
+.field-grid small { display:block; margin-top:5px; font-size:9px; color:#879087; }
+.calc-field,.input-field,.override-field { min-height:41px; border-bottom:1px solid #cdd1cb; padding:8px 0 6px; font-size:19px; font-weight:650; letter-spacing:-.02em; }
+.input-field { border-bottom:1px solid #666e67; }
+.override-field { border-bottom:2px solid #b2832d; background:linear-gradient(to right,rgba(178,131,45,.08),transparent 60%); padding-left:6px; }
+.calc-field { color:#39423b; background:#f5f6f3; padding-left:7px; }
+.calc-field em,.input-field em,.override-field em { font-style:normal; font-size:10px; color:#7b837c; font-weight:500; margin-left:3px; }
+.note-flag { color:#986e20!important; }
+.result-strip { display:grid; grid-template-columns:repeat(4,1fr); background:#202521; color:#fff; margin-bottom:14px; }
+.result-strip > div { padding:14px 13px; border-right:1px solid rgba(255,255,255,.12); }
+.result-strip > div:last-child { border-right:0; }
+.result-strip small { display:block; font-size:9px; color:#9fa8a1; margin-bottom:4px; }
+.result-strip strong { font-size:16px; }
+.review-text { color:#e3b65e; }
+.equipment-row { display:grid; grid-template-columns:42px 1fr auto; gap:13px; align-items:center; }
+.equipment-icon { width:42px; height:42px; display:grid; place-items:center; background:#e2eae5; color:#265c4a; font-size:11px; font-weight:900; }
+.equipment-row small,.equipment-price small { display:block; font-size:8px; letter-spacing:.08em; color:#818881; }
+.equipment-row strong { display:block; font-size:12px; margin:2px 0; }
+.equipment-row span { display:block; font-size:10px; color:#737a74; }
+.equipment-price { text-align:right; }
+.equipment-price strong { font-size:14px; }
+.intel-rail { border-left:1px solid #d5d8d2; padding-left:18px; display:flex; flex-direction:column; }
+.intel-block { padding:0 0 17px; margin-bottom:17px; border-bottom:1px solid #d5d8d2; }
+.intel-block > small { display:block; font-size:8px; letter-spacing:.12em; color:#7c847d; margin-bottom:8px; }
+.intel-block p { margin:6px 0 0; color:#727a73; font-size:10px; line-height:1.45; }
+.state-line { display:flex; align-items:center; gap:7px; }
+.state-line strong { font-size:12px; }
+.state-dot { width:7px; height:7px; border-radius:50%; background:#397a5f; }
+.big-value { font-size:27px; letter-spacing:-.04em; }
+.intel-block ul { list-style:none; padding:0; margin:0; font-size:10px; color:#59615b; }
+.intel-block li { padding:4px 0; border-bottom:1px dotted #d1d4ce; }
+.intel-action { margin-top:auto; background:#dfeae4; padding:13px; }
+.intel-action span { display:block; color:#426153; font-size:9px; margin-bottom:7px; }
+.intel-action button { width:100%; border:0; background:#1d5a46; color:#fff; padding:9px; font:inherit; font-size:10px; }
+.concept-notes { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px; }
+.concept-notes > div { display:grid; grid-template-columns:28px 1fr; gap:9px; border-top:1px solid var(--line); padding-top:13px; }
+.concept-notes span { color:var(--accent); font-size:11px; font-weight:800; }
+.concept-notes p { margin:0; color:var(--muted); font-size:13px; }
+.concept-notes strong { color:var(--ink); }
+@media (max-width: 900px) {
+  .principle-band,.repo-layout,.app-concept-head { grid-template-columns:1fr; }
+  .principle-grid,.concept-notes { grid-template-columns:1fr; }
+  .app-window { overflow-x:auto; }
+  .app-titlebar,.app-body { min-width:850px; }
+}
+
+#reading-progress {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 99;
+  height: 2px;
+  width: 0;
+  background: var(--accent);
+  transition: width .08s linear;
+}
+nav a.active {
+  color: var(--ink);
+  font-weight: 700;
+}
+@media (hover:hover) {
+  .panel, .compare > div, .flow .step, .money-hero {
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .panel:hover, .compare > div:hover, .flow .step:hover {
+    transform: translateY(-2px);
+  }
+}
+
+
+.stack-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+  margin-top:2rem;
+}
+.stack-item{
+  padding:1.5rem;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  min-height:190px;
+}
+.stack-item h3{
+  margin:.55rem 0 .65rem;
+  font-size:1.15rem;
+}
+.stack-item p{
+  margin:0;
+  max-width:56ch;
+}
+.stack-label{
+  display:block;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.58;
+}
+.stack-primary{
+  background:var(--ink);
+  color:var(--paper);
+}
+.stack-primary .stack-label{
+  opacity:.7;
+}
+.architecture-strip{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  margin:2rem 0 1.25rem;
+  overflow-x:auto;
+}
+.architecture-strip > div:not(.architecture-arrow){
+  min-width:180px;
+  padding:1rem 1.1rem;
+  border:1px solid var(--line);
+}
+.architecture-strip strong,
+.architecture-strip span{
+  display:block;
+}
+.architecture-strip span{
+  margin-top:.35rem;
+  font-size:.82rem;
+  opacity:.62;
+}
+.architecture-arrow{
+  display:grid;
+  place-items:center;
+  padding:0 .7rem;
+  font-size:1.2rem;
+}
+.architecture-core{
+  background:var(--accent-soft, rgba(0,0,0,.035));
+}
+.principle-callout{
+  border-top:1px solid var(--line);
+  padding-top:1rem;
+  max-width:78ch;
+}
+@media (max-width:760px){
+  .stack-grid{grid-template-columns:1fr;}
+  .architecture-strip{padding-bottom:.5rem;}
+}
+
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="container nav">
-      <a href="#" class="brand" aria-label="The 24th Group home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        The 24th Group
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-      </nav>
-    </div>
-  </header>
+<div aria-hidden="true" id="reading-progress"></div>
+<header class="topbar">
+<div class="topbar-inner">
+<div class="brand"><strong>BSP Costing Application</strong><span>Delivery Proposal</span></div>
+<nav><a href="#state">Current position</a><a href="#scope">Plan</a><a href="#ux">Product</a><a href="#technology-stack">Stack</a><a href="#commercial">Commercial</a><a href="#roadmap">Roadmap</a></nav>
+</div>
+</header>
+<main class="page">
+<section class="hero"><div><div class="kicker">Prepared for Buckingham Swimming Pools · October 2026</div><h1>From proven Excel model to maintainable web application.</h1><p class="hero-copy">A staged delivery plan for turning BSP's existing costing, design and engineering model into a structured web application while preserving verified logic, improving the user experience where the move from Excel genuinely allows it, and keeping every significant change traceable.</p></div><div class="hero-aside"><p><strong>Starting point</strong>Existing BSP workbook, controlled repository and documented engineering rules.</p><p><strong>Delivery approach</strong>Build, deploy, test with BSP, refine, accept, then expand.</p><p><strong>Commercial approach</strong>Small delivery blocks with review points, not one premature whole-project fixed price.</p></div></section>
+<section class="section" id="state">
+<div class="section-head">
+<div class="section-index">01 / Current position</div>
+<div>
+<h2>A strong foundation is already in place.</h2>
+<p class="section-intro">The existing repository already captures a substantial amount of product, engineering and migration thinking. The next step is to convert that controlled knowledge into a working application rather than restart the analysis from zero.</p>
+</div>
+</div>
+<div class="compare">
+<div class="good">
+<h3>Already substantially defined</h3>
+<ul>
+<li>Project → Body of Water → Proposal / Revision model</li>
+<li>Scope → Design → Costs → CSA / Audit / Equipment / Specification flow</li>
+<li>Controlled Excel baseline and evidence handling</li>
+<li>Module Library and candidate module families</li>
+<li>Shared data ownership and semantic contracts</li>
+<li>Master Data principles</li>
+<li>Engineering knowledge / source-guidance architecture</li>
+<li>Override, audit and historic-reproducibility rules</li>
+<li>Global interaction and UI standards</li>
+<li>Heating as first end-to-end reusable module candidate</li>
+</ul>
+</div>
+<div class="todo">
+<h3>Still to be built</h3>
+<ul>
+<li>Production database and application data model</li>
+<li>Authentication, RBAC and team access</li>
+<li>Working Project / Body of Water experience</li>
+<li>Frontend application shell and estimator workspace</li>
+<li>Backend/API integration layer</li>
+<li>Reusable module-instance framework</li>
+<li>Revision snapshots and issued-proposal freezing</li>
+<li>Master Data administration</li>
+<li>Production output / PDF generation</li>
+<li>Integrated, tested end-to-end application flows</li>
+</ul>
+</div>
+</div>
+<div class="callout">
+<strong>Core framing</strong>
+<p>This is not a simple Excel-to-browser conversion. The application should preserve verified engineering and commercial intent, separate rules from workbook cells, and make controlled improvements where a web product can be clearer, safer or easier to use.</p>
+</div>
+</section>
+<section class="section" id="scope">
+<div class="section-head">
+<div class="section-index">02 / Delivery plan</div>
+<div>
+<h2>Build once, prove it, then expand.</h2>
+<p class="section-intro">The delivery approach is designed to produce usable software early, prove the reusable architecture with real BSP modules, and then scale the wider workbook onto those established patterns.</p>
+</div>
+</div>
+<div class="grid-3">
+<div class="panel accent">
+<h3>Foundation</h3>
+<p>Covered by the initial £500 engagement.</p>
+<ul><li>Supabase data model and authentication</li><li>Projects, Bodies of Water and revision foundation</li><li>Master Data and audit structure</li><li>Application shell and navigation</li><li>Catalyst development deployment</li><li>Repository production structure</li></ul>
+</div>
+<div class="panel">
+<h3>Reference implementation</h3>
+<p>Prove the full application route using a real, representative BSP module.</p>
+<ul><li>Heating as the preferred first candidate</li><li>Scope, Design and shared values</li><li>Engineering calculation and equipment</li><li>Costing, CSA and Audit</li><li>Specification and MEP outputs</li><li>Revision, traceability and acceptance</li></ul>
+</div>
+<div class="panel">
+<h3>Reuse and rollout</h3>
+<p>Use further representative modules to prove reuse before broader migration.</p>
+<ul><li>Measured construction / shell pattern</li><li>Itemised equipment pattern</li><li>Finishes / tiling pattern</li><li>Refine common module framework</li><li>Migrate wider module library in blocks</li><li>Re-estimate from actual delivery evidence</li></ul>
+</div>
+</div>
+<div aria-label="BSP application flow" class="flow">
+<div class="step"><span>01</span><strong>Project setup</strong></div>
+<div class="step"><span>02</span><strong>Body of Water</strong></div>
+<div class="step"><span>03</span><strong>Scope &amp; design</strong></div>
+<div class="step"><span>04</span><strong>Costs &amp; equipment</strong></div>
+<div class="step"><span>05</span><strong>CSA &amp; audit</strong></div>
+<div class="step"><span>06</span><strong>Issue &amp; outputs</strong></div>
+</div>
+<div class="principle-band">
+<div><span class="eyebrow">Migration guardrail</span><strong>Parity where the rule matters. Improvement where the medium changes.</strong></div>
+<div class="principle-grid">
+<p><b>Preserve</b><br/>Engineering formulas, commercial intent, traceability, source lineage and issued-history behaviour until a change is explicitly approved.</p>
+<p><b>Improve</b><br/>Navigation, data-entry interaction, state visibility, validation, reusable module behaviour and web-specific workflows where Excel is constraining the experience.</p>
+<p><b>Control</b><br/>Record each material improvement as a decision with old behaviour, new behaviour, reason, acceptance evidence and regression coverage.</p>
+</div>
+</div>
+</section>
+<section class="section" id="repo">
+<div class="section-head">
+<div class="section-index">03 / Repository</div>
+<div>
+<h2>Proposed repository structure.</h2>
+<p class="section-intro">The existing documentation and reference evidence remain first-class project assets. Production code is added around them in a modular monolith so the UI, engineering rules, commercial rules, integrations and tests stay clearly separated without introducing unnecessary microservices.</p>
+</div>
+</div>
+<div class="repo-layout">
+<pre class="repo-tree"><code>bsp-costing-app/
+├── apps/
+│   └── web/                    # browser UI / estimator workspace
+├── backend/
+│   └── bsp/
+│       ├── domain/             # projects, bodies, revisions, scope
+│       ├── calculations/       # deterministic engineering logic
+│       │   ├── shell_geometry/
+│       │   └── heating/
+│       ├── modules/            # reusable costing module types
+│       ├── commercial/         # cost lines, CSA, audit rules
+│       ├── outputs/            # spec, MEP, PDF composition
+│       ├── application/        # orchestration / use cases
+│       └── integrations/
+│           ├── supabase/
+│           ├── zoho_crm/
+│           └── catalyst/
+├── supabase/
+│   └── migrations/             # controlled schema evolution
+├── tests/
+│   ├── unit/                   # component-level rules
+│   ├── parity/                 # workbook comparison cases
+│   ├── integration/            # cross-module/data behaviour
+│   └── acceptance/             # BSP-approved scenarios
+├── docs/                       # controlled specs, ADRs, registers
+├── reference/                  # frozen workbook + evidence
+└── tools/                      # verification / migration utilities</code></pre>
+<div class="repo-notes">
+<div class="repo-rule"><span>01</span><div><strong>Business rules do not live in the frontend.</strong><p>The web app renders and orchestrates; engineering and commercial rules remain testable server/domain code.</p></div></div>
+<div class="repo-rule"><span>02</span><div><strong>Workbook evidence stays first-class.</strong><p><code>docs/</code> and <code>reference/</code> remain controlled migration assets, not temporary notes to delete once coding starts.</p></div></div>
+<div class="repo-rule"><span>03</span><div><strong>Tests mirror the confidence model.</strong><p>Unit truth, Excel parity, integration behaviour and BSP acceptance are distinct layers rather than one generic “tests passed” claim.</p></div></div>
+<div class="repo-rule"><span>04</span><div><strong>One deployable system for now.</strong><p>Module boundaries are architectural boundaries inside a modular monolith. Split services only when scale or ownership genuinely demands it.</p></div></div>
+</div>
+</div>
+</section>
+<section class="section" id="ux">
+<div class="section-head">
+<div class="section-index">04 / Product direction</div>
+<div>
+<h2>A purpose-built estimator, not Excel in a browser.</h2>
+<p class="section-intro">The interface should feel like professional engineering software: efficient for experienced estimators, clear about calculated and overridden values, and organised around BSP's actual workflow rather than the physical layout of the workbook.</p>
+</div>
+</div>
+<div class="grid-4">
+<div class="panel"><h3>Hierarchy</h3><p>Organise screens by engineering/business meaning rather than generic “Inputs” and “Outputs”.</p></div>
+<div class="panel"><h3>Context</h3><p>Keep the current Body of Water, module, revision and issue state visible without repeating labels everywhere.</p></div>
+<div class="panel"><h3>Efficiency</h3><p>Keyboard-first numeric entry, predictable TAB flow, fast replacement and compact help.</p></div>
+<div class="panel"><h3>State clarity</h3><p>Calculated, default, overridden, excluded, optional and frozen values must never look identical.</p></div>
+</div>
+<div class="app-concept-wrap">
+<div class="app-concept-head">
+<div><span class="eyebrow">TegaDes · Direction A</span><h3>Estimator workspace as a calm engineering cockpit.</h3></div>
+<p>One persistent workspace: project context on the left, engineering task in the centre, live commercial/state intelligence on the right. The interface changes density by task rather than forcing every module into identical cards.</p>
+</div>
+<div aria-label="BSP application visual concept" class="app-window">
+<div class="app-titlebar">
+<div class="app-brandmark">BSP</div>
+<div class="app-crumb">Harrington House <span>/</span> Main Pool <span>/</span> Heating</div>
+<div class="app-status"><i></i> Revision 03 · Draft</div>
+</div>
+<div class="app-body">
+<aside class="app-sidebar">
+<div class="side-context"><small>BODY OF WATER</small><strong>Main Pool</strong><span>10.0 × 5.0 m</span></div>
+<nav class="side-nav">
+<a>Setup <b>✓</b></a>
+<a>Scope <b>✓</b></a>
+<a class="on">Design <b>12</b></a>
+<a>Costs <b>£</b></a>
+<a>Equipment <b>8</b></a>
+<a>CSA &amp; Audit</a>
+<a>Specification</a>
+<a>Issue</a>
+</nav>
+<div class="side-foot"><small>PROJECT</small><strong>BSP-0264</strong><span>3 Bodies of Water</span></div>
+</aside>
+<div class="app-main">
+<div class="screen-heading">
+<div><span class="screen-kicker">DESIGN / MODULE 101</span><h4>Main Pool : Water Heating</h4><p>Design basis, product selection and project-specific heating requirements.</p></div>
+<button class="quiet-btn">Module details</button>
+</div>
+<div class="workspace-grid">
+<section class="work-area">
+<div class="work-group">
+<div class="work-group-head"><strong>Design basis</strong><span>Shared body values are live</span></div>
+<div class="field-grid">
+<label><span>Water volume</span><div class="calc-field">67.50 <em>m³</em></div><small>From Shell Geometry</small></label>
+<label><span>Initial temperature</span><div class="input-field">15.0 <em>°C</em></div></label>
+<label><span>Target temperature</span><div class="override-field">30.0 <em>°C</em></div><small>Body default · override available</small></label>
+<label><span>Temperature rise</span><div class="input-field">0.5 <em>°C/hr</em></div><small class="note-flag">Label under BSP review</small></label>
+</div>
+</div>
+<div class="result-strip">
+<div><small>Calculated heat-up</small><strong>30 hrs</strong></div>
+<div><small>Heating load</small><strong>40 kW</strong></div>
+<div><small>Primary flow</small><strong>2.8 l/s</strong></div>
+<div><small>Rule status</small><strong class="review-text">Review</strong></div>
+</div>
+<div class="work-group">
+<div class="work-group-head"><strong>Heat generation</strong><button class="text-btn">Change technology</button></div>
+<div class="equipment-row">
+<div class="equipment-icon">HX</div>
+<div><small>SELECTED TECHNOLOGY</small><strong>Bowman Shell &amp; Tube Exchanger</strong><span>Model EC160-5113-2 · Qty 1</span></div>
+<div class="equipment-price"><small>Unit cost</small><strong>£1,842</strong><span>Rates v24.09</span></div>
+</div>
+</div>
+</section>
+<aside class="intel-rail">
+<div class="intel-block"><small>EFFECTIVE STATE</small><div class="state-line"><span class="state-dot"></span><strong>IN · Main Scope</strong></div><p>Scope and costing agree. Specification included.</p></div>
+<div class="intel-block"><small>MODULE VALUE</small><strong class="big-value">£6,480</strong><p>Contract sum after prelim, margin and MCD.</p></div>
+<div class="intel-block"><small>TRACE</small><ul><li>Volume ← Shell Geometry</li><li>Rates ← Master Data</li><li>Model ← Equipment Library</li><li>3 active overrides</li></ul></div>
+<div class="intel-action"><span>Ready for review</span><button>Review module →</button></div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<div class="concept-notes">
+<div><span>01</span><p><strong>Context never disappears.</strong> Project, Body, module and revision are always visible without being repeated in every field.</p></div>
+<div><span>02</span><p><strong>Calculated values feel different.</strong> Inputs, shared calculations, overrides and unresolved rules have distinct treatments without visual noise.</p></div>
+<div><span>03</span><p><strong>Commercial intelligence sits beside design.</strong> The estimator can see consequences while working, without turning the design screen into a finance dashboard.</p></div>
+</div>
+</div>
+<div class="callout">
+<strong>Visual direction</strong>
+<p>Quiet neutral base, strong hierarchy, minimal borders, efficient tables and forms, visible project and revision context, and no generic dashboard styling.</p>
+</div>
+</section>
+<section class="section" id="commercial">
+<div class="section-head">
+<div class="section-index">05 / Commercial model</div>
+<div>
+<h2>Commercial model: staged build blocks.</h2>
+<p class="section-intro">The project is best handled as a sequence of defined delivery blocks. This gives BSP a working output and review point at each stage, while allowing later estimates to use evidence from the modules already implemented.</p>
+</div>
+</div>
+<div class="money"><div class="money-hero"><div class="amount">£500</div><p>Initial engagement. Covers the platform foundation, application shell, database/auth foundation, repo structure, deployment setup and first usable screens.</p></div><div class="money-notes"><div class="note"><strong>Next build block: estimated £750 to £1,000</strong><span>First end-to-end reference implementation, centred on Heating and the reusable application behaviour needed to support it.</span></div><div class="note"><strong>No per-slice charging model</strong><span>Reference slices are used to prove the architecture. The commercial unit is a delivery block, not an individual module or workbook header.</span></div><div class="note"><strong>Re-estimate after evidence</strong><span>Once the first reference implementation is working, the next 2 to 3 structural patterns can be scoped from actual delivery effort.</span></div><div class="note"><strong>Wider rollout</strong><span>The broader module library is then migrated in agreed blocks using the proven framework. Pricing is based on remaining complexity and delivery velocity, not an arbitrary count of workbook modules.</span></div><div class="note"><strong>Infrastructure</strong><span>Use BSP-owned services and free tiers during development where appropriate. Paid infrastructure is introduced only when usage or production requirements justify it.</span></div></div></div>
+</section>
+<section class="section">
+<div class="section-head">
+<div class="section-index">06 / Responsibilities</div>
+<div>
+<h2>Clear ownership and decision-making.</h2>
+<p class="section-intro">BSP retains authority over engineering intent, commercial meaning and acceptance. Technical delivery converts those approved rules into maintainable software and challenges complexity where a simpler implementation is available.</p>
+</div>
+</div>
+<div style="overflow-x:auto">
+<table class="matrix">
+<thead><tr><th>Area</th><th>Paul / BSP</th><th>Tega</th><th>Platform</th></tr></thead>
+<tbody>
+<tr><td>Engineering logic</td><td>Own, explain and accept</td><td>Implement verified / approved rules</td><td>Repo + evidence</td></tr>
+<tr><td>Product decisions</td><td>Final business acceptance</td><td>Structure, challenge and translate into product behaviour</td><td>GitHub decisions / specs</td></tr>
+<tr><td>Database</td><td>Own account / project</td><td>Design schema and implement</td><td>Supabase</td></tr>
+<tr><td>Hosting</td><td>Own Catalyst account</td><td>Already has BSP Catalyst access; configure and deploy prototype/build</td><td>Zoho Catalyst · free tier during prototyping</td></tr>
+<tr><td>Application UX</td><td>Accept working behaviour</td><td>Design and build</td><td>Web app</td></tr>
+<tr><td>Testing</td><td>Engineering / workflow acceptance</td><td>Technical, integration and regression testing</td><td>CI + test env</td></tr>
+<tr><td>Source guidance</td><td>Supply and approve interpretations</td><td>Integrate controlled knowledge and rules</td><td>WorkDrive / Learn later</td></tr>
+</tbody>
+</table>
+</div>
+<div class="grid-2" style="margin-top:24px">
+<div class="panel accent">
+<h3>Immediate dependencies from Paul</h3>
+<ul>
+<li>Create / confirm BSP-owned Supabase project</li>
+<li>Add Tega with the required project access</li>
+<li><strong>Catalyst:</strong> no new access dependency : Tega already has BSP Catalyst access; use this plan to document that the free tier will host build/prototype/testing work</li>
+<li>Remain available for business/engineering qualification where evidence is ambiguous</li>
+<li>Provide representative final client documents when output design begins</li>
+</ul>
+</div>
+<div class="panel warning">
+<h3>Do not silently assume</h3>
+<ul>
+<li>Heat-up input semantics where the workbook label and formula conflict</li>
+<li>Shared-vs-instance temperature ownership</li>
+<li>Technology-change clearing / price-reset behaviour</li>
+<li>Raw Scope vs effective costing/specification state reconciliation</li>
+<li>Quantity “Z” behaviour across costing and equipment outputs</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="technology-stack">
+<div class="section-kicker">Technology stack</div>
+<div class="section-heading-row">
+<div>
+<h2>Recommended application stack.</h2>
+<p class="lead">The stack keeps engineering and commercial rules independent from the interface so the application remains testable, maintainable and adaptable as BSP grows.</p>
+</div>
+</div>
+<div class="stack-grid">
+<article class="stack-item">
+<span class="stack-label">Frontend</span>
+<h3>React + TypeScript</h3>
+<p>Estimator workspace, project navigation, forms, module screens, revision views and application interactions.</p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Backend / API</span>
+<h3>Python</h3>
+<p>Application services, orchestration, validation and controlled access to the engineering and commercial domain layer.</p>
+</article>
+<article class="stack-item stack-primary">
+<span class="stack-label">Engineering Engine</span>
+<h3>Python</h3>
+<p>
+        All verified engineering calculations and business rules live here, independently of the UI.
+        This is the core parity-tested layer used by Design, Costs, CSA, Audit, equipment and specification outputs.
+      </p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Data</span>
+<h3>PostgreSQL via Supabase</h3>
+<p>Projects, Bodies of Water, revisions, module instances, master data, overrides, audit history and application state.</p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Authentication</span>
+<h3>Supabase Auth</h3>
+<p>User authentication and the foundation for BSP role and permission controls.</p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Hosting</span>
+<h3>Zoho Catalyst</h3>
+<p>
+        Existing BSP Catalyst access is used for development, prototyping and testing where appropriate,
+        with the free tier used while the application remains within suitable limits.
+      </p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Source Control</span>
+<h3>GitHub</h3>
+<p>Controlled source of truth for code, tests, architecture decisions, evidence and technical documentation.</p>
+</article>
+<article class="stack-item">
+<span class="stack-label">Testing</span>
+<h3>Python + TypeScript test suites</h3>
+<p>
+        Unit tests, Excel parity tests, integration tests and end-to-end application tests remain separate and explicit.
+      </p>
+</article>
+</div>
+<div class="architecture-strip">
+<div><strong>React / TypeScript</strong><span>Product experience</span></div>
+<div class="architecture-arrow">→</div>
+<div><strong>Python API</strong><span>Application services</span></div>
+<div class="architecture-arrow">→</div>
+<div class="architecture-core"><strong>Python Domain Engine</strong><span>Engineering + commercial rules</span></div>
+<div class="architecture-arrow">→</div>
+<div><strong>Supabase / PostgreSQL</strong><span>Persistent state</span></div>
+</div>
+<div class="principle-callout">
+<strong>Key rule:</strong>
+    React presents the result. Python owns the calculation. The database stores the state.
+    Engineering rules do not live inside page components.
+  </div>
+</section>
+<section class="section" id="roadmap">
+<div class="section-head">
+<div class="section-index">08 / Roadmap</div>
+<div>
+<h2>Delivery roadmap.</h2>
+<p class="section-intro">Each stage ends in a working output or acceptance point. We prove the common architecture with a small number of representative modules, then use that evidence to scale the migration.</p>
+</div>
+</div>
+<div class="roadmap"><div class="phase"><div class="phase-num">Stage 1</div><div class="phase-body"><h3>Foundation</h3><p>Supabase, auth/RBAC foundation, Projects, Bodies of Water, revision model, Master Data structure, app shell, Catalyst dev deployment and repository production structure.</p><div class="phase-meta"><span class="tag accent">£500 already paid</span> Working development foundation and first usable product screens.</div></div></div><div class="phase"><div class="phase-num">Stage 2</div><div class="phase-body"><h3>First reference implementation</h3><p>Implement Heating end-to-end through design, calculation, equipment, cost, CSA, Audit, specification and MEP behaviour. Resolve any BSP decisions needed for acceptance.</p><div class="phase-meta"><span class="tag accent">Estimated £750 to £1,000</span> One complete real BSP flow working inside the new application architecture.</div></div></div><div class="phase"><div class="phase-num">Stage 3</div><div class="phase-body"><h3>Prove reuse</h3><p>Implement 2 to 3 deliberately different structural patterns, for example measured construction, itemised equipment and finishes, refining the shared framework as needed.</p><div class="phase-meta"><span class="tag accent">Price agreed after Stage 2 evidence</span> Reusable module framework proven beyond one engineered module.</div></div></div><div class="phase"><div class="phase-num">Stage 4</div><div class="phase-body"><h3>Scale the module library</h3><p>Progressively migrate the wider BSP module library using the established types, calculations, commercial contracts and output behaviour.</p><div class="phase-meta"><span class="tag accent">Scoped in delivery blocks</span> Increasing migration velocity without duplicating architecture or logic.</div></div></div><div class="phase"><div class="phase-num">Stage 5</div><div class="phase-body"><h3>Complete outputs and product workflows</h3><p>Mature CSA, Audit, equipment schedules, MEP, specification, PDF/document generation, revision snapshots and Master Data administration alongside the module rollout.</p><div class="phase-meta"><span class="tag accent">Included in agreed rollout blocks</span> Structured proposal package generated from controlled application data.</div></div></div><div class="phase"><div class="phase-num">Stage 6</div><div class="phase-body"><h3>Production readiness</h3><p>Security, backup/recovery, monitoring, performance, environment separation, regression testing, user acceptance and go-live controls.</p><div class="phase-meta"><span class="tag accent">Priced when production scope is known</span> Production-ready BSP application.</div></div></div></div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>The 24th<br />Group</h1>
-          <p>
-            We build and operate focused ventures across culture, infrastructure
-            and operational technology.
-          </p>
-          <span class="hero-note">Built for long-term value</span>
-        </div>
 
-        <div class="visual-card" aria-label="Founder-led venture and operations company, established 2026">
-          <div class="visual-top">
-            <span>Founder-led venture &amp; operations company</span>
-            <span>Est. 2026</span>
-          </div>
-          <div class="visual-title">Culture.<br />Systems.<br />Future.</div>
-          <div class="visual-orbit" aria-hidden="true"></div>
-        </div>
-      </div>
-    </section>
 
-    <section class="statement" id="about">
-      <div class="container statement-grid">
-        <div class="statement-title">
-          We build where important work is still fragmented, manual or unreliable.
-        </div>
-        <p class="statement-copy">
-          The Group gives focused products a shared operating home while each venture
-          stays close to the real problem it is built to solve.
-        </p>
-      </div>
-    </section>
+<footer class="footer"><div>BSP Costing Application · Delivery Proposal · October 2026</div><div>Prepared by Tega Oghoro</div></footer>
+</main>
+<script>
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('nav a')];
 
-    <section id="work">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <div class="section-kicker">The work</div>
-            <h2>Five businesses. One group.</h2>
-          </div>
-          <p>
-            A focused portfolio across culture, location infrastructure, process clarity,
-            energy operations and payroll.
-          </p>
-        </div>
+const setActive = () => {
+  const y = window.scrollY + 140;
+  let current = sections[0]?.id || '';
+  for (const section of sections) {
+    if (section.offsetTop <= y) current = section.id;
+  }
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
 
-        <div class="projects">
-          <a class="project-card-link" href="https://thereplaymag.com?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo"><img src="logo/thereplaymag.png" alt="TheReplayMAG" /></div>
-                <span class="status operating">Operating</span>
-              </div>
-              <div class="project-body">
-                <span class="category culture">Culture</span>
-                <h3>TheReplayMAG</h3>
-                <p>An independent culture publication spotlighting emerging creatives and underground scenes.</p>
-              </div>
-            </article>
-          </a>
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+  document.getElementById('reading-progress').style.width = pct + '%';
+};
 
-          <a class="project-card-link" href="https://koroko.development.catalystappsail.com/?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/koroko_icon.png" alt="Koroko" /></div>
-                <span class="status operating">Operating</span>
-              </div>
-              <div class="project-body">
-                <span class="category infrastructure">Infrastructure</span>
-                <h3>Koroko</h3>
-                <p>Location infrastructure for trusted address, direction and place intelligence in Nigeria.</p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://korokoro-758593152.development.catalystserverless.com/app/landing-mockup.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/oroko_icon.svg" alt="Oroko" /></div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Oroko</h3>
-                <p>Structured process mapping and documentation for teams that need clarity and control.</p>
-              </div>
-            </article>
-          </a>
-
-          <a class="project-card-link" href="https://ogoro-758593152.development.catalystserverless.com/app/index.html?utm_source=the24thgroup&utm_medium=referral&utm_campaign=portfolio" target="_blank" rel="noopener noreferrer">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="project-logo project-logo--icon"><img src="logo/ogoro_icon.png" alt="Ogoro" /></div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Ogoro</h3>
-                <p>Operational intelligence for energy systems, facilities and physical assets.</p>
-              </div>
-            </article>
-          </a>
-
-          <div class="project-card-static" aria-label="Igho, building">
-            <article class="project-card">
-              <div class="project-meta">
-                <div class="igho-logo" aria-label="Igho">
-                  <span class="igho-mark" aria-hidden="true">
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                  </span>
-                  <span class="igho-wordmark">igho</span>
-                </div>
-                <span class="status building">Building</span>
-              </div>
-              <div class="project-body">
-                <span class="category operations">Operations</span>
-                <h3>Igho</h3>
-                <p>Payroll infrastructure for projects, creative productions and small teams.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="principles" aria-labelledby="principles-title">
-      <div class="container">
-        <div class="section-kicker">How we think</div>
-        <h2 class="principles-title" id="principles-title">Three principles guide how we build.</h2>
-        <div class="principles-grid">
-          <div class="principle">
-            <strong>Clarity</strong>
-            <p>We focus on real problems and make the complex easier to understand.</p>
-          </div>
-          <div class="principle">
-            <strong>Discipline</strong>
-            <p>We build deliberately, stay close to evidence and avoid unnecessary complexity.</p>
-          </div>
-          <div class="principle">
-            <strong>Long-term</strong>
-            <p>We optimise for ownership, durability and useful systems that can compound over time.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true"></span>
-        The 24th Group
-      </div>
-      <div class="footer-meta">© 2026 The 24th Group · Building with clarity.</div>
-    </div>
-  </footer>
+window.addEventListener('scroll', setActive, { passive: true });
+window.addEventListener('load', setActive);
+</script>
 </body>
 </html>
