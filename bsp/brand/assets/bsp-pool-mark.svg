@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 125" role="img" aria-labelledby="t d">
+<title id="t">BSP pool mark</title><desc id="d">Isometric rectangular tiled pool symbol for BSP.</desc>
+<g transform="translate(6 8)">
+  <polygon points="12,35 79,14 146,35 79,57" fill="#74BDA8"/>
+  <polygon points="12,35 79,57 79,105 12,82" fill="#18231F"/>
+  <polygon points="146,35 79,57 79,105 146,82" fill="#263832"/>
+  <polyline points="24,36 79,19 134,36 79,53 24,36" fill="none" stroke="#DFF2EC" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="51" y1="28" x2="106" y2="46" stroke="#4B9E89" stroke-width="1" opacity=".55"/>
+  <line x1="79" y1="20" x2="79" y2="52" stroke="#4B9E89" stroke-width="1" opacity=".55"/>
+</g>
+</svg>
