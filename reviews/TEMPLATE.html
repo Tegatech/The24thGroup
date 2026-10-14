@@ -29,14 +29,14 @@
     .brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700}
     .brand img{width:18px;height:22px;object-fit:contain}
     .meta{display:flex;gap:28px;color:#666;font-size:12px}
-    .cover{padding:84px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:72px;align-items:end}
+    .cover{padding:54px 0 34px;display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:end;border-bottom:1px solid var(--border)}
     .eyebrow,.kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--gold)}
-    .cover h1{font-size:clamp(4.2rem,7vw,7.2rem);line-height:.92;letter-spacing:-.025em;margin:18px 0 30px}
-    .cover p{font-size:18px;line-height:1.65;color:#555;max-width:620px}
-    .cover-card{background:var(--soft);padding:30px;border-radius:14px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
-    .cover-card strong{font-size:13px}
-    .cover-card .month{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-size:46px;line-height:1}
-    .cover-card .small{font-size:11px;color:#777;display:grid;gap:8px}
+    .cover h1{font-size:clamp(4rem,7vw,7rem);line-height:.88;letter-spacing:-.025em;margin:14px 0 22px}
+    .cover p{font-size:16px;line-height:1.65;color:#555;max-width:680px}
+    .cover-card{background:transparent;padding:0;border-top:1px solid var(--border);min-height:0;display:grid}
+    .cover-card strong{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#777}
+    .cover-card .month{font-family:'IBM Plex Sans Condensed',Arial,sans-serif;font-size:34px;line-height:1;padding:14px 0;border-bottom:1px solid var(--border)}
+    .cover-card .small{font-size:11px;color:#777;display:grid;gap:0}.cover-card .small span{padding:11px 0;border-bottom:1px solid var(--border)}
     .statement{background:var(--black);color:var(--white);padding:52px 0}
     .statement-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
     .statement h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.02;max-width:650px}
@@ -50,7 +50,7 @@
     .summary-block + .summary-block{padding-left:26px;border-left:1px solid var(--border)}
     .summary-block h3{font-size:24px;margin-bottom:16px}
     .summary-block ul{padding-left:18px;color:#555;display:grid;gap:10px;font-size:14px}
-    .portfolio{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .portfolio{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     .venture{min-height:205px;padding:22px 18px;border-right:1px solid var(--border)}
     .venture:last-child{border-right:0}
     .venture .type{font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;margin-bottom:18px}
@@ -97,13 +97,11 @@
     <section class="page cover">
       <div>
         <div class="eyebrow">Group review</div>
-        <h1>Monthly<br />Review</h1>
-        <p>A concise record of what moved, what we learned, what needs attention and what matters next across the Group.</p>
+        <h1>Month<br />YYYY</h1>
+        <p>Monthly operating review. What moved, what we learned, what needs attention and what matters next across the Group.</p>
       </div>
       <aside class="cover-card">
-        <div><strong>Review period</strong></div>
-        <div class="month">Month YYYY</div>
-        <div class="small"><span>Prepared: YYYY-MM-DD</span><span>Basis: Asana + GitHub + product status + operating notes</span></div>
+        <div><strong>Review metadata</strong></div><div class="month">Monthly operating review</div><div class="small"><span>Period: 01–31 Month YYYY</span><span>Prepared: YYYY-MM-DD</span><span>Basis: Asana + GitHub + product status + operating notes</span></div>
       </aside>
     </section>
 
@@ -118,10 +116,9 @@
     </section>
 
     <section class="page content">
-      <div class="section-head"><div><div class="kicker">02 / Portfolio</div><h2>Five businesses. One group.</h2></div><p>Use On track, Watch, Blocked or Paused. Explain anything that is not obvious.</p></div>
+      <div class="section-head"><div><div class="kicker">02 / Portfolio</div><h2>Four active businesses. One group.</h2></div><p>Use On track, Watch, Blocked or Paused. Explain anything that is not obvious.</p></div>
       <div class="portfolio">
         <article class="venture"><div class="type culture">Culture</div><h3>TheReplayMAG</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
-        <article class="venture"><div class="type infrastructure">Infrastructure</div><h3>Koroko</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
         <article class="venture"><div class="type operations">Operations</div><h3>Oroko</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
         <article class="venture"><div class="type operations">Operations</div><h3>Ogoro</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
         <article class="venture"><div class="type operations">Operations</div><h3>Igho</h3><div class="health">[Health]</div><p>[Main movement this month]<br /><br /><strong>Next gate:</strong> [Outcome]</p></article>
